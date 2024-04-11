@@ -1,8 +1,14 @@
 import Header from "./Components/Header";
+import ListCohorts from "./Components/ListCohorts";
 
 function App() {
   return (
-    <Header />
+    <>
+      <Header />
+      <main>
+        <ListCohorts />
+      </main>
+    </>
   );
 }
 

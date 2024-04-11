@@ -4,3 +4,24 @@
   text-align: center;
   padding: 20px;
 }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+}
+
+.cohorts {
+  text-align: center;
+  margin-left: 25px;
+}
+
+.cohorts h3 {
+  text-align: start;
+  font-weight: bolder;
+}
+
+.cohorts hr {
+  border: 1.5px solid;
+  color:#5C946E;
+}
