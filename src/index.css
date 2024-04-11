@@ -2,7 +2,8 @@
   background-color: #5C946E;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 main {
@@ -13,7 +14,8 @@ main {
 
 .cohorts {
   text-align: center;
-  margin-left: 25px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .cohorts h3 {
@@ -24,4 +26,12 @@ main {
 .cohorts hr {
   border: 1.5px solid;
   color:#5C946E;
+}
+
+.cohort-list {
+  margin-left:4rem;
+}
+
+.cohort-list h3 {
+  font-weight: lighter;
 }
