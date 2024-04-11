@@ -21,6 +21,7 @@ main {
 }
 
 .cohorts h3 {
+  cursor: pointer;
   text-align: start;
   font-weight: bolder;
 }
@@ -31,6 +32,7 @@ main {
 }
 
 .cohort {
+  cursor: pointer;
   list-style: none;
   text-align: start;
   font-weight: bolder;
@@ -79,7 +81,11 @@ span {
   font-weight: bolder;
 }
 
-.showMore {
+.showMore button {
+  cursor: pointer;
   text-decoration: underline;
+  border: none;
+  background: none;
+  font-size: 18px;
 }
 
