@@ -72,6 +72,7 @@ span {
 
 .student-profile img {
   width: 150px;
+  max-height: 150px;
   border-radius: 10px;
   object-fit: cover;
   margin-right: 2rem;
@@ -88,4 +89,19 @@ span {
   background: none;
   font-size: 18px;
 }
+
+.showMore {
+  margin-top: 3rem;
+}
+
+.extra-info {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: start;
+}
+
+/* .extra-info ul {
+
+}  */
 

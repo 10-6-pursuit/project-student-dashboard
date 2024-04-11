@@ -17,6 +17,7 @@ export default function CohortList({students}) {
               username={student.username}
               dob={student.dob}
               image={student.profilePhoto}
+              student={student}
               // Show More... component goes here
             />
           )

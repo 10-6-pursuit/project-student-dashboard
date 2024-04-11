@@ -9,7 +9,7 @@ export default function StudentProfile({name, username, dob, image, student}) {
         <h3 className="student-info__name">{name}</h3>
         <h3>{username}</h3>
         <h3><span>Birthday:</span> {dob}</h3>
-        <ShowMore student={student}/>
+        <ShowMore student={student} />
       </div>
     </li>
   )
