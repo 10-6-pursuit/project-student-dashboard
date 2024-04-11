@@ -63,7 +63,7 @@ span {
 }
 
 .student-profile {
-  max-width: 90%;
+  max-width: 85%;
   display: flex;
   border: 2px solid #5C946E;
   padding: 2rem;
@@ -90,18 +90,25 @@ span {
   font-size: 18px;
 }
 
-.showMore {
-  margin-top: 3rem;
-}
 
 .extra-info {
   display: flex;
-  width: 100%;
   flex-direction: row;
-  justify-content: start;
+  margin-left: -11rem;
 }
 
-/* .extra-info ul {
+.extra-info h3 {
+  font-weight: bold;
+}
 
-}  */
+.extra-info ul {
+  margin-left: -2rem;
+  margin-right: 9rem;
+}
+
+.extra-info li {
+  margin-bottom: 1rem;
+}
+
+
 
