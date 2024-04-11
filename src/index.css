@@ -6,28 +6,43 @@
   margin-bottom: 2rem;
 }
 
+/* Set Grid Display */
 main {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
 }
 
+/* Left Side of App */
 .cohorts {
-  text-align: center;
+  /* text-align: center; */
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
-.cohorts h3 {
+/* .cohorts h3 {
   text-align: start;
   font-weight: bolder;
-}
+} */
 
 .cohorts hr {
   border: 1.5px solid;
   color:#5C946E;
 }
 
+.cohort {
+  list-style: none;
+  text-align: start;
+  font-weight: bolder;
+  margin-left: -2.5rem;
+}
+
+.cohorts h3,
+.cohort h3 {
+  margin-bottom: 0px;
+}
+
+/* Right Side of App */
 .cohort-list {
   margin-left:4rem;
 }
