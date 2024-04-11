@@ -20,10 +20,10 @@ main {
   margin-right: 2rem;
 }
 
-/* .cohorts h3 {
+.cohorts h3 {
   text-align: start;
   font-weight: bolder;
-} */
+}
 
 .cohorts hr {
   border: 1.5px solid;
@@ -50,3 +50,36 @@ main {
 .cohort-list h3 {
   font-weight: lighter;
 }
+
+li {
+  list-style: none;
+}
+
+span {
+  color: #5C946E;
+  font-weight: 500;
+}
+
+.student-profile {
+  max-width: 90%;
+  display: flex;
+  border: 2px solid #5C946E;
+  padding: 2rem;
+  margin: 2rem 0rem;
+}
+
+.student-profile img {
+  width: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.student-info .student-info__name   {
+  font-weight: bolder;
+}
+
+.showMore {
+  text-decoration: underline;
+}
+
