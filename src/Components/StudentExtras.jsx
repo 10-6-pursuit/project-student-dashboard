@@ -24,6 +24,9 @@ export default function StudentExtras({
     assessments: assessment,
   } = scores;
 
+  //!Deconstruct certifications object
+  const{resume: isResume, linkedin: isLinked, github: isGithub, mockInterview: isMockInterview} = certifications
+
   return (
     <div className="extras">
       <div className="extra-info" key={studentID}>
@@ -69,16 +72,21 @@ export default function StudentExtras({
           <h3>Certifications:</h3>
           <ul>
             <li>
-              <span>Resume:</span>
+              {/* Pass Boolean argument and add emjoi according to true or false */}
+              <span>Resume: </span>
+              {isResume ? "✅" : "❌"}
             </li>
             <li>
-              <span>LinkedIn:</span>
+              <span>LinkedIn: </span>
+              {isLinked ? "✅" : "❌"}
             </li>
             <li>
-              <span>Mock Interview:</span>
+              <span>Mock Interview: </span>
+              {isMockInterview ? "✅" : "❌"}
             </li>
             <li>
-              <span>Github:</span>
+              <span>Github: </span>
+              {isGithub ? "✅" : "❌"}
             </li>
           </ul>
         </div>
