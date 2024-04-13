@@ -14,7 +14,7 @@ export default function CohortList({students}) {
           return (
             <StudentProfile
               key={student.id}
-              name= {`${student.names.preferredName} ${student.names.middleName} ${student.names.surname} `} //this might cause issues, it did
+              name= {`${student.names.preferredName} ${student.names.middleName} ${student.names.surname} `}
               username={student.username}
               dob={student.dob}
               image={student.profilePhoto}

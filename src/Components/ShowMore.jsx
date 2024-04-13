@@ -11,9 +11,8 @@ export default function ShowMore({student}) {
   }
 
   //!This is it: Found in stack overflow, kept getting error, on 'Objects are not valid as a react child'
-  //!Turn into an array 
-  const codewars = Object.keys(student.codewars).map(codewarsOpt => (codewarsOpt, student.codewars[codewarsOpt]));
-  console.log(codewars)
+  // const codewars = Object.keys(student.codewars).map(codewarsOpt => (codewarsOpt, student.codewars[codewarsOpt]));
+  // console.log(codewars)
 
   return (
     <div className="showMore">
