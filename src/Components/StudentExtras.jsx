@@ -5,9 +5,8 @@ export default function StudentExtras({
   codewars,
   certifications,
   scores,
-  notes
+  notes,
 }) {
-
   //Deconstruct codewars object
   const { current, goal } = codewars;
   const { total: currentTotal, lastWeek: currentLastWeek } = current;
@@ -23,7 +22,12 @@ export default function StudentExtras({
   } = scores;
 
   //Deconstruct certifications object
-  const{resume: isResume, linkedin: isLinked, github: isGithub, mockInterview: isMockInterview} = certifications
+  const {
+    resume: isResume,
+    linkedin: isLinked,
+    github: isGithub,
+    mockInterview: isMockInterview,
+  } = certifications;
 
   return (
     <div className="extras">
@@ -89,7 +93,7 @@ export default function StudentExtras({
           </ul>
         </div>
       </div>
-      <Note notes={notes}/>
+      <Note notes={notes} />
     </div>
   );
 }

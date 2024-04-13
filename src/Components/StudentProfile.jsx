@@ -28,9 +28,10 @@ export default function StudentProfile({
       <img src={image} alt="Profile Image" />
       <div className="student-info">
         <div className="student-name">
-          <h3 className="student-info__name">{name}
+          <h3 className="student-info__name">
+            {name}
             <span>
-            {isLinked && isGithub && isMockInterview && isResume
+              {isLinked && isGithub && isMockInterview && isResume
                 ? "On Track to Graduate"
                 : ""}
             </span>

@@ -1,7 +1,7 @@
 import StudentProfile from "./StudentProfile";
 
 // Make All Students h2 dynamic
-export default function CohortList({students, cohort}) {
+export default function Students({ students, cohort }) {
   return (
     <div className="cohort-list">
       <h2>{cohort}</h2>
@@ -13,7 +13,7 @@ export default function CohortList({students, cohort}) {
           return (
             <StudentProfile
               key={student.id}
-              name= {`${student.names.preferredName} ${student.names.middleName} ${student.names.surname} `}
+              name={`${student.names.preferredName} ${student.names.middleName} ${student.names.surname} `}
               username={student.username}
               dob={student.dob}
               image={student.profilePhoto}
@@ -24,9 +24,9 @@ export default function CohortList({students, cohort}) {
               scores={student.cohort.scores}
               notes={student.notes}
             />
-          )
+          );
         })}
       </ul>
     </div>
-  )
+  );
 }

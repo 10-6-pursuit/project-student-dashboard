@@ -73,10 +73,10 @@ export default function Note({ notes }) {
                   onChange={handleComment}
                 />
               </label>
-              <input 
+              <input
                 className="submit"
                 type="submit"
-                value="Add Note" 
+                value="Add Note"
                 onClick={handleClick}
               />
             </fieldset>

@@ -6,7 +6,7 @@ export default function ShowMore({
   codewars,
   certifications,
   scores,
-  notes
+  notes,
 }) {
   const [showMore, setShowMore] = useState(false);
 
