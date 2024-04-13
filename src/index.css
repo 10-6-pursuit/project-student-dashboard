@@ -7,7 +7,6 @@
 }
 
 body {
-  margin: 0px;
 }
 
 h2, h3, h4 {
@@ -30,8 +29,10 @@ header {
 }
 
 main {
+  margin: 20px;
   display: grid;
   grid-template-columns: 2fr 5fr;
+  column-gap: 20px;
 }
 
 .green {
