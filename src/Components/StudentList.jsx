@@ -6,17 +6,20 @@ export default function StudentList() {
       <span>
         <span className="green">Total Students: </span>numStudents
       </span>
-      <div className="student-card">
-        <div className="avatar" src="">avatar</div>
-        <h3>First M. Last</h3>
-        <span>studentEmail</span>
-        <br />
-        <span>
-          <span className="green">Birthday:</span> studentBirthday
-        </span>
-        <br />
-        <span className="green">Show More...</span>
-      </div>
+      <section className="student-card">
+        <div className="student-card-upper">
+          <div className="avatar" src="">avatar</div>
+          <div className="student-info">
+            <h3 className="student-name">First M. Last</h3>
+            <span>studentEmail</span>
+            <br />
+            <span>
+              <span className="green">Birthday:</span> studentBirthday
+            </span>
+          </div>
+          <span className="green detail-toggle">Show More...</span>
+        </div>
+      </section>
     </section>
 
   )

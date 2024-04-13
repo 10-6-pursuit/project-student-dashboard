@@ -2,3 +2,31 @@ main {
   display: grid;
   grid-template-columns: 2fr 5fr;
 }
+
+.green {
+  color: green;
+}
+
+.student-card {
+  border: 1px solid green;
+  padding: 20px;
+}
+
+.student-card-upper {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.avatar {
+  width: 75px;
+  aspect-ratio: 1;
+  background: gray;
+}
+
+.student-name {
+  margin: 0px;
+}
+
+.detail-toggle {
+  grid-column: 2 / span 1;
+}
