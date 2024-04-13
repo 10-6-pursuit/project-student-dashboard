@@ -21,4 +21,12 @@ Simple site design with the following elements
   - useState
   - lifting state
 
-##
+## Planning
+**Component Map**
+| Component | Parent | Children | Props Used | Props Passed |
+|---|---|---|---|---|
+| App | Index | Header, CohortList, StudentList | N/A | N/A |
+| Header | App | N/A | N/A | N/A |
+| CohortList | App | N/A | CohortList | N/A |
+| StudentList | App | Student | StudentList | N/A |
+| Student | App | N/A | StudentList | N/A |
