@@ -9,10 +9,12 @@ const { id, names:{ preferredName, middleName, surname }, userName, dob, profile
 
     return (
         <li>
-            { profilePhoto }
-            { preferredName }
-            { userName }
-            { dob }
+            <div>
+                <img src={ profilePhoto } alt="profilePhoto" />
+            </div>
+            <p>{ preferredName }</p>
+            <p>{ userName }</p>
+            <p>{ dob }</p>
             <a onClick={() => setShowMore(!showMore)} href="#">{showMore ? "Show Less" : "Show More"}</a>
             {showMore && <MoreInfo />}
         </li>
