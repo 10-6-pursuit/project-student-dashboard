@@ -1,6 +1,6 @@
 import Header from  './Components/Header.jsx'
 import CohortPanel from  './Components/CohortPanel.jsx'
-import StudentList from  './Components/StudentList.jsx'
+import StudentPanel from  './Components/StudentPanel.jsx'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Header />
       <main>
         <CohortPanel />
-        <StudentList />
+        <StudentPanel />
       </main>
     </>
   );
