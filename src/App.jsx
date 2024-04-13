@@ -4,8 +4,6 @@ import Header from "./Components/Header";
 import ListCohorts from "./Components/ListCohorts";
 import studentsData from "./data/data.json"
 
-//!Create a function for onClick, if user clicks on a specific cohort class, it should then show that cohorts data on the right side(inside our Cohort List Component)
-
 function App() {
   const [students, setStudents] = useState(studentsData);
   const [allStudents] = useState(studentsData);
