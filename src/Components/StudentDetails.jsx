@@ -1,11 +1,11 @@
+import Codewars from './Codewars.jsx'
+
 export default function StudentDetails() {
-  
+
   return (
     <section className="student-details">
       <div className="student-progress">
-        <div className="codewars">
-          <h4>CodeWars:</h4>
-        </div>
+        <Codewars />
         <div className="Scores">
           <h4>Scores:</h4>
         </div>
