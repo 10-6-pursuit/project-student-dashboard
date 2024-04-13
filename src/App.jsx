@@ -13,11 +13,12 @@ export default function App() {
     <div>
       <h1>Student Dashboard</h1>
       
+      <CohortList />
       <Students students={cohortList}/>
     
 
 
-      <CohortList />
+      
       {/* function cohortList () {
         const "names": {
           "preferredName": "Israel",
