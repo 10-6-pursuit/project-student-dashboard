@@ -10,21 +10,26 @@ export default function Note({ notes }) {
 
   //Handle Comment
 
+
   //Handle AddNotes
+
+  //Handle Reset Form
 
 
   //Handle Submit
   function handleSubmit(e) {
     e.preventDefault();
-    //Function to add Notes to existing Notes array
-    //Function to reset Input Fields
+    //Add rest function
   }
+
+
+  //Pass values for each input. Ex: note.commenter || note.comment
 
   return (
     <div className="note">
       <hr />
+        <h3 className="note-title">1-on-1 Notes</h3>
       <section className="form-note">
-        <h3>1-on-1 Notes</h3>
         <form onSubmit={handleSubmit}>
           <div className="inputs">
             <fieldset>
@@ -49,8 +54,7 @@ export default function Note({ notes }) {
                   // onChange={handleComment}
                 />
               </label>
-
-              <button>Add Note</button>
+              <input className="submit" type="submit" value="Add Note"/>
             </fieldset>
           </div>
         </form>

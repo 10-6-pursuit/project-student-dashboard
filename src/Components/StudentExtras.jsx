@@ -7,8 +7,6 @@ export default function StudentExtras({
   scores,
   notes
 }) {
-  //!Need state type boolean for the certifications
-  //!Need a function to decide what emoji to add depending if certification: if true add check, if false add x
 
   //Deconstruct codewars object
   const { current, goal } = codewars;
@@ -24,7 +22,7 @@ export default function StudentExtras({
     assessments: assessment,
   } = scores;
 
-  //!Deconstruct certifications object
+  //Deconstruct certifications object
   const{resume: isResume, linkedin: isLinked, github: isGithub, mockInterview: isMockInterview} = certifications
 
   return (

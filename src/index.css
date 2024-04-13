@@ -125,13 +125,17 @@ span {
 }
 
 
-.note button {
+.note .submit {
   background: #5C946E;
   border-radius: 5px;
+  text-align: center;
   color: white;
   text-decoration: none;
   padding: 5px 0px;
-  width: 20%;
+  width: 85px;
+  border: none;
+  margin-left: -3px;
+  font-weight: bold;
 }
 
 .form-note {
@@ -148,7 +152,8 @@ fieldset {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 0rem;
+
 }
 
 fieldset input {
@@ -159,4 +164,20 @@ fieldset input {
 .note li {
   margin-top: 1rem;
   list-style: disc;
+}
+
+.student-info {
+  display: block;
+  width: 100%;
+}
+/* Style for on Track */
+.student-info__name span {
+  /* margin-left: 10rem; */
+  float: right;
+}
+
+.note .note-title {
+  display: block;
+  width: 100%;
+  text-align: start;
 }
