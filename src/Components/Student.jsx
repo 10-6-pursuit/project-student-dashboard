@@ -1,3 +1,5 @@
+import StudentDetails from './StudentDetails.jsx'
+
 export default function Student() {
 
   return (
@@ -15,15 +17,7 @@ export default function Student() {
         <span>On Track to Graduate</span>
         <span className="green detail-toggle">Show More...</span>
       </div>
-      <section className="details-section">
-        <div className="student-details">
-          Student Details
-        </div>
-        <hr className="green"/>
-        <div className="student-notes">
-          1-On-1 Notes
-        </div>
-      </section>
+        <StudentDetails />
     </section>
   )
 }
