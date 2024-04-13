@@ -5,7 +5,7 @@ export default function StudentList({students}) {
         <>
             <p>StudentList</p>
             <ul>
-                {students.map((student) => <Student student={student} /> 
+                {students.map((student) => <Student student={student} key={student.id}/> 
                 )}
             </ul>
         </>
