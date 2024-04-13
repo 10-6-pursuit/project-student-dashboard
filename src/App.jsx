@@ -1,10 +1,11 @@
 import Header from  './Components/Header.jsx'
+import CohortList from  './Components/CohortList.jsx'
 function App() {
   return (
     <>
       <Header />
       <main>
-        <section className="cohort-list">cohortList</section>
+        <CohortList />
         <section className="student-list">studentList</section>
       </main>
     </>
