@@ -23,6 +23,7 @@ export default function CohortList({students}) {
               codewars={student.codewars}
               certifications={student.certifications}
               scores={student.cohort.scores}
+              notes={student.notes}
             />
           )
         })}

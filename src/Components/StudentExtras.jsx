@@ -1,8 +1,11 @@
+import Note from "./Note";
+
 export default function StudentExtras({
   studentID,
   codewars,
   certifications,
   scores,
+  notes
 }) {
   //!Need state type boolean for the certifications
   //!Need a function to decide what emoji to add depending if certification: if true add check, if false add x
@@ -80,31 +83,7 @@ export default function StudentExtras({
           </ul>
         </div>
       </div>
-      <div className="note">
-        {/* move hr up if not shown */}
-        <hr />
-        <section className="form-note">
-          <h3>1-on-1 Notes</h3>
-          <form action="">
-            <div className="inputs">
-              <fieldset>
-                <label htmlFor="comment-name">Comment Name
-                  <input type="text" id="comment-name"name="comment-name" />
-                </label>
-
-                <label htmlFor="comment">Comment
-                  <input type="text" id="comment" name="comment" />
-                </label>
-
-                <button>Add Note</button>
-              </fieldset>
-            </div>
-          </form>
-        </section>
-        <ul>
-          <li>Add Note Here</li>
-        </ul>
-      </div>
+      <Note notes={notes}/>
     </div>
   );
 }
