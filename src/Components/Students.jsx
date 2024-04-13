@@ -1,6 +1,5 @@
 import StudentProfile from "./StudentProfile";
 
-// Make All Students h2 dynamic
 export default function Students({ students, cohort }) {
   return (
     <div className="cohort-list">

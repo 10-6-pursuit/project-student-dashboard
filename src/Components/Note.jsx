@@ -1,16 +1,12 @@
 import { useState } from "react";
 
 export default function Note({ notes }) {
-  //Got the student notes, now le'ts add state to it to update it when we submit our note form
-  // console.log(notes)
-  //Pass Notes props as state to update, allowing to add more notes
 
   const [studentNote, setStudentNote] = useState(notes);
   const [newCommenter, setNewCommenter] = useState("");
   const [newComment, setNewComment] = useState("");
-  //!Now When creating a new note from form add that our our studentNote by adding it to our setStudentNote.
 
-  //!Steps: Get input values and pass this to a new object and push that to our Notes array, remember to copy it.
+
   //Handle Commenter
   function handleClick(e) {
     setStudentNote([
@@ -31,18 +27,16 @@ export default function Note({ notes }) {
     setNewComment(e.target.value);
   }
 
-  //Handle AddNotes
 
-  //Handle Reset Form
-  function resetForm() {}
-
-  //Handle Submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    // resetForm();
+  function resetForm() {
+    setNewCommenter(""),
+    setNewComment("");
   }
 
-  //Pass values for each input. Ex: note.commenter || note.comment
+  function handleSubmit(e) {
+    e.preventDefault();
+    resetForm();
+  }
 
   return (
     <div className="note">

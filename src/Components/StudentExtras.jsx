@@ -7,21 +7,18 @@ export default function StudentExtras({
   scores,
   notes,
 }) {
-  //Deconstruct codewars object
   const { current, goal } = codewars;
   const { total: currentTotal, lastWeek: currentLastWeek } = current;
   const { total: goalTotal, lastWeek: goalLastWeek } = goal;
 
   const percentGoal = Math.round((currentTotal / goalTotal) * 100);
 
-  // Deconstruct scores object
   const {
     assignments: assignment,
     projects: project,
     assessments: assessment,
   } = scores;
 
-  //Deconstruct certifications object
   const {
     resume: isResume,
     linkedin: isLinked,

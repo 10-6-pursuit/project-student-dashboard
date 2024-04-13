@@ -12,16 +12,12 @@ export default function StudentProfile({
   scores,
   notes,
 }) {
-  //Do the destructuring for Certifications here as well:
-  //Deconstruct certifications object
   const {
     resume: isResume,
     linkedin: isLinked,
     github: isGithub,
     mockInterview: isMockInterview,
   } = certifications;
-
-  //Create function that will display an h1 element with text "On Track to Graduate if all certifications are true"
 
   return (
     <li className="student-profile">

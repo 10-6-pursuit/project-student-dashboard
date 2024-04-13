@@ -13,11 +13,6 @@ export default function ShowMore({
   function toggleShowMore() {
     setShowMore(!showMore);
   }
-  // Okay, I got the notes arrays for each student.
-  // console.log(certifications)
-
-  // const codewars = Object.keys(student.codewars).map(codewarsOpt => (codewarsOpt, student.codewars[codewarsOpt]));
-  // console.log(codewars)
 
   return (
     <div className="showMore">
