@@ -1,4 +1,4 @@
-import Student from './Student.jsx'
+import Students from './Students.jsx'
 
 export default function StudentPanel() {
 
@@ -6,9 +6,9 @@ export default function StudentPanel() {
     <section className="student-list">
       <h2>Selected Cohort Name</h2>
       <span>
-        <span className="green">Total Students: </span>numStudents
+        <span className="green">Total Students: </span>#STUDENTS
       </span>
-      <Student />
+      <Students />
     </section>
   )
 }

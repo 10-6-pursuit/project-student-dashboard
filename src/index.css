@@ -47,8 +47,15 @@ main {
   margin-left: 20px;
 }
 
+.student-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .student-card {
   border: 1px solid var(--green);
+  margin: 20px 0;
   padding: 20px;
 }
 

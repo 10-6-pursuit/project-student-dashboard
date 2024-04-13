@@ -3,7 +3,7 @@ export default function NoteForm() {
   return(
     <form className="notes-form">
       <fieldset>
-        <label htmlFor="commenter-name">Commenter Name: </label>
+        <label htmlFor="commenterName">Commenter Name: </label>
         <input type="text" id="commenterName" required/>
         <br />
         <label htmlFor="comment">Commenter: </label>
