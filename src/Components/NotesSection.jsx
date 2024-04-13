@@ -6,7 +6,10 @@ export default function NotesSection() {
 
   return (
     <div className="student-notes">
-      1-On-1 Notes
+      <h3>1-On-1 Notes</h3>
+      <span>
+        Total Notes: <span className="green">#NOTES</span>
+      </span>
       <NoteForm />
       <Notes />
     </div>

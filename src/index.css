@@ -1,10 +1,26 @@
+:root {
+  --green: #5ba769;
+}
+
+* {
+  font-family: sans-serif;
+}
+
 body {
   margin: 0px;
 }
 
+h2, h3, h4 {
+  margin: 0 0 10px 0;
+}
+
+hr {
+ border-top: 2px solid var(--green);
+}
+
 header {
   height: 75px;
-  background: lightgreen;
+  background: var(--green);
   align-content: center;
 }
 
@@ -19,11 +35,11 @@ main {
 }
 
 .green {
-  color: green;
+  color: var(--green);
 }
 
 .student-card {
-  border: 1px solid green;
+  border: 1px solid var(--green);
   padding: 20px;
 }
 
@@ -49,4 +65,15 @@ main {
 .student-progress {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+button {
+  color: white;
+  background: var(--green);
+  border: none;
+  border-radius: 3px;
 }
