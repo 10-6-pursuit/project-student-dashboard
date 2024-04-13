@@ -45,3 +45,8 @@ main {
 .detail-toggle {
   grid-column: 2 / span 1;
 }
+
+.student-progress {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
