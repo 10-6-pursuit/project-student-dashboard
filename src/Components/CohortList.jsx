@@ -4,7 +4,7 @@ import StudentProfile from "./StudentProfile";
 export default function CohortList({students, cohort}) {
   return (
     <div className="cohort-list">
-      <h2>All Students{cohort}</h2>
+      <h2>{cohort}</h2>
       <h3>
         Total Students: <span>{students.length}</span>
       </h3>

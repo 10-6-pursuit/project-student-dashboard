@@ -8,12 +8,14 @@ function App() {
   const [students, setStudents] = useState(studentsData);
   const [allStudents] = useState(studentsData);
   
+  //Add state for cohort that captures that cohort
+  const [cohort, setCohort] = useState("All Students")
   return (
     <>
       <Header />
       <main>
-        <ListCohorts students={students} setStudents={setStudents} allStudents={allStudents}/>
-        <CohortList students={students} setStudents={setStudents}/>
+        <ListCohorts students={students} setStudents={setStudents} allStudents={allStudents} setCohort={setCohort} />
+        <CohortList students={students} setStudents={setStudents} cohort={cohort}/>
       </main>
     </>
   );
