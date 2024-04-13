@@ -1,8 +1,8 @@
-
+import Header from  './Components/Header.jsx'
 function App() {
   return (
     <div>
-      <h1>Student Dashboard</h1>
+      <Header />
     </div>
   );
 }
