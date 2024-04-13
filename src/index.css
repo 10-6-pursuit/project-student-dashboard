@@ -1,3 +1,18 @@
+body {
+  margin: 0px;
+}
+
+header {
+  height: 75px;
+  background: lightgreen;
+  align-content: center;
+}
+
+.site-header {
+  margin: 0px;
+  text-align: center;
+}
+
 main {
   display: grid;
   grid-template-columns: 2fr 5fr;
@@ -14,7 +29,7 @@ main {
 
 .student-card-upper {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 100px 3fr 1fr;
 }
 
 .avatar {
