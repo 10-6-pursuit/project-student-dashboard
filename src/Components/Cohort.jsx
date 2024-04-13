@@ -1,4 +1,4 @@
-export default function Cohort({cohort, students, setStudents, allStudents}) {
+export default function Cohort({cohort, setStudents, allStudents}) {
 
   function handleClick(e) {
     const text = e.target.textContent.replace(" ", "");

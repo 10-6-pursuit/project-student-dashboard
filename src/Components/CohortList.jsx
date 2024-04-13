@@ -19,6 +19,10 @@ export default function CohortList({students}) {
               dob={student.dob}
               image={student.profilePhoto}
               student={student}
+              //Key into extras
+              codewars={student.codewars}
+              certifications={student.certifications}
+              scores={student.cohort.scores}
             />
           )
         })}

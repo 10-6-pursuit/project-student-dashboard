@@ -1,6 +1,14 @@
-export default function StudentExtras({studentID}) {
+export default function StudentExtras({studentID, codewars, certifications, scores}) {
   //!Need state type boolean for the certifications
   //!Need a function to decide what emoji to add depending if certification: if true add check, if false add x
+
+  //Deconstruct codewars object
+  const {current, goal} = codewars;
+  const {total: currentTotal, lastWeek: currentLastWeek} = current;
+  const {total: goalTotal, lastWeek: goalLastWeek} = goal;
+
+ const percentGoal = Math.round(((currentTotal / goalTotal) * 100));
+
 
   return (
     //! For Each ul pass along the data as props
@@ -9,10 +17,10 @@ export default function StudentExtras({studentID}) {
       <div className="codewars">
         <h3>CodeWars:</h3>
         <ul>
-          <li><span>Current Total:</span></li>
-          <li><span>Last Week:</span></li>
-          <li><span>Goal:</span></li>
-          <li><span>Percent of Goal Achieved:</span></li>
+          <li><span>Current Total: </span>{currentTotal}</li>
+          <li><span>Last Week: </span>{currentLastWeek}</li>
+          <li><span>Goal: </span>{goalTotal}</li>
+          <li><span>Percent of Goal Achieved: </span>{percentGoal}%</li>
         </ul>
       </div>
 

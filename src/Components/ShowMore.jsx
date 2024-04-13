@@ -1,7 +1,7 @@
 import { useState } from "react";
 import StudentExtras from "./StudentExtras";
 
-export default function ShowMore({student}) {
+export default function ShowMore({student, codewars, certifications, scores}) {
   const [showMore, setShowMore] = useState(false);
 
   // //!Create variable that will hold the codewars, scores, and certification info of each student. 
@@ -24,7 +24,7 @@ export default function ShowMore({student}) {
 
       {showMore ? (
         <div className="student-info__moreInfo">
-          <StudentExtras studentID={student.id}/>
+          <StudentExtras studentID={student.id} codewars={codewars} certifications={certifications} scores={scores}/>
         </div>
       ): null}
     </div>
