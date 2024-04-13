@@ -1,8 +1,10 @@
 .main {
     display: flex;
+    margin: 20px;
+    padding: 20px;
 }
 
-h2 {
+#btn-title {
     padding: 20px;
     text-align: center;
 }

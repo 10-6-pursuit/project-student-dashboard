@@ -38,7 +38,7 @@ export default function StudentList({ filter }) {
   return (
     <div>
       <h2 id="list-title">{filter ? `Students in ${filter}` : "All Students"}</h2>
-      <p>Total Students: {filteredData.length}</p>
+      <p id="list-total">Total Students: {filteredData.length}</p>
       {filteredData.map((item) => (
         <div key={item.id} className="card">
           <img

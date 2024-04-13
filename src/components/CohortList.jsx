@@ -16,7 +16,7 @@ export default function FilterButtons() {
   return (
     <div className="main">
       <div className="container">
-        <h2>{filter ? `Showing ${filter}` : "Choose a Class by Start Date"}</h2>
+        <h2 id="btn-title">{filter ? `Showing ${filter}` : "Choose a Class by Start Date"}</h2>
         <button className="filter-btn" onClick={handleShowAll}>All Students</button>
         <button className="filter-btn" onClick={() => handleFilter("Winter2026")}>Winter 2026</button>
         <button className="filter-btn" onClick={() => handleFilter("Fall2026")}>Fall 2026</button>
