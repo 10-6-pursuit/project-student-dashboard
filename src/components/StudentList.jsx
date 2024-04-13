@@ -30,16 +30,16 @@ export default function StudentList({ filter }) {
     return `${month} ${day}, ${year}`;
   }
 
-  const filterStudents = (student) => {
+  const filteredData = data.filter((student) => {
     if (!filter) return true;
-    return student.cohort.cohortCode
-      .toLowerCase()
-      .includes(filter.toLowerCase());
-  };
+    return student.cohort.cohortCode.toLowerCase().includes(filter.toLowerCase());
+  });
 
   return (
     <div>
-      {data.filter(filterStudents).map((item) => (
+      <h2 id="list-title">{filter ? `Students in ${filter}` : "All Students"}</h2>
+      <p>Total Students: {filteredData.length}</p>
+      {filteredData.map((item) => (
         <div key={item.id} className="card">
           <img
             src={item.profilePhoto}

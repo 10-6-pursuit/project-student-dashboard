@@ -15,6 +15,10 @@ h3, p {
     margin: 9px;
 }
 
+#list-title {
+    text-align: left;
+}
+
 #show-more-btn {
     text-align: left;
     margin: 2px;
