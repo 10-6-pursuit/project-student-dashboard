@@ -1,9 +1,24 @@
 .main {
     display: flex;
-    grid-template-columns: 1fr 3fr;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    margin-right: 100px;
+}
+
+.filter-btn {
+    width: 500px;
+    text-align: left;
+    margin-bottom: 15px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid #67a35f;
+    height: 40px;
+}
+
+.filter-btn:hover {
+    cursor: pointer;
+    background-color: lightgrey;
 }
