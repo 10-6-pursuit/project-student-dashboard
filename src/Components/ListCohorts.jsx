@@ -4,7 +4,8 @@ import cohortsData from "../data/cohorts";
 export default function ListCohorts({students, setStudents, allStudents, setCohort}) {
 
   function showAll() {
-    setStudents(allStudents)
+    setStudents(allStudents);
+    setCohort("All Students")
   }
 
   return (
