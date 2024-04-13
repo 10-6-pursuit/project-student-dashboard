@@ -1,7 +1,7 @@
 import Cohort from "./Cohort";
 import cohortsData from "../data/cohorts";
 
-export default function ListCohorts({students, setStudents}) {
+export default function ListCohorts({students, setStudents, allStudents}) {
   return (
     <div className="cohorts">
       <h2>Choose a Class by Start Date</h2>
@@ -10,7 +10,7 @@ export default function ListCohorts({students, setStudents}) {
       <ul className="cohorts-season">
       {cohortsData.map((cohort, index) => {
         return (
-          <Cohort key={index} cohort={cohort} students={students} setStudents={setStudents}/>
+          <Cohort key={index} cohort={cohort} students={students} setStudents={setStudents} allStudents={allStudents}/>
         )
       })}
       </ul>
