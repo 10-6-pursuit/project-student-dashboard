@@ -1,10 +1,13 @@
 import Student from "./Student.jsx";
 
-export default function StudentList() {
+export default function StudentList({students}) {
     return (
         <>
             <p>StudentList</p>
-            <Student />
+            <ul>
+                {students.map((student) => <Student student={student} /> 
+                )}
+            </ul>
         </>
     )
 }
