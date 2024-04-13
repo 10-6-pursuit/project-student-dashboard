@@ -39,6 +39,14 @@ main {
   color: var(--green);
 }
 
+.cohort-list h2 {
+  text-align: center;
+}
+
+.cohort-name {
+  margin-left: 20px;
+}
+
 .student-card {
   border: 1px solid var(--green);
   padding: 20px;

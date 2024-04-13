@@ -4,11 +4,11 @@ export default function CohortList() {
     <section className="cohort-list">
       <h2>Choose a Class by Start Date</h2>
       <p>(all cohorts most recent to less recent)</p>
-      <h3>cohort 1</h3>
+      <h3 className="cohort-name">cohort 1</h3>
       <hr />
-      <h3>cohort 2</h3>
+      <h3 className="cohort-name">cohort 2</h3>
       <hr />
-      <h3>cohort 3</h3>
+      <h3 className="cohort-name">cohort 3</h3>
       <hr />
     </section>
 
