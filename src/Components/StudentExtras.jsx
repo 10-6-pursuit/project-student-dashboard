@@ -9,7 +9,9 @@ export default function StudentExtras({studentID, codewars, certifications, scor
 
  const percentGoal = Math.round(((currentTotal / goalTotal) * 100));
 
-
+  // Deconstruct scores object
+  const {assignments: assignment, projects: project, assessments: assessment} = scores;
+  
   return (
     //! For Each ul pass along the data as props
     <div className="extra-info" key={studentID}>
@@ -27,9 +29,9 @@ export default function StudentExtras({studentID, codewars, certifications, scor
       <div className="scores">
         <h3>Scores</h3>
         <ul>
-          <li><span>Assignment:</span></li>
-          <li><span>Projects:</span></li>
-          <li><span>Assessments:</span></li>
+          <li><span>Assignment: </span>{assignment * 100}%</li>
+          <li><span>Projects: </span>{project * 100}%</li>
+          <li><span>Assessments:</span>{assessment * 100}%</li>
         </ul>
       </div>
 
