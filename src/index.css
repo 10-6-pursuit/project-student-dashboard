@@ -1,3 +1,8 @@
+html {
+  overscroll-behavior: none;
+}
+
+
 .header {
   background-color: #5C946E;
   color: white;

@@ -12,6 +12,14 @@ export default function StudentProfile({
   scores,
   notes,
 }) {
+
+  const date = new Date(dob)
+  const formatted = date.toLocaleDateString("en", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  })
+
   const {
     resume: isResume,
     linkedin: isLinked,
@@ -35,7 +43,7 @@ export default function StudentProfile({
         </div>
         <h3>{username}</h3>
         <h3>
-          <span>Birthday:</span> {dob}
+          <span>Birthday:</span> {formatted}
         </h3>
         <ShowMore
           student={student}
