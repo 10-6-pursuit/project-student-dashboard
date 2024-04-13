@@ -1,8 +1,9 @@
-export default function CohortList({cohortSelection}) {
+export default function CohortList({cohortSelection, handleCohortChange}) {
+
     return (
         <div>
-            <h2>Choose A Class by Start Date</h2>
-            {cohortSelection.map(cohort => <li>{cohort}</li>)}
+            <h3>Choose A Class by Start Date</h3>
+            {cohortSelection.map((cohort,i) => <li key={i}><input type="button" onClick={handleCohortChange} value={cohort} /></li>)}
         </div>
     )
 }

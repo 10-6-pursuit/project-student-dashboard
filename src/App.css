@@ -1,0 +1,15 @@
+
+header {
+    background: green;
+    font-family: sans-serif
+}
+main {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    font-family: monospace;
+}
+
+ul {
+    padding: 0px
+}

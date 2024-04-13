@@ -1,6 +1,8 @@
 export default function Header() {
 
     return (
-        <h1>Student Dashboard</h1>
+        <header>
+            <h1>Student Dashboard</h1>
+        </header>
     )
 };
