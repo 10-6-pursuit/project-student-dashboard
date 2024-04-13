@@ -11,9 +11,8 @@ export default function StudentExtras({studentID, codewars, certifications, scor
 
   // Deconstruct scores object
   const {assignments: assignment, projects: project, assessments: assessment} = scores;
-  
+
   return (
-    //! For Each ul pass along the data as props
     <div className="extra-info" key={studentID}>
 
       <div className="codewars">
@@ -43,6 +42,26 @@ export default function StudentExtras({studentID, codewars, certifications, scor
           <li><span>Mock Interview:</span></li>
           <li><span>Github:</span></li>
         </ul>
+      </div>
+      <hr/>
+      <div className="note">
+      <h3>1-on-1 Notes</h3>
+        <div className="inputs">
+          <label htmlFor="comment-name">
+            Comment Name
+            <input type="text" id="comment-name" name="comment-name"/>
+          </label>
+
+          <label htmlFor="comment">
+            Comment
+            <input type="text" id="comment" name="comment"/>
+          </label>
+
+          <button>Add Note</button>
+
+          //!Below Here add a Component Called Notes that will get the value of the inputs and place them here as a ul
+
+        </div>
       </div>
 
     </div>
