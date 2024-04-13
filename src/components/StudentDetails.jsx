@@ -3,7 +3,7 @@ import "/src/components/StudentDetails.css"
 
 export default function StudentDetails({student}) {
 
-    const [notes, setNotes] = useState(student.notes)
+    const [notes, setNotes] = useState([])
 
     const [comments, setComments] = useState({
         commenter: "",
@@ -16,7 +16,7 @@ export default function StudentDetails({student}) {
 
     function addNotes(e) {
         e.preventDefault()
-        setNotes([...notes, comments])
+        setNotes([...notes,comments])
         setComments({
             commenter: "",
             comment: ""
@@ -42,25 +42,26 @@ export default function StudentDetails({student}) {
                 <div className="studentDetails__card">
                     <div className="studentDetails__card-codewars">
                         <h3>Codewars:</h3>
-                        <div><span>Current Total:</span>{student.codewars.current.total}</div>
-                        <div><span>Last Week:</span>{student.codewars.current.lastWeek}</div>
-                        <div><span>Goal:</span>{student.codewars.goal.total}</div>
-                        <div><span>Percent of Goal Achieved:</span>{Math.round(student.codewars.current.total/student.codewars.goal.total * 100)}%</div>
+                        <div><span>Current Total:</span> {student.codewars.current.total}</div>
+                        <div><span>Last Week:</span> {student.codewars.current.lastWeek}</div>
+                        <div><span>Goal:</span> {student.codewars.goal.total}</div>
+                        <div><span>Percent of Goal Achieved:</span> {Math.round(student.codewars.current.total/student.codewars.goal.total * 100)}%</div>
                     </div>
                     <div className="studentDetails__card-score">
-                        <h3>Score</h3>
-                        <div><span>Assignments:</span>{student.cohort.scores.assignments}</div>
-                        <div><span>Projects:</span>{student.cohort.scores.projects}</div>
-                        <div><span>Assessments:</span>{student.cohort.scores.assessments}</div>
+                        <h3>Scores</h3>
+                        <div><span>Assignments:</span> {student.cohort.scores.assignments * 100}%</div>
+                        <div><span>Projects:</span> {student.cohort.scores.projects * 100}%</div>
+                        <div><span>Assessments:</span> {student.cohort.scores.assessments * 100}%</div>
                     </div>
                     <div className="studentDetails__card-certification">
-                        <h3>Certification</h3>
-                        <div><span>Resume:</span>{student.certifications.resume ? "✅" : "❌"}</div>
-                        <div><span>LinkedIn:</span>{student.certifications.linkedin ? "✅" : "❌"}</div>
-                        <div><span>Mock Interview:</span>{student.certifications.mockInterview ? "✅" : "❌"}</div>
-                        <div><span>Github:</span>{student.certifications.github ? "✅" : "❌"}</div>
+                        <h3>Certifications</h3>
+                        <div><span>Resume:</span> {student.certifications.resume ? "✅" : "❌"}</div>
+                        <div><span>LinkedIn:</span> {student.certifications.linkedin ? "✅" : "❌"}</div>
+                        <div><span>Mock Interview:</span> {student.certifications.mockInterview ? "✅" : "❌"}</div>
+                        <div><span>Github:</span> {student.certifications.github ? "✅" : "❌"}</div>
                     </div>
                 </div>
+                <hr />
                 <div className="studentDetails__form">
                     <p>1 on 1 Notes</p>
                     <form onSubmit={addNotes}>
@@ -70,7 +71,9 @@ export default function StudentDetails({student}) {
                         <label>Comment<input onChange={handleTextChange} type="text" id="comment" value={comments.comment} />
                         </label>
                         <br />
-                        <input type="submit" value="Add Note" />
+                        <div className="studentDetails__form-button-container">
+                        <input className="studentDetails__form-button" type="submit" value="Add Note" />
+                        </div>
                     </form>
                     <ul>
                         {notes.map(ele => <li>{ele.commenter} says, "{ele.comment}"</li>)}

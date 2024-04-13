@@ -4,6 +4,15 @@
     padding: 0px 20px;
     padding-bottom: 40px;
     margin-top: -20px;
+    li {
+        margin-left: 20px;
+    }
+
+    input {
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+    
 }
 .studentDetails__showMoreButton {
     display: grid;
@@ -16,6 +25,7 @@
 
 }
 .studentDetails__card {
+    padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     div {
@@ -37,4 +47,15 @@ form {
     margin-bottom: 20px;
 }
 
+.studentDetails__form-button-container {
+    margin-left: -10px;
+}
 
+.studentDetails__form-button{
+    margin-top: 10px;
+    color: white;
+    background: green;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}

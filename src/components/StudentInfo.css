@@ -5,7 +5,7 @@
 
 .studentInfo__card-top {
     font-family: sans-serif;
-    padding: 20px;
+    padding: 30px;
     display: grid;
     align-items: center;
     grid-template-columns: 20% 50% 30%;
@@ -20,11 +20,11 @@
       grid-column: 2 / 3;
       color: black;
       margin: 12px 0px;
-      padding-left: 20px;
+      padding-left: 10px;
     }
     
     img {
-      width: 100%;
+      width: 90%;
       grid-column: 1 / 2;
       border-radius: 3px;
     }
@@ -40,3 +40,7 @@
     }
   }
 
+  .studentInfo__card-fullName {
+    font-weight: 900;
+    font-size: 1.3em;
+  }
