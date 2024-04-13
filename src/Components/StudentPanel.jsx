@@ -1,6 +1,6 @@
 import Student from './Student.jsx'
 
-export default function StudentList() {
+export default function StudentPanel() {
 
   return (
     <section className="student-list">
