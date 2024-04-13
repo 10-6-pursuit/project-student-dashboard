@@ -18,7 +18,7 @@ To complete this project, you will need to build a React application that meets 
 
 #### Overall requirements
 
-1. The front-end application should be successfully deployed to the web.
+1. The front-end application should be successfully deployed to the web. "NETLIFY"
 1. Your front-end repository should have a `readme.md` file with setup instructions for your application. It should also include a link to your deployed application.
 
 #### Front-end feature requirements
@@ -31,10 +31,10 @@ To complete the front-end application, you will need to build a React applicatio
    - The student has a LinkedIn certification (e.g. `certifications.linkedin` is `true`).
    - The student has a GitHub certification (e.g. `certifications.github` is `true`).
    - The student has a mock interview certification (e.g. `certifications.mockInterview` is `true`).
-   - The student has a current CodeWars score that is over 600.
+   - The student has a current CodeWars score that is over 600.  "USE &&"
 1. **Additional student details.** Include a link or button on each student's profile that hides and shows additional information when clicked. This feature should include the following:
-   - The text of the button changes depending on whether it is open or closed.
-   - Opening the details section for one student does not open it for every other student.
+   - The text of the button changes depending on whether it is open or closed. "SHOW MORE / SHOW LESS"
+   - Opening the details section for one student does not open it for every other student. "MEANING ON EACH STUDENT"
    - The details section includes the percentages for all scores, properly formatted as percentages.
    - The details section includes whether or not the student has received certain certifications. Instead of showing "true" or "false" for certifications, show an emoji or icon depending on the certification status.
 1. **1-on-1 section.** Create a section in the student details section that contains information about a student's 1-on-1 with an instructor. To complete this feature, the following should be true:

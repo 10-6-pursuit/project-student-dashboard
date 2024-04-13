@@ -1,8 +1,13 @@
 
 function App() {
   return (
-    <div>
+    <div className="App">
+      <Header />
       <h1>Student Dashboard</h1>
+      <main>
+      <CohortList />
+      <StudentList />  
+      </main>
     </div>
   );
 }
