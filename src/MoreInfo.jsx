@@ -3,8 +3,6 @@ import OneOnOne from "./OneOnOne.jsx";
 
 export default function MoreInfo({student, notes, scores, certifications, codewars}) {
 
-    // const { resume, linkedin, github, mockInterview } = certifications;
-console.log(certifications);
 
     return (
         <div>
@@ -24,10 +22,10 @@ console.log(certifications);
             <br />
             Certifications <br />
             <ul>
-                <li>Resume: {certifications.resume}</li>
-                <li>LinkedIn: {certifications.linkedin}</li>
-                <li>Mock Interview: {certifications.mockInterview}</li>
-                <li>Github: {certifications.github}</li>
+                <li>Resume: {certifications.resume ? "✅" : "❌"}</li>
+                <li>LinkedIn: {certifications.linkedin ? "✅" : "❌"}</li>
+                <li>Mock Interview: {certifications.mockInterview ? "✅" : "❌"}</li>
+                <li>Github: {certifications.github ? "✅" : "❌"}</li>
             </ul>
             <OneOnOne notes={notes} />
         </div>

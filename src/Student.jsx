@@ -9,16 +9,19 @@ const { notes, certifications, cohort:{scores}, codewars, id, names:{ preferredN
 
 const {assignments, projects, assessments} = scores;
 
+function handleShowMore(e) {
+    e.preventDefault();
+    setShowMore(!showMore);
+}
+
 
     return (
         <li>
-            <div>
-                <img src={ profilePhoto } alt="profilePhoto" />
-            </div>
+            <img src={ profilePhoto } alt="profilePhoto" />
             <p>{ preferredName }</p>
             <p>{ userName }</p>
             <p>{ dob }</p>
-            <a onClick={() => setShowMore(!showMore)} href="#">{showMore ? "Show Less" : "Show More"}</a>
+            <a onClick={handleShowMore} href="#">{showMore ? "Show Less" : "Show More"}</a>
             {showMore && <MoreInfo certifications={certifications} scores={scores} codewars={codewars} notes={notes} student={student} />} 
         </li>
     )
