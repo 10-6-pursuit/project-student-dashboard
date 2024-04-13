@@ -2,7 +2,7 @@ import React from "react";
 import data from "/src/data/data.json";
 import "/src/styles/StudentList.css";
 
-export default function StudentList() {
+export default function StudentList({ filter }) {
   const middleInitial = (str) => `${str[0]}.`;
 
   function formatDate(inputDate) {
@@ -30,9 +30,16 @@ export default function StudentList() {
     return `${month} ${day}, ${year}`;
   }
 
+  const filterStudents = (student) => {
+    if (!filter) return true;
+    return student.cohort.cohortCode
+      .toLowerCase()
+      .includes(filter.toLowerCase());
+  };
+
   return (
     <div>
-      {data.map((item) => (
+      {data.filter(filterStudents).map((item) => (
         <div key={item.id} className="card">
           <img
             src={item.profilePhoto}
@@ -48,7 +55,7 @@ export default function StudentList() {
               <span>Birthday: </span>
               {formatDate(item.dob)}
             </p>
-            <button>Show More...</button>
+            <button id="show-more-btn">Show More...</button>
           </div>
         </div>
       ))}

@@ -15,7 +15,7 @@ h3, p {
     margin: 9px;
 }
 
-button {
+#show-more-btn {
     margin: 9px;
     margin-top: 20px;
     text-decoration: underline;
@@ -26,7 +26,7 @@ button {
     padding: 0;
 }
 
-button:hover {
+#show-more-btn:hover {
     color: #477041;
     text-decoration-color: #477041;
     cursor: pointer;

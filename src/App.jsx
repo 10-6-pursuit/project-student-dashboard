@@ -1,11 +1,11 @@
 import React from "react";
-import StudentList from "./components/StudentList";
+import CohortList from "./components/CohortList";
 
 function App() {
   return (
     <div>
       <h1>Student Dashboard</h1>
-      <StudentList />
+      <CohortList />
     </div>
   );
 }
