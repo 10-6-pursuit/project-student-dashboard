@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 export default function Note({ notes }) {
-
+  //Got the student notes, now le'ts add state to it to update it when we submit our note form
+  console.log(notes)
   //Pass Notes props as state to update, allowing to add more notes
-  // const [useNote, setUseNotes] = useState(notes);
 
+  const[newNote, setNewNote] = useState(notes);
 
   //Handle Commenter
 
@@ -60,7 +61,11 @@ export default function Note({ notes }) {
         </form>
       </section>
       <ul>
-        {/* Map the updated notes here, to display them */}
+        {newNote.map((note, index)=> {
+          return (
+            <li key={index}>{note.commenter} says, "{note.comment}"</li>
+          )
+        })}
       </ul>
     </div>
   );
