@@ -1,10 +1,12 @@
 import OneOnOne from "./OneOnOne.jsx";
 
 
-export default function MoreInfo() {
+export default function MoreInfo({notes}) {
+
+
     return (
         <>
-            <p>MoreInfo</p>
+            <p>More Info</p>
             <OneOnOne />
         </>
     )

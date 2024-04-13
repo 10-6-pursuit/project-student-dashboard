@@ -5,7 +5,7 @@ export default function Student({student}) {
 
 const [showMore, setShowMore] = useState(false);
 
-const { id, names:{ preferredName, middleName, surname }, userName, dob, profilePhoto} = student;
+const { notes, certifications, cohort:{scores}, codewars, id, names:{ preferredName, middleName, surname }, userName, dob, profilePhoto} = student;
 
     return (
         <li>
@@ -16,7 +16,7 @@ const { id, names:{ preferredName, middleName, surname }, userName, dob, profile
             <p>{ userName }</p>
             <p>{ dob }</p>
             <a onClick={() => setShowMore(!showMore)} href="#">{showMore ? "Show Less" : "Show More"}</a>
-            {showMore && <MoreInfo />}
+            {showMore && <MoreInfo certifications={certifications} cohort={cohort} codewars={codewars} notes={notes} />} 
         </li>
     )
 }
