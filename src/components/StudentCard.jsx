@@ -5,8 +5,7 @@ export default function StudentCard({ student }) {
   const [showDetails, setShowDetails] = useState(false);
 
   const middleInitial = (str) => `${str[0]}.`;
-
-  function formatDate(inputDate) {
+  const formatDate = (inputDate) => {
     const parts = inputDate.split("/");
     const months = [
       "January",
@@ -27,32 +26,23 @@ export default function StudentCard({ student }) {
     const year = parseInt(parts[2], 10);
     return `${month} ${day}, ${year}`;
   }
-
-  const toggleDetails = () => {
-    setShowDetails(!showDetails);
-  };
-
+  const toggleDetails = () => setShowDetails(!showDetails);
   const codewarsGoalReachedPercentage = (goal, total) => Math.floor((total / goal) * 100);
-
   const percentage = (x) => Math.floor(x * 100);
 
   return (
     <div key={student.id} className="card">
-      <img
-        src={student.profilePhoto}
-        alt={`${student.names.preferredName}'s profile photo`}
-        className="card__img"
-      />
-      <div className="card__container">
-        <h3 className="card__container__name">
-          {student.names.preferredName} {middleInitial(student.names.middleName)}{" "}
-          {student.names.surname}
-        </h3>
-        <p className="card__container__username">{student.username}</p>
-        <p className="card__container__dob">
-          <span>Birthday: </span>
-          {formatDate(student.dob)}
-        </p>
+      <div className="card__outer-container">
+        <img
+          src={student.profilePhoto}
+          alt={`${student.names.preferredName}'s profile photo`}
+          className="card__img"
+        />
+        <div className="card__inner-container">
+          <h3 className="card__inner-container__content">{student.names.preferredName} {middleInitial(student.names.middleName)} {student.names.surname}</h3>
+          <p className="card__inner-container__content">{student.username}</p>
+          <p className="card__inner-container__content"><span>Birthday: </span>{formatDate(student.dob)}</p>
+        </div>
       </div>
       {showDetails && (
           <div className="card__details">
@@ -71,16 +61,14 @@ export default function StudentCard({ student }) {
             </div>
             <div className="card__details__certs">
                 <h3 className="card__details__title">Certifications</h3>
-                <p className="card__details__para"><span>Resume: </span>{student.certifications.resume ? <>&#x2714;</> : <>&#x58;</>}</p>
-                <p className="card__details__para"><span>LinkedIn: </span>{student.certifications.linkedin ? <>&#x2714;</> : <>&#x58;</>}</p>
-                <p className="card__details__para"><span>Mock Interview: </span>{student.certifications.github ? <>&#x2714;</> : <>&#x58;</>}</p>
-                <p className="card__details__para"><span>GitHub: </span>{student.certifications.monckInterview ? <>&#x2714;</> : <>&#x58;</>}</p>
+                <p className="card__details__para"><span>Resume: </span>{student.certifications.resume ? "✅": "❌"}</p>
+                <p className="card__details__para"><span>LinkedIn: </span>{student.certifications.linkedin ? "✅": "❌"}</p>
+                <p className="card__details__para"><span>Mock Interview: </span>{student.certifications.github ? "✅": "❌"}</p>
+                <p className="card__details__para"><span>GitHub: </span>{student.certifications.monckInterview ? "✅": "❌"}</p>
             </div>
           </div>
         )}
-        <button className="card__show-more-btn" onClick={toggleDetails}>
-          {showDetails ? "Show Less" : "Show More..."}
-        </button>
+        <button className="card__show-more-btn" onClick={toggleDetails}>{showDetails ? "Show Less" : "Show More..."}</button>
     </div>
   );
 }

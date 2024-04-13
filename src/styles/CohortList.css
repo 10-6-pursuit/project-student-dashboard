@@ -1,22 +1,24 @@
-.main {
-    display: flex;
+.cohort-list {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     margin: 20px;
     padding: 20px;
 }
 
-#btn-title {
+.cohort-list__container__filter-title {
     padding: 20px;
     text-align: center;
 }
 
-.container {
+.cohort-list__container {
+    grid-column: 1;
     display: flex;
     flex-direction: column;
     margin-right: 100px;
 }
 
-.filter-btn {
-    width: 500px;
+.cohort-list__container__filter-btn {
+    width: 100%;
     text-align: left;
     margin-bottom: 15px;
     background-color: white;
@@ -25,7 +27,7 @@
     height: 40px;
 }
 
-.filter-btn:hover {
+.cohort-list__container__filter-btn:hover {
     cursor: pointer;
     background-color: lightgrey;
 }
