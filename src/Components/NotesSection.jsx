@@ -1,4 +1,5 @@
 import NoteForm from './NoteForm.jsx'
+import Notes from './Notes.jsx'
 
 
 export default function NotesSection() {
@@ -7,9 +8,7 @@ export default function NotesSection() {
     <div className="student-notes">
       1-On-1 Notes
       <NoteForm />
-      <ul className="notes">
-        <li>COMMENTER N. says "NOTE"</li>
-      </ul>
+      <Notes />
     </div>
   )
 }
