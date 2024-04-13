@@ -1,8 +1,11 @@
+
+import Note from './Note.jsx'
+
 export default function Notes() {
 
   return (
     <ul className="notes">
-      <li>COMMENTER N. says "NOTE"</li>
+      <Note />
     </ul>
   )
 }
