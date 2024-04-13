@@ -21,6 +21,16 @@ span {
 
 .card__inner-container {
     margin-left: 25px;
+    width: 100%;
+}
+
+.onTrack {
+    color: #006eff;
+}
+
+.card__inner-inner-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .card__details {
