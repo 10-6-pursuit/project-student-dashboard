@@ -10,7 +10,7 @@ body {
 }
 
 h2, h3, h4 {
-  margin: 0 0 10px 0;
+  margin: 0 0 0 0;
 }
 
 hr {
@@ -39,7 +39,7 @@ main {
   color: var(--green);
 }
 
-.cohort-list h2 {
+.cohort-panel h2 {
   text-align: center;
 }
 

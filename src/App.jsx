@@ -1,5 +1,5 @@
 import Header from  './Components/Header.jsx'
-import CohortList from  './Components/CohortList.jsx'
+import CohortPanel from  './Components/CohortPanel.jsx'
 import StudentList from  './Components/StudentList.jsx'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <Header />
       <main>
-        <CohortList />
+        <CohortPanel />
         <StudentList />
       </main>
     </>
