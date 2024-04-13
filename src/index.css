@@ -107,19 +107,19 @@ span {
 
 .extra-info ul {
   margin-left: -2.5rem;
-  margin-right: 8rem;
+  margin-right: 7rem;
 }
 
 .extra-info li {
   margin-bottom: 1rem;
 }
 
-.extra-info hr {
-  width: 100%;
-}
+/* .extra-info hr {
+  width: 90%;
+} */
 
 .note hr {
-  width: 95%;
+  width: 100%;
   margin-right: 2rem;
 }
 

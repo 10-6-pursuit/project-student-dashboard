@@ -1,21 +1,21 @@
 import { useState } from "react";
 
 export default function Note({ notes }) {
-
   const [studentNote, setStudentNote] = useState(notes);
   const [newCommenter, setNewCommenter] = useState("");
   const [newComment, setNewComment] = useState("");
 
-
   //Handle Commenter
   function handleClick(e) {
-    setStudentNote([
-      ...studentNote,
-      {
-        commenter: newCommenter,
-        comment: newComment,
-      },
-    ]);
+    if (newCommenter.length > 0 && newComment.length > 0) {
+      setStudentNote([
+        ...studentNote,
+        {
+          commenter: newCommenter,
+          comment: newComment,
+        },
+      ]);
+    }
   }
 
   //Handle Comment
@@ -27,10 +27,8 @@ export default function Note({ notes }) {
     setNewComment(e.target.value);
   }
 
-
   function resetForm() {
-    setNewCommenter(""),
-    setNewComment("");
+    setNewCommenter(""), setNewComment("");
   }
 
   function handleSubmit(e) {
@@ -54,6 +52,7 @@ export default function Note({ notes }) {
                   name="comment-name"
                   value={newCommenter}
                   onChange={handleCommenter}
+                  required
                 />
               </label>
 
@@ -65,6 +64,7 @@ export default function Note({ notes }) {
                   name="comment"
                   value={newComment}
                   onChange={handleComment}
+                  required
                 />
               </label>
               <input
