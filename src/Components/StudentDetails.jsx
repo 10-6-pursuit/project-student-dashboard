@@ -1,7 +1,7 @@
 import Codewars from './Codewars.jsx'
 import Scores from './Scores.jsx'
 import Certifications from './Certifications.jsx'
-import Notes from './Notes.jsx'
+import NotesSection from './NotesSection.jsx'
 
 export default function StudentDetails() {
 
@@ -13,7 +13,7 @@ export default function StudentDetails() {
         <Certifications />
       </div>
       <hr className="green"/>
-      <Notes />
+      <NotesSection />
     </section>
   )
 }
