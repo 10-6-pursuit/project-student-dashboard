@@ -1,7 +1,7 @@
-export default function Cohort({cohort}) {
+export default function Cohort({cohort, students}) {
   return (
     <div className="cohort">
-      <h3>{cohort}</h3>
+      <li>{cohort}</li>
       <hr/>
     </div>
   )

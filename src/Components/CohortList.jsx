@@ -2,6 +2,7 @@ import StudentProfile from "./StudentProfile";
 
 export default function CohortList({students}) {
 
+// Have to make below dynamic:
   return (
     <div className="cohort-list">
       <h2>All Students</h2>
@@ -18,7 +19,6 @@ export default function CohortList({students}) {
               dob={student.dob}
               image={student.profilePhoto}
               student={student}
-              // Show More... component goes here
             />
           )
         })}

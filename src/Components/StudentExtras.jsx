@@ -1,6 +1,6 @@
 export default function StudentExtras({studentID}) {
-  //Need state type boolean for the certifications
-  //Need a function to decide what emoji to add depending if certification: if true add check, if false add x
+  //!Need state type boolean for the certifications
+  //!Need a function to decide what emoji to add depending if certification: if true add check, if false add x
 
   return (
     //! For Each ul pass along the data as props

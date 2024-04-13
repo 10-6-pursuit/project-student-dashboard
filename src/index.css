@@ -24,6 +24,7 @@ main {
   cursor: pointer;
   text-align: start;
   font-weight: bolder;
+  margin-bottom: 0px;
 }
 
 .cohorts hr {
@@ -37,11 +38,7 @@ main {
   text-align: start;
   font-weight: bolder;
   margin-left: -2.5rem;
-}
-
-.cohorts h3,
-.cohort h3 {
-  margin-bottom: 0px;
+  margin-bottom: 1.5rem;
 }
 
 /* Right Side of App */

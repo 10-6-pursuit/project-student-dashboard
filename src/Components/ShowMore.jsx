@@ -2,16 +2,18 @@ import { useState } from "react";
 import StudentExtras from "./StudentExtras";
 
 export default function ShowMore({student}) {
-  //Add function that toggles show and hide for the "Show More.."
-  //Show More should have info from codewars
   const [showMore, setShowMore] = useState(false);
 
-  // //!Create our variable that will hold the codewars info of each student. Didn't work
-  // const codeWarsInfo = Object.entries(student.codewars);
+  // //!Create variable that will hold the codewars, scores, and certification info of each student. 
 
   function toggleShowMore() {
     setShowMore(!showMore);
   }
+
+  //!This is it: Found in stack overflow, kept getting error, on 'Objects are not valid as a react child'
+  //!Turn into an array 
+  const codewars = Object.keys(student.codewars).map(codewarsOpt => (codewarsOpt, student.codewars[codewarsOpt]));
+  console.log(codewars)
 
   return (
     <div className="showMore">
