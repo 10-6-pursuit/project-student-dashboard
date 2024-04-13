@@ -27,7 +27,8 @@ main {
   margin-bottom: 0px;
 }
 
-.cohorts hr {
+
+hr {
   border: 1.5px solid;
   color:#5C946E;
 }
@@ -88,7 +89,8 @@ span {
 }
 
 
-.extra-info {
+.extra-info,
+.note {
   display: flex;
   flex-direction: row;
   margin-left: -11rem;
@@ -107,5 +109,54 @@ span {
   margin-bottom: 1rem;
 }
 
+.extra-info hr {
+  width: 100%;
+}
+
+.note hr {
+  width: 95%;
+  margin-right: 2rem;
+}
+
+.note {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 
 
+.note button {
+  background: #5C946E;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 0px;
+  width: 20%;
+}
+
+.form-note {
+  margin-right: 2rem;
+}
+
+section {
+  width: 100%;
+}
+
+
+fieldset {
+  width: 94%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+fieldset input {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.note li {
+  margin-top: 1rem;
+  list-style: disc;
+}
