@@ -7,11 +7,11 @@ export default function Student() {
       <div className="student-card-upper">
         <div className="avatar" src="">avatar</div>
         <div className="student-info">
-          <h3 className="student-name">First M. Last</h3>
-          <span>studentEmail</span>
+          <h3 className="student-name">FIRST M. LAST</h3>
+          <span>EMAIL</span>
           <br />
           <span>
-            <span className="green">Birthday:</span> studentBirthday
+            <span className="green">Birthday:</span> BIRTHDAY
           </span>
         </div>
         <span>On Track to Graduate</span>

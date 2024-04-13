@@ -4,19 +4,19 @@ export default function Certifications() {
     <div className="certifications">
       <h4>Certifications:</h4>
       <span>
-        <span className="green">Resume: </span>Boolean
+        <span className="green">Resume: </span>BOOLEAN
       </span>
       <br />
       <span>
-        <span className="green">LinkedIn: </span>Boolean
+        <span className="green">LinkedIn: </span>BOOLEAN
       </span>
       <br />
       <span>
-        <span className="green">Mock Interview: </span>Boolean
+        <span className="green">Mock Interview: </span>BOOLEAN
       </span>
       <br />
       <span>
-        <span className="green">GitHub: </span>Boolean
+        <span className="green">GitHub: </span>BOOLEAN
       </span>
     </div>
   )
