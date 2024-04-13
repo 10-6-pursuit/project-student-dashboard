@@ -1,0 +1,38 @@
+.card {
+    display: grid;
+    grid-template-columns: 1fr 3.2fr;
+    padding: 15px;
+    border: 1px solid #67a35f;
+    margin: 10px;
+    width: 65%;
+}
+
+img {
+    width: 150px;
+}
+
+h3, p {
+    margin: 9px;
+}
+
+button {
+    margin: 9px;
+    margin-top: 20px;
+    text-decoration: underline;
+    border: none;
+    background-color: white;
+    color: #67a35f;
+    text-decoration-color: #67a35f;
+    padding: 0;
+}
+
+button:hover {
+    color: #477041;
+    text-decoration-color: #477041;
+    cursor: pointer;
+}
+
+span {
+    color:#67a35f;
+}
+
