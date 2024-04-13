@@ -1,4 +1,5 @@
 import Codewars from './Codewars.jsx'
+import Scores from './Scores.jsx'
 
 export default function StudentDetails() {
 
@@ -6,9 +7,7 @@ export default function StudentDetails() {
     <section className="student-details">
       <div className="student-progress">
         <Codewars />
-        <div className="Scores">
-          <h4>Scores:</h4>
-        </div>
+        <Scores />
         <div className="Certifications">
           <h4>Certifications:</h4>
         </div>
