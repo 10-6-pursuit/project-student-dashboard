@@ -6,15 +6,20 @@
   font-family: sans-serif;
 }
 
-body {
-}
-
 h2, h3, h4 {
-  margin: 0 0 0 0;
+  margin: 0 0 20px 0;
 }
 
 hr {
  border-top: 2px solid var(--green);
+}
+
+ul {
+  list-style: none;
+}
+
+.green {
+  color: var(--green);
 }
 
 header {
@@ -35,20 +40,18 @@ main {
   column-gap: 20px;
 }
 
-ul {
-  list-style: none;
-}
-
-.green {
-  color: var(--green);
-}
-
 .cohort-panel h2 {
   text-align: center;
 }
 
 .cohort-name {
-  margin-left: 20px;
+  width: fit-content;
+  margin: 10px 0 10px 20px;
+}
+
+.cohort-name:hover {
+  cursor: pointer;
+  transform: scale(120%);
 }
 
 .student-list {

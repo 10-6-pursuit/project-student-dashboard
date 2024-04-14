@@ -1,7 +1,7 @@
 export default function Cohort({ cohortCode, cohortName, handleCohortSelect }) {
 
   return (
-    <div>
+    <div className="cohort">
         <h3
           className="cohort-name"
           id={cohortCode}
