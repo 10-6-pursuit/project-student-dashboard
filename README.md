@@ -24,9 +24,24 @@ Simple site design with the following elements
 ## Planning
 **Component Map**
 | Component | Parent | Children | Props Used | Props Passed |
-|---|---|---|---|---|
-| App | Index | Header, CohortList, StudentList | N/A | N/A |
-| Header | App | N/A | N/A | N/A |
-| CohortList | App | N/A | CohortList | N/A |
-| StudentList | App | Student | StudentList | N/A |
-| Student | App | N/A | StudentList | N/A |
+|----|---|---|---|---|
+| 1. App | Index | Header, CohortList, StudentList | N/A | N/A |
+| 2. Header | App | N/A | N/A | N/A |
+| 2. CohortPanel | App | Cohorts | N/A | N/A |
+| 3. Cohorts | CohortPanel | Cohort | N/A | N/A |
+| 4. Cohort | Cohorts | N/A | N/A | N/A |
+| 2. StudentPanel | App | Students | N/A | N/A |
+| 3. Students | StudentPanel | Student | N/A | N/A |
+| 4. Student | Students | StudentDetails | N/A | N/A |
+| 5. StudentDetails | Student | Codewars, Scores, Certification, NotesSection | N/A | N/A |
+| 6. Codewars| StudentDetails | N/A | N/A | N/A |
+| 6. Scores| StudentDetails | N/A | N/A | N/A |
+| 6. Certifications| StudentDetails | N/A | N/A | N/A |
+| 6. NotesSection | StudentDetails | NoteForm | N/A | N/A |
+| 7. NoteForm | NotesSection | N/A | N/A | N/A |
+| 7. Notes | NotesSection | Note | N/A | N/A |
+| 7. Note | Notes | N/A | N/A | N/A |
+
+##
+**Data*
+
