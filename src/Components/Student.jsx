@@ -9,6 +9,15 @@ export default function Student({ student }) {
     dob
    } = student;
 
+   // convert dob
+   const event = new Date(dob);
+   const options = {
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+   }
+   const dobFormatted = event.toLocaleDateString('en-US', options)
+
   return (
     <li className="student-card">
       <div className="student-card-upper">
@@ -18,7 +27,7 @@ export default function Student({ student }) {
           <span>{username}</span>
           <br />
           <span>
-            <span className="green">Birthday: </span>{dob}
+            <span className="green">Birthday: </span>{dobFormatted}
           </span>
         </div>
         <span>On Track to Graduate</span>
