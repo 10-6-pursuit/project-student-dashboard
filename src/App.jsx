@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from  './Components/Header.jsx'
 import CohortPanel from  './Components/CohortPanel.jsx'
 import StudentPanel from  './Components/StudentPanel.jsx'
@@ -14,16 +15,17 @@ for (let {cohort} of data){
     cohorts.push([cohortCode, new Date(cohortStartDate)]);
   }
 }
-
 cohorts.sort((a, b) => b[1] - a[1])
 
 function App() {
+  const [ studentList, setStudentList ] = useState(data);
+
   return (
     <>
       <Header />
       <main>
         <CohortPanel cohorts={cohorts} />
-        <StudentPanel />
+        <StudentPanel studentList={studentList} />
       </main>
     </>
   );
