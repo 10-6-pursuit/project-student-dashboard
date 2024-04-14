@@ -1,4 +1,4 @@
-export default function Cohort({ cohortCode, cohortName, handleCohortSelect }) {
+export default function Cohort({ cohortCode, selectedCohort, handleCohortSelect }) {
 
   return (
     <div className="cohort">
@@ -6,6 +6,7 @@ export default function Cohort({ cohortCode, cohortName, handleCohortSelect }) {
           className="cohort-name"
           id={cohortCode}
           onClick={handleCohortSelect}
+          style={cohortCode.replace("2", " 2") === selectedCohort ? {color: "green"} : null}
         >{cohortCode.replace("2", " 2")}</h3>
         <hr />
     </div>

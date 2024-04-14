@@ -1,6 +1,6 @@
 import Cohorts from './Cohorts.jsx'
 
-export default function CohortPanel({ cohorts, handleCohortSelect }) {
+export default function CohortPanel({ cohorts, selectedCohort, handleCohortSelect }) {
   
   return (
   <section className="cohort-panel">
@@ -8,6 +8,7 @@ export default function CohortPanel({ cohorts, handleCohortSelect }) {
     <div>
         <h3
           className="cohort-name"
+          style={"All Students" === selectedCohort ? {color: "green"} : null}
           id="AllStudents"
           onClick={handleCohortSelect}
         >All Students</h3>
@@ -15,6 +16,7 @@ export default function CohortPanel({ cohorts, handleCohortSelect }) {
     </div>
     <Cohorts
       cohorts={cohorts}
+      selectedCohort={selectedCohort}
       handleCohortSelect={handleCohortSelect} />
   </section>
   )

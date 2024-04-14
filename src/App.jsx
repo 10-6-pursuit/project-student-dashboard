@@ -59,6 +59,7 @@ function App() {
       <main>
         <CohortPanel
           cohorts={cohortsArr}
+          selectedCohort={selectedCohort}
           handleCohortSelect={handleCohortSelect} />
         <StudentPanel
           selectedCohort={selectedCohort}

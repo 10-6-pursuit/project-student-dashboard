@@ -6,16 +6,13 @@
   font-family: sans-serif;
 }
 
-h2, h3, h4 {
-  margin: 0 0 20px 0;
-}
-
 hr {
  border-top: 2px solid var(--green);
 }
 
-ul {
+.student-progress ul {
   list-style: none;
+  padding: 0
 }
 
 .green {
@@ -68,7 +65,7 @@ main {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
 }
 
 .student-card {
@@ -87,6 +84,7 @@ main {
   width: 75px;
   aspect-ratio: 1;
   background: gray;
+  box-shadow: 2px 2px 5px gray;
 }
 
 .student-name {
@@ -102,6 +100,18 @@ main {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.student-notes h3 {
+  margin: 0;
+}
+
+.note-form {
+  margin: 10px 0;
+}
+
+fieldset {
+  border: 1px solid gray;
+}
+
 input {
   margin: 10px 0px;
 }
@@ -111,6 +121,10 @@ button {
   background: var(--green);
   border: none;
   border-radius: 3px;
+}
+
+.notes {
+  padding: 0px 0 0 20px;
 }
 
 .note {
