@@ -1,5 +1,5 @@
 import React from "react";
-import OneOnOneNotes from "./1on1Notes";
+import "/src/styles/AdditionalDetails.css"
 
 export default function AdditionalDetails({
   student,
@@ -22,19 +22,19 @@ export default function AdditionalDetails({
         <div className="card__details__codewars">
           <h3 className="card__details__title">Codewars</h3>
           <p className="card__details__para">
-            <span>Codewars Score: </span>
+            <span className="green-txt">Codewars Score: </span>
             {score}
           </p>
           <p className="card__details__para">
-            <span>Last Week: </span>
+            <span className="green-txt">Last Week: </span>
             {student.codewars.current.lastWeek}
           </p>
           <p className="card__details__para">
-            <span>Goal: </span>
+            <span className="green-txt">Goal: </span>
             {student.codewars.goal.total}
           </p>
           <p className="card__details__para">
-            <span>Percent of Goal Achieved: </span>
+            <span className="green-txt">Percent of Goal Achieved: </span>
             {codewarsGoalReachedPercentage(
               student.codewars.goal.total,
               student.codewars.current.total
@@ -45,34 +45,34 @@ export default function AdditionalDetails({
         <div className="card__details__scores">
           <h3 className="card__details__title">Scores</h3>
           <p className="card__details__para">
-            <span>Assignments: </span>
+            <span className="green-txt">Assignments: </span>
             {percentage(student.cohort.scores.assignments)}%
           </p>
           <p className="card__details__para">
-            <span>Projects: </span>
+            <span className="green-txt">Projects: </span>
             {percentage(student.cohort.scores.projects)}%
           </p>
           <p className="card__details__para">
-            <span>Assessments: </span>
+            <span className="green-txt">Assessments: </span>
             {percentage(student.cohort.scores.assessments)}%
           </p>
         </div>
         <div className="card__details__certs">
           <h3 className="card__details__title">Certifications</h3>
           <p className="card__details__para">
-            <span>Resume: </span>
+            <span className="green-txt">Resume: </span>
             {resume ? "✅" : "❌"}
           </p>
           <p className="card__details__para">
-            <span>LinkedIn: </span>
+            <span className="green-txt">LinkedIn: </span>
             {linkedin ? "✅" : "❌"}
           </p>
           <p className="card__details__para">
-            <span>GitHub: </span>
+            <span className="green-txt">GitHub: </span>
             {github ? "✅" : "❌"}
           </p>
           <p className="card__details__para">
-            <span>Mock Interview: </span>
+            <span className="green-txt">Mock Interview: </span>
             {mockInterview ? "✅" : "❌"}
           </p>
         </div>

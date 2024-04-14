@@ -1,0 +1,6 @@
+.card__details {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}

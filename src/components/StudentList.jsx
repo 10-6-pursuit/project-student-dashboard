@@ -1,14 +1,11 @@
 import React from "react";
 import data from "/src/data/data.json";
 import StudentCard from "./StudentCard";
-import "/src/styles/StudentList.css";
 
-export default function StudentList({ filter, handleFilterTitle }) {
+export default function StudentList({ filter, comments, addComment, handleFilterTitle }) {
   const filteredData = data.filter((student) => {
     if (!filter) return true;
-    return student.cohort.cohortCode
-      .toLowerCase()
-      .includes(filter.toLowerCase());
+    return student.cohort.cohortCode.toLowerCase().includes(filter.toLowerCase());
   });
 
   return (
@@ -20,7 +17,12 @@ export default function StudentList({ filter, handleFilterTitle }) {
         Total Students: {filteredData.length}
       </p>
       {filteredData.map((student) => (
-        <StudentCard key={student.id} student={student} />
+        <StudentCard
+          key={student.id}
+          student={student}
+          comments={comments[student.id] || []}
+          addComment={(commenter, comment) => addComment(student.id, commenter, comment)}
+        />
       ))}
     </div>
   );

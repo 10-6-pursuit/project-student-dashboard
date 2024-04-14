@@ -1,4 +1,4 @@
-span {
+.green-txt {
     color:#67a35f;
 }
 
@@ -31,13 +31,6 @@ span {
 .card__inner-inner-container {
     display: flex;
     justify-content: space-between;
-}
-
-.card__details {
-    grid-column: span 2;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
 }
 
 .card__show-more-btn {

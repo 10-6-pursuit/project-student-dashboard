@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "/src/styles/1on1Notes.css";
 
 export default function OneOnOneNotes({ addComment }) {
   const [commenterName, setCommenterName] = useState("");
@@ -15,11 +16,13 @@ export default function OneOnOneNotes({ addComment }) {
 
   return (
     <div>
+      <hr />
       <h3>1-on-1 Notes</h3>
       <form className="one-on-one-form" onSubmit={handleSubmit}>
-        <label htmlFor="commenter-name">
-          Commenter Name:
+        <label className="one-on-one-form__label" htmlFor="commenter-name">
+          <span className="one-on-one-form__label__title">Commenter Name</span> 
           <input
+            className="one-on-one-form__input"
             type="text"
             id="commenter-name"
             value={commenterName}
@@ -27,15 +30,18 @@ export default function OneOnOneNotes({ addComment }) {
             required
           />
         </label>
-        <label htmlFor="comment">
-          Comment:
-          <textarea
+        <label className="one-on-one-form__label" htmlFor="comment">
+          <span className="one-on-one-form__label__title">Comment</span> 
+          <input
+            className="one-on-one-form__input"
+            type="text"
             id="comment"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
+            required
           />
         </label>
-        <button type="submit">Submit</button>
+        <input className="one-on-one-form__submit-btn" type="submit" value={"Add Note"} />
       </form>
     </div>
   );

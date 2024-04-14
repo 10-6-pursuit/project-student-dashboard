@@ -46,15 +46,28 @@ export default function StudentCard({ student }) {
         />
         <div className="card__inner-container">
           <div className="card__inner-inner-container">
-            <h3 className="card__inner-inner-container__content name">{student.names.preferredName} {middleInitial(student.names.middleName)} {student.names.surname}</h3>
-            <h3 className="card__inner-inner-container__content onTrack">{(student.certifications.resume && student.certifications.linkedin && student.certifications.github && student.certifications.mockInterview && student.codewars.current.total >= 600) ? "On Track for Graduation" : null}</h3>
+            <h3 className="card__inner-inner-container__content name">
+              {student.names.preferredName}{" "}
+              {middleInitial(student.names.middleName)} {student.names.surname}
+            </h3>
+            <h3 className="card__inner-inner-container__content onTrack">
+              {student.certifications.resume &&
+              student.certifications.linkedin &&
+              student.certifications.github &&
+              student.certifications.mockInterview &&
+              student.codewars.current.total >= 600
+                ? "On Track for Graduation"
+                : null}
+            </h3>
           </div>
           <p className="card__inner-container__content">{student.username}</p>
-          <p className="card__inner-container__content"><span>Birthday: </span>{formatDate(student.dob)}</p>
+          <p className="card__inner-container__content">
+            <span className="green-txt">Birthday: </span>
+            {formatDate(student.dob)}
+          </p>
         </div>
       </div>
       <AdditionalDetails student={student} showDetails={showDetails} />
-      <button className="card__show-more-btn" onClick={toggleDetails}>{showDetails ? "Show Less" : "Show More..."}</button>
       {showDetails && (
         <div>
           <OneOnOneNotes addComment={addComment} />
@@ -68,6 +81,9 @@ export default function StudentCard({ student }) {
           </div>
         </div>
       )}
+      <button className="card__show-more-btn" onClick={toggleDetails}>
+        {showDetails ? "Show Less" : "Show More..."}
+      </button>
     </div>
   );
 }

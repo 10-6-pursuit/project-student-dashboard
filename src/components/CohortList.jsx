@@ -4,6 +4,8 @@ import "/src/styles/CohortList.css";
 
 export default function CohortList() {
   const [filter, setFilter] = useState(null);
+  const [comments, setComments] = useState({});
+
   const handleFilter = (cohort) => setFilter(cohort);
   const handleShowAll = () => setFilter(null);
   const handleFilterTitle = (input) => {
@@ -23,6 +25,12 @@ export default function CohortList() {
     } else {
       return input;
     }
+  };
+   const addComment = (studentId, commenter, comment) => {
+    setComments((prevComments) => ({
+      ...prevComments,
+      [studentId]: [...(prevComments[studentId] || []), { commenter, comment }],
+    }));
   };
 
   return (
@@ -88,8 +96,12 @@ export default function CohortList() {
           Spring 2025
         </button>
       </div>
-
-      <StudentList filter={filter} handleFilterTitle={handleFilterTitle} />
+      <StudentList
+        filter={filter}
+        comments={comments}
+        addComment={addComment}
+        handleFilterTitle={handleFilterTitle}
+      />
     </div>
   );
 }
