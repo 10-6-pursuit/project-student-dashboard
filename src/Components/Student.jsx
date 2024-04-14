@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import StudentDetails from './StudentDetails.jsx'
 
 export default function Student({ student }) {
+  const [ showDetails, setShowDetails ] = useState(false);
 
   const {
     profilePhoto,
@@ -22,6 +24,11 @@ export default function Student({ student }) {
   // is on track
   const isOnTrack = Object.values(certifications).every(cert => cert);
 
+  function handleShowDetailsToggle(e) {
+    e.preventDefault();
+    setShowDetails(!showDetails);
+  }
+
   return (
     <li className="student-card">
       <div className="student-card-upper">
@@ -35,9 +42,13 @@ export default function Student({ student }) {
           </span>
         </div>
         <span>{isOnTrack ? "On Track to Graduate" : null}</span>
-        <span className="green detail-toggle">Show More...</span>
+        <a
+          href="#"
+          className="green detail-toggle"
+          onClick={handleShowDetailsToggle}
+        >Show More...</a>
       </div>
-      <StudentDetails student={student} />
+      {showDetails ? <StudentDetails student={student} /> : null}
     </li>
   )
 }
