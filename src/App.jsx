@@ -26,7 +26,6 @@ for (let {cohort, id } of data){
 }
 cohortsArr.sort((a, b) => b[1] - a[1]);
 
-
 function App() {
   const [ studentList, setStudentList ] = useState(data);
   const [ filteredStudentList, setFilteredStudentList ] = useState(studentList);
@@ -50,15 +49,8 @@ function App() {
 
   // update student note
   function handleAddNote(studentId, newNote) {
-    const student = getStudentById(studentId);
-    student.notes.push(newNote);
-    const updatedStudentList = [...studentList].toSpliced(idIndexMap[studentId], 1, student);
-    setStudentList(updatedStudentList);
-  }
-
-  function getStudentById(studentId) {
-    const student = studentList[idIndexMap[studentId]];
-    return student
+    studentList[idIndexMap[studentId]].notes.push(newNote);
+    setStudentList([...studentList]);
   }
 
   return (
