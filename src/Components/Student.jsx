@@ -6,7 +6,8 @@ export default function Student({ student }) {
     profilePhoto,
     names: { preferredName, middleName, surname },
     username,
-    dob
+    dob,
+    certifications
   } = student;
 
   // convert dob
@@ -17,6 +18,9 @@ export default function Student({ student }) {
   year: "numeric"
   }
   const dobFormatted = event.toLocaleDateString('en-US', options)
+
+  // is on track
+  const isOnTrack = Object.values(certifications).every(cert => cert);
 
   return (
     <li className="student-card">
@@ -30,7 +34,7 @@ export default function Student({ student }) {
             <span className="green">Birthday: </span>{dobFormatted}
           </span>
         </div>
-        <span>On Track to Graduate</span>
+        <span>{isOnTrack ? "On Track to Graduate" : null}</span>
         <span className="green detail-toggle">Show More...</span>
       </div>
       <StudentDetails student={student} />
