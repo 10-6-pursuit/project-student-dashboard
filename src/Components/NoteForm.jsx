@@ -6,8 +6,6 @@ export default function NoteForm() {
     comment: ""
   })
 
-  console.log(noteForm);
-
   function handleInputChange(e) {
     setNoteForm({...noteForm, [e.target.id]: e.target.value})
   }
