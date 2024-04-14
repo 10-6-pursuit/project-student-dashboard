@@ -1,3 +1,4 @@
+import StudentPanelHeader from './StudentPanelHeader.jsx'
 import Students from './Students.jsx'
 
 export default function StudentPanel({ selectedCohort,
@@ -7,10 +8,9 @@ export default function StudentPanel({ selectedCohort,
   
   return (
     <section className="student-panel">
-      <h2>{selectedCohort}</h2>
-      <span>
-        <span className="green">Total Students: </span>{filteredStudentList.length}
-      </span>
+      <StudentPanelHeader
+        selectedCohort={selectedCohort}
+        filteredStudentList={filteredStudentList} />
       <Students
         filteredStudentList={filteredStudentList}
         handleAddNote={handleAddNote} />

@@ -54,6 +54,10 @@ main {
   transform: scale(120%);
 }
 
+.student-panel-header {
+  margin-bottom: 20px;
+}
+
 .student-panel h2 {
   margin-bottom: 0;
 }
