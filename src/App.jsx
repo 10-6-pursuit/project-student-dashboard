@@ -13,7 +13,7 @@ function App() {
 
   const [cohort, setCohort] = useState("All Students")
 
-  useEffect(() => setStudentArray(cohort === "All Students" ? [...dataState] : dataState.filter(ele => ele.cohort.cohortCode === cohortName)), [cohort])
+  useEffect(() => setStudentArray(cohort === "All Students" ? [...dataState] : dataState.filter(ele => ele.cohort.cohortCode === cohortName)), [cohort, dataState])
 
   function handleCohortChange(e) {
     setCohort(e.target.value)
@@ -40,7 +40,7 @@ function App() {
       <Header />
       <main>
       <CohortList cohortSelection={cohortSelection} handleCohortChange={handleCohortChange}/>
-      <StudentList cohort={cohort} studentArray={studentArray}/>  
+      <StudentList cohort={cohort} studentArray={studentArray} setDataState={setDataState} dataState={dataState} />  
       </main>
     </div>
   );

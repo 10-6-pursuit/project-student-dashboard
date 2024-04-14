@@ -1,14 +1,24 @@
 import { useState, useEffect } from "react"
 import "/src/components/StudentDetails.css"
 
-export default function StudentDetails({student}) {
+export default function StudentDetails({student, studentArray, setDataState, index, dataState, cohort}) {
     
     const [notes, setNotes] = useState(student.notes)
 
     useEffect(() => {setNotes(student.notes)
-    setShowDetails("none")
-    setShown("Show More...")
     },[student])
+
+    useEffect(() => {
+        setShowDetails("none")
+        setShown("Show More...")
+    },[cohort])
+
+    useEffect(() => {
+        studentArray[index].notes = notes;
+        let originalIndex = dataState.findIndex(curStudent => curStudent.id === student.id)
+        dataState[originalIndex] = studentArray[index]
+        setDataState(structuredClone(dataState))
+    },[notes.length])
     
     const [comments, setComments] = useState({
         commenter: "",
@@ -18,7 +28,7 @@ export default function StudentDetails({student}) {
     function handleTextChange (e) {
         setComments({...comments, [e.target.id]: e.target.value})
     }
-    
+
     function addNotes(e) {
         e.preventDefault()
         setNotes([...notes,comments])
@@ -85,45 +95,10 @@ export default function StudentDetails({student}) {
                         </div>
                     </form>
                     <ul>
-                        {notes.map(ele => <li>{ele.commenter} says, "{ele.comment}"</li>)}
+                        {notes.map((ele, i) => <li key={i}>{ele.commenter} says, "{ele.comment}"</li>)}
                     </ul>
                 </div>
             </div>
         </div>
     )
 }
-
-/*
-{
-    "id": "D8-hEWB",
-    "names": {
-      "preferredName": "Israel",
-      "middleName": "Benjamin",
-      "surname": "Rodriguez"
-    },
-    "username": "israel.rodriguez@pursuit.org",
-    "dob": "2/3/1979",
-    "profilePhoto": "https://xsgames.co/randomusers/avatar.php?g=male&minimum_age=38&maximum_age=48",
-    "codewars": {
-      "current": { "total": 1804, "lastWeek": 144 },
-      "goal": { "total": 850, "lastWeek": 75 }
-    },
-    "certifications": {
-      "resume": false,
-      "linkedin": false,
-      "github": false,
-      "mockInterview": false
-    },
-    "notes": [
-      {
-        "commenter": "Alan R.",
-        "comment": "Israel is a pleasure to work with!"
-      }
-    ],
-    "cohort": {
-      "cohortCode": "Winter2025",
-      "cohortStartDate": "12/1/25",
-      "scores": { "assignments": 0.71, "projects": 0.7, "assessments": 0.66 }
-    }
-  }
-*/
