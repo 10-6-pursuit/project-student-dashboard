@@ -13,9 +13,7 @@ export default function StudentList({ filter, handleFilterTitle }) {
     <div className="list">
       <h2 className="list__title" id="list-title">{filter ? handleFilterTitle(filter) : "All Students"}</h2>
       <p className="list__para" id="list-total">Total Students: {filteredData.length}</p>
-      {filteredData.map((student) => (
-        <StudentCard key={student.id} student={student} />
-      ))}
+      {filteredData.map((student) => <StudentCard key={student.id} student={student} />)}
     </div>
   );
 }
