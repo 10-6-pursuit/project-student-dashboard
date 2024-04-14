@@ -6,26 +6,48 @@ import data from './data/data.json'
 
 // get list of cohorts
 const cohortSet = new Set();
-const cohorts = [];
+const cohortsArr = [];
 
 for (let {cohort} of data){
   const { cohortCode, cohortStartDate } = cohort
   if (!cohortSet.has(cohortCode)) {
     cohortSet.add(cohortCode);
-    cohorts.push([cohortCode, new Date(cohortStartDate)]);
+    cohortsArr.push([cohortCode, new Date(cohortStartDate)]);
   }
 }
-cohorts.sort((a, b) => b[1] - a[1])
+cohortsArr.sort((a, b) => b[1] - a[1]);
 
 function App() {
   const [ studentList, setStudentList ] = useState(data);
+  const [ filteredStudentList, setFilteredStudentList ] = useState(studentList);
+  const [ selectedCohort, setSelectedCohort ] = useState("All Students")
+
+  function handleCohortSelect(e) {
+    const cohortCode = e.target.id
+    if (cohortCode === "AllStudents") {
+      setSelectedCohort("All Students");
+      setFilteredStudentList(studentList);
+    } else {
+      setSelectedCohort(cohortCode.replace("2", " 2"));
+      filterStudentsByCohort(cohortCode);
+    }
+  }
+
+  function filterStudentsByCohort(cohortQuery) {
+    const filteredStudents = studentList.filter(({ cohort }) => cohort.cohortCode === cohortQuery);
+    setFilteredStudentList(filteredStudents);
+  } 
 
   return (
     <>
       <Header />
       <main>
-        <CohortPanel cohorts={cohorts} />
-        <StudentPanel studentList={studentList} />
+        <CohortPanel
+          cohorts={cohortsArr}
+          handleCohortSelect={handleCohortSelect} />
+        <StudentPanel
+          selectedCohort={selectedCohort}
+          filteredStudentList={filteredStudentList} />
       </main>
     </>
   );

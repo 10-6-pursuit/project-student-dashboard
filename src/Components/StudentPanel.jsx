@@ -1,14 +1,14 @@
 import Students from './Students.jsx'
 
-export default function StudentPanel({ studentList }) {
-
+export default function StudentPanel({ selectedCohort, filteredStudentList }) {
+  
   return (
     <section className="student-list">
-      <h2>Selected Cohort Name</h2>
+      <h2>{selectedCohort}</h2>
       <span>
-        <span className="green">Total Students: </span>{studentList.length}
+        <span className="green">Total Students: </span>{filteredStudentList.length}
       </span>
-      <Students studentList={studentList} />
+      <Students filteredStudentList={filteredStudentList} />
     </section>
   )
 }
