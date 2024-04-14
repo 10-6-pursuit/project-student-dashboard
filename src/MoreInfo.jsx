@@ -1,7 +1,7 @@
 import OneOnOne from "./OneOnOne.jsx";
 
 
-export default function MoreInfo({student, notes, scores, certifications, codewars}) {
+export default function MoreInfo({setStudents, student, notes, scores, certifications, codewars, studentArr, indx}) {
 
 
     return (
@@ -27,7 +27,7 @@ export default function MoreInfo({student, notes, scores, certifications, codewa
                 <li>Mock Interview: {certifications.mockInterview ? "✅" : "❌"}</li>
                 <li>Github: {certifications.github ? "✅" : "❌"}</li>
             </ul>
-            <OneOnOne notes={notes} />
+            <OneOnOne studentArr={studentArr} indx={indx} setStudents={setStudents} notes={notes} />
         </div>
     )
 }

@@ -12,7 +12,7 @@ function App() {
     <div>
       <h1>Student Dashboard</h1>
       <CohortList />
-      <StudentList students={students}/>
+      <StudentList students={students} setStudents={setStudents}/>
     </div>
   );
 }

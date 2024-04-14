@@ -1,14 +1,22 @@
 import { useState } from "react"
 
-export default function OneOnOne({notes}) {
+export default function OneOnOne({id, notes, setStudents, studentArr, indx}) {
 
     const [note, setNote] = useState({
         commenter: "",
         comment: ""
     });
 
+
+    const [oldNotes, setOldNotes] = useState(notes);
+
     function addNote(event) {
         event.preventDefault();
+        setOldNotes([...oldNotes, note]);
+        const arrCopy = [...studentArr];
+        arrCopy[indx].notes = [...oldNotes];
+        setStudents(arrCopy);
+        console.log(studentArr[indx]);
     }
 
     function handleChange(event) {
@@ -20,6 +28,7 @@ export default function OneOnOne({notes}) {
 
 
     return (
+        <>
         <form onSubmit={addNote} className="oneForm">
             <h2>1-on-1 Notes</h2>
 
@@ -33,5 +42,9 @@ export default function OneOnOne({notes}) {
 
             <input type="submit" value="Add Note" className="submitButton" />
         </form>
+        <ul>
+            {oldNotes.map((notePad) => <li>{notePad.commenter + "--" + notePad.comment}</li> )}
+        </ul>
+        </>
     )
 }
