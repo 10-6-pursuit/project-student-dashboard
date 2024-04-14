@@ -7,16 +7,16 @@ export default function Student({ student }) {
     names: { preferredName, middleName, surname },
     username,
     dob
-   } = student;
+  } = student;
 
-   // convert dob
-   const event = new Date(dob);
-   const options = {
-    month: "long",
-    day: "numeric",
-    year: "numeric"
-   }
-   const dobFormatted = event.toLocaleDateString('en-US', options)
+  // convert dob
+  const event = new Date(dob);
+  const options = {
+  month: "long",
+  day: "numeric",
+  year: "numeric"
+  }
+  const dobFormatted = event.toLocaleDateString('en-US', options)
 
   return (
     <li className="student-card">
@@ -33,7 +33,7 @@ export default function Student({ student }) {
         <span>On Track to Graduate</span>
         <span className="green detail-toggle">Show More...</span>
       </div>
-      <StudentDetails />
+      <StudentDetails student={student} />
     </li>
   )
 }
