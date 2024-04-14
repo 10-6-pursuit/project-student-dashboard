@@ -1,38 +1,25 @@
 import { useState, useEffect } from "react"
 import "/src/components/StudentDetails.css"
 
-export default function StudentDetails({student, studentArray, setDataState, index, dataState, cohort}) {
-    
-    const [notes, setNotes] = useState(student.notes)
+export default function StudentDetails({student, setDataState, dataState}) {
 
-    useEffect(() => {setNotes(student.notes)
-    },[student])
-
-    useEffect(() => {
-        setShowDetails("none")
-        setShown("Show More...")
-    },[cohort])
-
-    useEffect(() => {
-        studentArray[index].notes = notes;
-        let originalIndex = dataState.findIndex(curStudent => curStudent.id === student.id)
-        dataState[originalIndex] = studentArray[index]
-        setDataState(structuredClone(dataState))
-    },[notes.length])
-    
-    const [comments, setComments] = useState({
+    const [comment, setComment] = useState({
         commenter: "",
         comment: ""
     })
     
     function handleTextChange (e) {
-        setComments({...comments, [e.target.id]: e.target.value})
+        setComment({...comment, [e.target.id]: e.target.value})
     }
 
     function addNotes(e) {
         e.preventDefault()
-        setNotes([...notes,comments])
-        setComments({
+        student.notes.push(comment)
+        const index = dataState.findIndex(curStudent => curStudent.id === student.id)
+        const newStudentArray = [...dataState]
+        newStudentArray.splice(index, 1, student)
+        setDataState(newStudentArray)
+        setComment({
             commenter: "",
             comment: ""
         })
@@ -84,10 +71,10 @@ export default function StudentDetails({student, studentArray, setDataState, ind
                 <div className="studentDetails__form">
                     <p>1-on-1 Notes</p>
                     <form onSubmit={addNotes}>
-                        <label>Commenter Name<input onChange={handleTextChange} type="text" id="commenter" value={comments.commenter} />
+                        <label>Commenter Name<input onChange={handleTextChange} type="text" id="commenter" value={comment.commenter} />
                         </label>
                         <br />
-                        <label>Comment<input onChange={handleTextChange} type="text" id="comment" value={comments.comment} />
+                        <label>Comment<input onChange={handleTextChange} type="text" id="comment" value={comment.comment} />
                         </label>
                         <br />
                         <div className="studentDetails__form-button-container">
@@ -95,7 +82,7 @@ export default function StudentDetails({student, studentArray, setDataState, ind
                         </div>
                     </form>
                     <ul>
-                        {notes.map((ele, i) => <li key={i}>{ele.commenter} says, "{ele.comment}"</li>)}
+                        {student.notes.map((ele) => <li key={ele.comment}>{ele.commenter} says, "{ele.comment}"</li>)}
                     </ul>
                 </div>
             </div>

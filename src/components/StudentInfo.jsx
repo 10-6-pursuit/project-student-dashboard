@@ -2,7 +2,7 @@ import "/src/components/StudentInfo.css"
 import StudentDetails from "/src/components/StudentDetails.jsx"
 
 
-export default function StudentInfo({student, studentArray, setDataState, index, dataState, cohort}) {
+export default function StudentInfo({student, setDataState, dataState}) {
    
     let studentFullName = `${student.names.preferredName} ${student.names.middleName[0]}. ${student.names.surname}`
 
@@ -19,12 +19,12 @@ export default function StudentInfo({student, studentArray, setDataState, index,
                     <div className="studentInfo__card-email">{student.username}</div>
                     <div className="studentInfo__card-birthday"><span className="birthday">Birthday:</span> {studentBirthDay}</div>
                 </div>
-                <div className="studentInfo__card-ontrack-status" style={{display: student.certifications.resume ? "block" : "none"}}>
+                <div className="studentInfo__card-ontrack-status" style={{display: !student.certifications.resume  || !student.certifications.linkedin || !student.certifications.mockInterview || !student.certifications.github? "none" : "block"}}>
                     <div>On Track to Graduate</div>
                 </div>
             </div>
             <div className="studentInfo__card-bottom">
-            <StudentDetails student={student} studentArray={studentArray} setDataState={setDataState} index={index} dataState={dataState} cohort={cohort}/>
+            <StudentDetails student={student} setDataState={setDataState} dataState={dataState}/>
             </div>
         </div>
     )
