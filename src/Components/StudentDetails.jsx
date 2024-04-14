@@ -3,12 +3,13 @@ import Scores from './Scores.jsx'
 import Certifications from './Certifications.jsx'
 import NotesSection from './NotesSection.jsx'
 
-export default function StudentDetails({ student }) {
+export default function StudentDetails({ student, handleAddNote }) {
   const {
     codewars,
     cohort: { scores },
     certifications,
-    notes
+    notes,
+    id
   } = student;
 
   return (
@@ -19,7 +20,10 @@ export default function StudentDetails({ student }) {
         <Certifications certifications={certifications} />
       </div>
       <hr className="green"/>
-      <NotesSection notes={notes} />
+      <NotesSection
+        notes={notes}
+        id={id}
+        handleAddNote={handleAddNote} />
     </section>
   )
 }

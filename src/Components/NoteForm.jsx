@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function NoteForm() {
+export default function NoteForm({ id, handleAddNote }) {
   const [ noteForm, setNoteForm ] = useState({
     commenter: "",
     comment: ""
@@ -12,8 +12,7 @@ export default function NoteForm() {
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    
-    console.log(noteForm);
+    handleAddNote(id, noteForm)
     setNoteForm({
       commenter: "",
       comment: ""

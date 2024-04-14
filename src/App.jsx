@@ -4,18 +4,28 @@ import CohortPanel from  './Components/CohortPanel.jsx'
 import StudentPanel from  './Components/StudentPanel.jsx'
 import data from './data/data.json'
 
+
 // get list of cohorts
 const cohortSet = new Set();
 const cohortsArr = [];
 
-for (let {cohort} of data){
+// student id map
+const idIndexMap = {};
+let i = 0;
+
+for (let {cohort, id } of data){
   const { cohortCode, cohortStartDate } = cohort
   if (!cohortSet.has(cohortCode)) {
     cohortSet.add(cohortCode);
     cohortsArr.push([cohortCode, new Date(cohortStartDate)]);
   }
+
+  // populate idIndexMap
+  idIndexMap[id] = i;
+  i++;
 }
 cohortsArr.sort((a, b) => b[1] - a[1]);
+
 
 function App() {
   const [ studentList, setStudentList ] = useState(data);
@@ -36,7 +46,20 @@ function App() {
   function filterStudentsByCohort(cohortQuery) {
     const filteredStudents = studentList.filter(({ cohort }) => cohort.cohortCode === cohortQuery);
     setFilteredStudentList(filteredStudents);
-  } 
+  }
+
+  // update student note
+  function handleAddNote(studentId, newNote) {
+    const student = getStudentById(studentId);
+    student.notes.push(newNote);
+    const updatedStudentList = [...studentList].toSpliced(idIndexMap[studentId], 1, student);
+    setStudentList(updatedStudentList);
+  }
+
+  function getStudentById(studentId) {
+    const student = studentList[idIndexMap[studentId]];
+    return student
+  }
 
   return (
     <>
@@ -47,7 +70,8 @@ function App() {
           handleCohortSelect={handleCohortSelect} />
         <StudentPanel
           selectedCohort={selectedCohort}
-          filteredStudentList={filteredStudentList} />
+          filteredStudentList={filteredStudentList}
+          handleAddNote={handleAddNote} />
       </main>
     </>
   );

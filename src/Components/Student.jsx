@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import StudentDetails from './StudentDetails.jsx'
 
-export default function Student({ student }) {
+export default function Student({ student, handleAddNote }) {
   const [ showDetails, setShowDetails ] = useState(false);
 
   const {
@@ -48,7 +48,11 @@ export default function Student({ student }) {
           onClick={handleShowDetailsToggle}
         >Show More...</a>
       </div>
-      {showDetails ? <StudentDetails student={student} /> : null}
+      {showDetails ?
+        <StudentDetails
+          student={student}
+          handleAddNote={handleAddNote} /> :
+        null}
     </li>
   )
 }

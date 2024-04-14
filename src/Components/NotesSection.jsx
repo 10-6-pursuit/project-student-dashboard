@@ -2,7 +2,7 @@ import NoteForm from './NoteForm.jsx'
 import Notes from './Notes.jsx'
 
 
-export default function NotesSection({ notes }) {
+export default function NotesSection({ notes, id, handleAddNote }) {
 
   return (
     <div className="student-notes">
@@ -10,7 +10,9 @@ export default function NotesSection({ notes }) {
       <span>
         Total Notes: <span className="green">{notes.length}</span>
       </span>
-      <NoteForm />
+      <NoteForm
+        id={id}
+        handleAddNote={handleAddNote} />
       <Notes notes={notes} />
     </div>
   )
