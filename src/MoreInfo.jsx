@@ -6,26 +6,31 @@ export default function MoreInfo({setStudents, student, notes, scores, certifica
 
     return (
         <div>
-            Codewars: <br />
+            Codewars: 
+            <br />
             <ul id="codeW" className="codeWarsList">
-                <li>Current Total: { codewars.current.total }</li>
-                <li>Last Week: { codewars.current.lastWeek }</li>
-                <li>Goal:{ codewars.goal.total }</li>
+                <li><span>Current Total:</span> { codewars.current.total }</li>
+                <li><span>Last Week: </span> 
+                { codewars.current.lastWeek }</li>
+                <li><span>Goal:</span> { codewars.goal.total }</li>
+                <li><span>Percent of Goal Achieved: { Math.round(codewars.current.total / codewars.goal.total * 100)}% </span> </li>
             </ul>
             <br />
-            Scores <br />
+            Scores 
+            <br />
             <ul id="scoresL" className="scoresList">
-                <li>Assignments: { scores.assignments }</li>
-                <li>Projects: { scores.projects }</li>
-                <li>Assessments: { scores.assessments }</li>
+                <li><span>Assignments:</span> { scores.assignments }</li>
+                <li><span>Projects:</span> { scores.projects }</li>
+                <li><span>Assessments:</span> { scores.assessments }</li>
             </ul>
             <br />
-            Certifications <br />
-            <ul>
-                <li>Resume: {certifications.resume ? "✅" : "❌"}</li>
-                <li>LinkedIn: {certifications.linkedin ? "✅" : "❌"}</li>
-                <li>Mock Interview: {certifications.mockInterview ? "✅" : "❌"}</li>
-                <li>Github: {certifications.github ? "✅" : "❌"}</li>
+            Certifications 
+            <br />
+            <ul id="certs" className="certsList">
+                <li><span>Resume:</span> {certifications.resume ? "✅" : "❌"}</li>
+                <li><span>LinkedIn:</span> {certifications.linkedin ? "✅" : "❌"}</li>
+                <li><span>Mock Interview:</span> {certifications.mockInterview ? "✅" : "❌"}</li>
+                <li><span>Github:</span> {certifications.github ? "✅" : "❌"}</li>
             </ul>
             <OneOnOne studentArr={studentArr} indx={indx} setStudents={setStudents} notes={notes} />
         </div>

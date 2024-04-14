@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+
 
 export default function OneOnOne({id, notes, setStudents, studentArr, indx}) {
 
@@ -10,13 +11,16 @@ export default function OneOnOne({id, notes, setStudents, studentArr, indx}) {
 
     const [oldNotes, setOldNotes] = useState(notes);
 
-    function addNote(event) {
-        event.preventDefault();
-        setOldNotes([...oldNotes, note]);
+    useEffect(() => {
         const arrCopy = [...studentArr];
         arrCopy[indx].notes = [...oldNotes];
         setStudents(arrCopy);
-        console.log(studentArr[indx]);
+    }, [oldNotes])
+
+    function addNote(event) {
+        event.preventDefault();
+        setOldNotes([...oldNotes, note]);
+        // console.log(studentArr[indx]);
     }
 
     function handleChange(event) {
