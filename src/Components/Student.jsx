@@ -1,18 +1,24 @@
 import StudentDetails from './StudentDetails.jsx'
 
 export default function Student({ student }) {
-  console.log(student);
+
+  const {
+    profilePhoto,
+    names: { preferredName, middleName, surname },
+    username,
+    dob
+   } = student;
 
   return (
     <li className="student-card">
       <div className="student-card-upper">
-        <div className="avatar" src="">avatar</div>
+        <img className="avatar" src={profilePhoto} />
         <div className="student-info">
-          <h3 className="student-name">FIRST M. LAST</h3>
-          <span>EMAIL</span>
+          <h3 className="student-name">{preferredName} {middleName[0]}. {surname}</h3>
+          <span>{username}</span>
           <br />
           <span>
-            <span className="green">Birthday:</span> BIRTHDAY
+            <span className="green">Birthday: </span>{dob}
           </span>
         </div>
         <span>On Track to Graduate</span>
