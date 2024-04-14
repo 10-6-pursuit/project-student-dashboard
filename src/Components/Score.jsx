@@ -4,7 +4,7 @@ export default function Score({ score }) {
   const scoreAsPercent = (categoryScore * 100).toFixed()+"%"
 
   return (
-    <li>
+    <li className={category}>
       <span className="green">{categoryDisplay}: </span>{scoreAsPercent}
     </li>
   )
