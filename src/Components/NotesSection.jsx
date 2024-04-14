@@ -13,7 +13,7 @@ export default function NotesSection({ notes, id, handleAddNote }) {
       <NoteForm
         id={id}
         handleAddNote={handleAddNote} />
-      <Notes notes={notes} />
+      <Notes notes={notes} id={id} />
     </div>
   )
 }

@@ -15,9 +15,14 @@ export default function StudentDetails({ student, handleAddNote }) {
   return (
     <section className="student-details">
       <div className="student-progress">
-        <Codewars codewars={codewars} />
-        <Scores scores={scores} />
-        <Certifications certifications={certifications} />
+        <Codewars
+          codewars={codewars} key={id+"codewars"} />
+        <Scores
+          id={id}
+          scores={scores} />
+        <Certifications
+          id={id}
+          certifications={certifications} />
       </div>
       <hr className="green"/>
       <NotesSection
