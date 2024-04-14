@@ -1,20 +1,21 @@
-export default function Scores() {
+import Score from './Score.jsx';
+
+export default function Scores({ scores }) {
+  const { 
+    assignments,
+    projects,
+    assessments
+  } = scores;
+
+  const scoresArr = Object.entries(scores);
+  console.log(scoresArr);
 
   return (
-    <div className="scores">
+    <ul className="scores">
       <h4>Scores:</h4>
-      <span>
-        <span className="green">Assignments: </span>PERCENTAGE
-      </span>
-      <br />
-      <span>
-        <span className="green">Projects: </span>PERCENTAGE
-      </span>
-      <br />
-      <span>
-        <span className="green">Assessments: </span>PERCENTAGE
-      </span>
-      <br />
-    </div>
+      {scoresArr.map((score) =>(
+        <Score score={score} />
+      ))}
+    </ul>
   )
 }
