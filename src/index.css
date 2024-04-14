@@ -35,6 +35,10 @@ main {
   column-gap: 20px;
 }
 
+ul {
+  list-style: none;
+}
+
 .green {
   color: var(--green);
 }
