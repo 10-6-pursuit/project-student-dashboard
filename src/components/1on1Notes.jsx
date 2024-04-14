@@ -20,7 +20,7 @@ export default function OneOnOneNotes({ addComment }) {
       <h3>1-on-1 Notes</h3>
       <form className="one-on-one-form" onSubmit={handleSubmit}>
         <label className="one-on-one-form__label" htmlFor="commenter-name">
-          <span className="one-on-one-form__label__title">Commenter Name</span> 
+          <span className="one-on-one-form__label__title">Commenter Name</span>
           <input
             className="one-on-one-form__input"
             type="text"
@@ -31,7 +31,7 @@ export default function OneOnOneNotes({ addComment }) {
           />
         </label>
         <label className="one-on-one-form__label" htmlFor="comment">
-          <span className="one-on-one-form__label__title">Comment</span> 
+          <span className="one-on-one-form__label__title">Comment</span>
           <input
             className="one-on-one-form__input"
             type="text"
@@ -41,7 +41,11 @@ export default function OneOnOneNotes({ addComment }) {
             required
           />
         </label>
-        <input className="one-on-one-form__submit-btn" type="submit" value={"Add Note"} />
+        <input
+          className="one-on-one-form__submit-btn"
+          type="submit"
+          value={"Add Note"}
+        />
       </form>
     </div>
   );

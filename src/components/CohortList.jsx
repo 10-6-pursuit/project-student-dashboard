@@ -26,7 +26,7 @@ export default function CohortList() {
       return input;
     }
   };
-   const addComment = (studentId, commenter, comment) => {
+  const addComment = (studentId, commenter, comment) => {
     setComments((prevComments) => ({
       ...prevComments,
       [studentId]: [...(prevComments[studentId] || []), { commenter, comment }],

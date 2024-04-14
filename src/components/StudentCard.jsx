@@ -75,7 +75,9 @@ export default function StudentCard({ student }) {
             <h3>Comments</h3>
             {comments.map((note, index) => (
               <div key={index}>
-                <p><strong>{note.commenter}:</strong> {note.comment}</p>
+                <p>
+                  <strong>{note.commenter}:</strong> {note.comment}
+                </p>
               </div>
             ))}
           </div>
