@@ -1,8 +1,10 @@
-export default function Certification() {
+export default function Certification({ cert }) {
+  const [ category, isComplete ] = cert;
+  const categoryDisplay = category[0].toUpperCase()+category.slice(1);
 
   return (
-    <li>
-      <span className="green">Resume: </span>BOOLEAN
+    <li className={category} >
+      <span className="green">{categoryDisplay}: </span>{isComplete ? "✅" : "❌"}
     </li>
   )
 }

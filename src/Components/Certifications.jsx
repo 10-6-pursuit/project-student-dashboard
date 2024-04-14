@@ -1,13 +1,14 @@
 import Certification from './Certification.jsx'
 
-export default function Certifications( ) {
-
-
+export default function Certifications({ certifications } ) {
+  const certsArr = Object.entries(certifications);
 
   return (
     <ul className="certifications">
       <h4>Certifications:</h4>
-      <Certification />
+      {certsArr.map((cert) => (
+        <Certification cert={cert} />
+      ))}
     </ul>
   )
 }
