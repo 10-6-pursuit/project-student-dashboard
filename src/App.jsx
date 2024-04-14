@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import CohortList from "./components/CohortList";
 import StudentList from "./components/StudentList";
@@ -7,15 +7,19 @@ import "./App.css"
 
 function App() {
 
+  const [dataState, setDataState] = useState(data)
+
+  const [studentArray, setStudentArray] = useState(dataState)
+
   const [cohort, setCohort] = useState("All Students")
+
+  useEffect(() => setStudentArray(cohort === "All Students" ? [...dataState] : dataState.filter(ele => ele.cohort.cohortCode === cohortName)), [cohort])
 
   function handleCohortChange(e) {
     setCohort(e.target.value)
   }
 
   const cohortName = cohort.split(" ").join("")
-
-  const filtered = data.filter(ele => ele.cohort.cohortCode === cohortName)
   
   let cohortList = []
 
@@ -36,7 +40,7 @@ function App() {
       <Header />
       <main>
       <CohortList cohortSelection={cohortSelection} handleCohortChange={handleCohortChange}/>
-      <StudentList cohort={cohort} data={cohort === "All Students" ? data : filtered}/>  
+      <StudentList cohort={cohort} studentArray={studentArray}/>  
       </main>
     </div>
   );

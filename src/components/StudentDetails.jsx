@@ -1,9 +1,14 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "/src/components/StudentDetails.css"
 
 export default function StudentDetails({student}) {
     
-    const [notes, setNotes] = useState([])
+    const [notes, setNotes] = useState(student.notes)
+
+    useEffect(() => {setNotes(student.notes)
+    setShowDetails("none")
+    setShown("Show More...")
+    },[student])
     
     const [comments, setComments] = useState({
         commenter: "",

@@ -1,13 +1,13 @@
 import StudentInfo from "/src/components/StudentInfo.jsx"
 
-export default function StudentList({data, cohort}) {
+export default function StudentList({studentArray, cohort}) {
 
     return (
         <div>
             <h2>{cohort}</h2>
-            <p>Total Students: <span className="numberOfStudents">{data.length}</span></p>
+            <p>Total Students: <span className="numberOfStudents">{studentArray.length}</span></p>
             <ul>
-                {data.map(student => <StudentInfo student={student}/>)}
+                {studentArray.map(student => <StudentInfo student={student}/>)}
             </ul>
         </div>
 
