@@ -20,7 +20,7 @@ export default function NoteForm({ id, handleAddNote }) {
   }
 
   return(
-    <form className="notes-form"
+    <form className="note-form"
       onSubmit={handleFormSubmit}
     >
       <fieldset>

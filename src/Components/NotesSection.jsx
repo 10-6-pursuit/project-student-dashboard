@@ -7,7 +7,7 @@ export default function NotesSection({ notes, id, handleAddNote }) {
   return (
     <div className="student-notes">
       <h3>1-On-1 Notes</h3>
-      <span>
+      <span className="total-notes">
         Total Notes: <span className="green">{notes.length}</span>
       </span>
       <NoteForm
