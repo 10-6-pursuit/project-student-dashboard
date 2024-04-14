@@ -47,7 +47,10 @@ export default function StudentCard({ student }) {
           <div className="card__inner-inner-container">
             <h3 className="card__inner-inner-container__content name">
               {student.names.preferredName}{" "}
-              {student.names.middleName ? student.names.middleName.charAt(0) + '.' : ''} {student.names.surname}
+              {student.names.middleName
+                ? student.names.middleName.charAt(0) + "."
+                : ""}{" "}
+              {student.names.surname}
             </h3>
             <h3 className="card__inner-inner-container__content onTrack">
               {student.certifications.resume &&

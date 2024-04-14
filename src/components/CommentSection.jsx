@@ -18,4 +18,4 @@ export default function CommentsSection({ comments }) {
       </ul>
     </div>
   );
-};
+}
