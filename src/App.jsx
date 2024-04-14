@@ -15,7 +15,7 @@ for (let {cohort} of data){
   }
 }
 
-// const cohortName = `${cohortCode.slice(0,-4)} ${cohortCode.slice(-4)}`
+cohorts.sort((a, b) => b[1] - a[1])
 
 function App() {
   return (

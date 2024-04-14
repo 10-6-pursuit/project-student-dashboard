@@ -1,11 +1,10 @@
 import Cohorts from './Cohorts.jsx'
 
-export default function CohortPanel() {
-
+export default function CohortPanel({ cohorts }) {
   return (
     <section className="cohort-panel">
       <h2>Choose a Class by Start Date</h2>
-      <Cohorts />
+      <Cohorts cohorts={cohorts} />
     </section>
 
   )
