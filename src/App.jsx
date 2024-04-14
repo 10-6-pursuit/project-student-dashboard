@@ -26,6 +26,7 @@ function App() {
   }
 
   let seasonObject = {Winter: 0, Fall: 1, Summer: 2, Spring: 3};
+  
   let sortedCohortList = cohortList.map(ele => `${ele.slice(0,-4)} ${ele.slice(-4)}`).sort((a, b) => b.split(" ")[1] - a.split(" ")[1] || seasonObject[a.split(" ")[0]] - seasonObject[b.split(" ")[0]]);
   
   let cohortSelection = ["All Students"].concat(sortedCohortList)

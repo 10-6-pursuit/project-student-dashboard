@@ -2,41 +2,45 @@ import { useState } from "react"
 import "/src/components/StudentDetails.css"
 
 export default function StudentDetails({student}) {
-
+    
     const [notes, setNotes] = useState([])
-
+    
     const [comments, setComments] = useState({
         commenter: "",
         comment: ""
-      })
-
+    })
+    
     function handleTextChange (e) {
         setComments({...comments, [e.target.id]: e.target.value})
     }
-
+    
     function addNotes(e) {
         e.preventDefault()
         setNotes([...notes,comments])
         setComments({
             commenter: "",
             comment: ""
-          })
+        })
     }
+
+    const [shown, setShown] = useState("Show More...")
 
     const [showDetails, setShowDetails] = useState("none")
 
     function toggleDetails(){
         if(showDetails === "none") {
             setShowDetails("block")
+            setShown("Show Less...")
         } else {
             setShowDetails("none")
+            setShown("Show More...")
         }
     }
 
     return (
         <div className="studentDetails">
             <div className="studentDetails__showMoreButton">
-                <span onClick={toggleDetails}>Show More...</span>
+                <span onClick={toggleDetails}>{shown}</span>
             </div>
             <div style={{display: showDetails}}>
                 <div className="studentDetails__card">
@@ -63,7 +67,7 @@ export default function StudentDetails({student}) {
                 </div>
                 <hr />
                 <div className="studentDetails__form">
-                    <p>1 on 1 Notes</p>
+                    <p>1-on-1 Notes</p>
                     <form onSubmit={addNotes}>
                         <label>Commenter Name<input onChange={handleTextChange} type="text" id="commenter" value={comments.commenter} />
                         </label>
