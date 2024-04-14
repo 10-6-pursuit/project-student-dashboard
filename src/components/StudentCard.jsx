@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import AdditionalDetails from "./AdditionalDetails";
 import OneOnOneNotes from "./1on1Notes";
+import CommentsSection from "./CommentSection";
 import "/src/styles/StudentCard.css";
 
 export default function StudentCard({ student }) {
   const [showDetails, setShowDetails] = useState(false);
   const [comments, setComments] = useState(student.notes);
-
-  const initializer = (str) => `${str[0]}.`;
   const formatDate = (inputDate) => {
     const parts = inputDate.split("/");
     const months = [
@@ -29,14 +28,11 @@ export default function StudentCard({ student }) {
     const year = parseInt(parts[2], 10);
     return `${month} ${day}, ${year}`;
   };
+
   const toggleDetails = () => setShowDetails(!showDetails);
   const addComment = (commenter, comment) => {
     const newComment = { commenter, comment };
     setComments([...comments, newComment]);
-  };
-  const commenterName = (input) => {
-    const name = input.split(" ");
-    return `${name[0]} ${initializer(name[1])}`;
   };
 
   return (
@@ -51,7 +47,7 @@ export default function StudentCard({ student }) {
           <div className="card__inner-inner-container">
             <h3 className="card__inner-inner-container__content name">
               {student.names.preferredName}{" "}
-              {initializer(student.names.middleName)} {student.names.surname}
+              {student.names.middleName ? student.names.middleName.charAt(0) + '.' : ''} {student.names.surname}
             </h3>
             <h3 className="card__inner-inner-container__content onTrack">
               {student.certifications.resume &&
@@ -77,15 +73,7 @@ export default function StudentCard({ student }) {
       {showDetails && (
         <div>
           <OneOnOneNotes addComment={addComment} />
-          <div>
-            <ul>
-              {comments.map((note, index) => (
-                <li key={index}>
-                  {commenterName(note.commenter)} says, {`"${note.comment}"`}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <CommentsSection comments={comments} />
         </div>
       )}
     </div>
