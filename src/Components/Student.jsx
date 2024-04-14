@@ -1,6 +1,7 @@
 import StudentDetails from './StudentDetails.jsx'
 
-export default function Student() {
+export default function Student({ student }) {
+  console.log(student);
 
   return (
     <li className="student-card">
