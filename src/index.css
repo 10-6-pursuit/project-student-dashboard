@@ -97,3 +97,7 @@ button {
   border: none;
   border-radius: 3px;
 }
+
+.note {
+  list-style: disc;
+}
