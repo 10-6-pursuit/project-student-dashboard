@@ -13,13 +13,10 @@ function App() {
 
   const [cohort, setCohort] = useState("All Students")
 
-  useEffect(() => setStudentArray(cohort === "All Students" ? [...dataState] : dataState.filter(ele => ele.cohort.cohortCode === cohortName)), [cohort, dataState])
-
   function handleCohortChange(e) {
+    setStudentArray(e.target.value === "All Students" ? [...dataState] : dataState.filter(ele => ele.cohort.cohortCode === e.target.value.split(" ").join("")))
     setCohort(e.target.value)
   }
-
-  const cohortName = cohort.split(" ").join("")
   
   let cohortList = []
 
