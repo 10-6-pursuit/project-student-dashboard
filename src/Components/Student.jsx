@@ -46,7 +46,7 @@ export default function Student({ student, handleAddNote }) {
           href="#"
           className="green detail-toggle"
           onClick={handleShowDetailsToggle}
-        >Show More...</a>
+        >Show {showDetails ? "Less" : "More"}...</a>
       </div>
       {showDetails ?
         <StudentDetails
