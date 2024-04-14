@@ -11,7 +11,7 @@ export default function NotesSection({ notes }) {
         Total Notes: <span className="green">{notes.length}</span>
       </span>
       <NoteForm />
-      <Notes />
+      <Notes notes={notes} />
     </div>
   )
 }

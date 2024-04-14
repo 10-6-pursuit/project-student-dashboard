@@ -1,8 +1,8 @@
-export default function Note() {
-
+export default function Note({ note }) {
+  const { commenter, comment } = note;
   return (
-    <li>
-      COMMENTER N. says "NOTE"
+    <li className="note" >
+      {commenter} says "{comment}"
     </li>
   )
 }

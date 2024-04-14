@@ -1,11 +1,13 @@
 
 import Note from './Note.jsx'
 
-export default function Notes() {
+export default function Notes({ notes }) {
 
   return (
     <ul className="notes">
-      <Note />
+      {notes.map((note) => (
+        <Note note={note} />
+      ))}
     </ul>
   )
 }
