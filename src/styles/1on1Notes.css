@@ -1,3 +1,14 @@
+hr {
+    border: none;
+    height: 2px;
+    background-color: #67a35f;
+}
+
+.one-on-one-fieldset {
+    padding: 25px 20px;
+    border: 1px solid black;
+}
+
 .one-on-one-form {
     display: flex;
     flex-direction: column;
@@ -20,4 +31,9 @@
 .one-on-one-form__submit-btn:hover {
     cursor: pointer;
     background-color: #477041;
+}
+
+.error-box {
+    margin-left: 10px;
+    color: red;
 }

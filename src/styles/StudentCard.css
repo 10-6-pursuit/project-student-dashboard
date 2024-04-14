@@ -4,9 +4,9 @@
 
 .card {
     display: grid;
-    grid-template-rows: 1fr auto;
-    padding: 15px;
-    border: 1px solid #67a35f;
+    grid-template: 1fr auto / 1fr;
+    padding: 25px;
+    border: 2px solid #67a35f;
     margin: 10px;
     width: auto;
 }
@@ -17,6 +17,8 @@
 
 .card__img {
     width: 150px;
+    height: 150px;
+    border-radius: 5px;
 }
 
 .card__inner-container {

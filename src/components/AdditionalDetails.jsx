@@ -68,12 +68,12 @@ export default function AdditionalDetails({
             {linkedin ? "✅" : "❌"}
           </p>
           <p className="card__details__para">
-            <span className="green-txt">GitHub: </span>
-            {github ? "✅" : "❌"}
-          </p>
-          <p className="card__details__para">
             <span className="green-txt">Mock Interview: </span>
             {mockInterview ? "✅" : "❌"}
+          </p>
+          <p className="card__details__para">
+            <span className="green-txt">GitHub: </span>
+            {github ? "✅" : "❌"}
           </p>
         </div>
       </div>
