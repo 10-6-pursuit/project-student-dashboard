@@ -54,15 +54,23 @@ main {
   transform: scale(120%);
 }
 
+.student-panel h2 {
+  margin-bottom: 0;
+}
+
 .student-list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .student-card {
-  border: 1px solid var(--green);
-  margin: 20px 0;
+  width: 550px;
+  height: fit-content;
+  border: 2px solid var(--green);
   padding: 20px;
 }
 

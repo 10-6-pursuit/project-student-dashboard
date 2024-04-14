@@ -6,7 +6,7 @@ export default function StudentPanel({ selectedCohort,
  }) {
   
   return (
-    <section className="student-list">
+    <section className="student-panel">
       <h2>{selectedCohort}</h2>
       <span>
         <span className="green">Total Students: </span>{filteredStudentList.length}
