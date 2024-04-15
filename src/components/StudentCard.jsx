@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AdditionalDetails from "./AdditionalDetails";
-import OneOnOneNotes from "./1on1Notes";
+import OneOnOneNotes from "./OneOnOneNotes";
 import CommentsSection from "./CommentSection";
 import "/src/styles/StudentCard.css";
 
