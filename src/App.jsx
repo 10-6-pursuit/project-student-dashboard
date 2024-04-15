@@ -25,6 +25,12 @@ for (let {cohort, id } of data){
   i++;
 }
 cohortsArr.sort((a, b) => b[1] - a[1]);
+const cohortSymbols = {
+  "Spring": "🌻",
+  "Summer": "☀️",
+  "Fall": "🍂",
+  "Winter": "❄️"
+}
 
 function App() {
   const [ studentList, setStudentList ] = useState(data);
@@ -60,10 +66,12 @@ function App() {
         <CohortPanel
           cohorts={cohortsArr}
           selectedCohort={selectedCohort}
+          cohortSymbols={cohortSymbols}
           handleCohortSelect={handleCohortSelect} />
         <StudentPanel
           selectedCohort={selectedCohort}
           filteredStudentList={filteredStudentList}
+          cohortSymbols={cohortSymbols}
           handleAddNote={handleAddNote} />
       </main>
     </>

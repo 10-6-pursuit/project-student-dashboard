@@ -51,6 +51,10 @@ main {
   transform: scale(120%);
 }
 
+.cohort-symbol {
+  color: black;
+}
+
 .student-panel-header {
   margin-bottom: 20px;
 }
@@ -69,10 +73,16 @@ main {
 }
 
 .student-card {
-  width: 550px;
+  width: minmax(450px, 550px);
   height: fit-content;
   border: 2px solid var(--green);
-  padding: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+
+.card-cohort-symbol {
+  margin: 10px 0 0 95%;
+  z-index: 1;
 }
 
 .student-card-upper {

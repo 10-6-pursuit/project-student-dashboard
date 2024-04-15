@@ -1,6 +1,9 @@
 import Cohort from './Cohort.jsx'
 
-export default function Cohorts({ cohorts, selectedCohort ,handleCohortSelect }) {
+export default function Cohorts({ cohorts,
+  selectedCohort,
+  cohortSymbols,
+  handleCohortSelect }) {
 
   return (
     <div className="cohort-list">
@@ -9,6 +12,7 @@ export default function Cohorts({ cohorts, selectedCohort ,handleCohortSelect })
           cohortCode={cohortCode}
           cohortName={cohortName}
           selectedCohort={selectedCohort}
+          cohortSymbols={cohortSymbols}
           handleCohortSelect={handleCohortSelect}
           key={cohortCode} />
       ))}

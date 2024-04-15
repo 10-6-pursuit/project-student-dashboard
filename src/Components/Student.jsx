@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import StudentDetails from './StudentDetails.jsx'
 
-export default function Student({ student, handleAddNote }) {
+export default function Student({ student,
+  cohortSymbols,
+  handleAddNote }) {
   const [ showDetails, setShowDetails ] = useState(false);
+  const { cohort: { cohortCode } } = student;
+  const symbolDisplay = `${cohortSymbols[cohortCode.slice(0, -4)]}'${cohortCode.slice(-2)}`;
 
   const {
     profilePhoto,
@@ -31,6 +35,7 @@ export default function Student({ student, handleAddNote }) {
 
   return (
     <li className="student-card">
+      <h4 className="card-cohort-symbol">{symbolDisplay}</h4>
       <div className="student-card-upper">
         <img className="avatar" src={profilePhoto} />
         <div className="student-info">

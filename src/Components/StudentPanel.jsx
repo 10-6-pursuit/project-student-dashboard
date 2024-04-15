@@ -3,6 +3,7 @@ import Students from './Students.jsx'
 
 export default function StudentPanel({ selectedCohort,
   filteredStudentList,
+  cohortSymbols,
   handleAddNote
  }) {
   
@@ -13,6 +14,7 @@ export default function StudentPanel({ selectedCohort,
         filteredStudentList={filteredStudentList} />
       <Students
         filteredStudentList={filteredStudentList}
+        cohortSymbols={cohortSymbols}
         handleAddNote={handleAddNote} />
     </section>
   )

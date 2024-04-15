@@ -1,6 +1,9 @@
 import Cohorts from './Cohorts.jsx'
 
-export default function CohortPanel({ cohorts, selectedCohort, handleCohortSelect }) {
+export default function CohortPanel({ cohorts,
+  selectedCohort,
+  cohortSymbols,
+  handleCohortSelect }) {
   
   return (
   <section className="cohort-panel">
@@ -17,6 +20,7 @@ export default function CohortPanel({ cohorts, selectedCohort, handleCohortSelec
     <Cohorts
       cohorts={cohorts}
       selectedCohort={selectedCohort}
+      cohortSymbols={cohortSymbols}
       handleCohortSelect={handleCohortSelect} />
   </section>
   )
