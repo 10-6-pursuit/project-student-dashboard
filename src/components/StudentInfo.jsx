@@ -19,7 +19,7 @@ export default function StudentInfo({student, setDataState, dataState}) {
                     <div className="studentInfo__card-email">{student.username}</div>
                     <div className="studentInfo__card-birthday"><span className="birthday">Birthday:</span> {studentBirthDay}</div>
                 </div>
-                <div className="studentInfo__card-ontrack-status" style={{display: !student.certifications.resume  || !student.certifications.linkedin || !student.certifications.mockInterview || !student.certifications.github? "none" : "block"}}>
+                <div className="studentInfo__card-ontrack-status" style={{display: student.codewars.current.total > 600 && student.certifications.resume  && student.certifications.linkedin && student.certifications.mockInterview && student.certifications.github ? "block" : "none"}}>
                     <div>On Track to Graduate</div>
                 </div>
             </div>
