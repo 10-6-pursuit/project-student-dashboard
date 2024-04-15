@@ -1,11 +1,7 @@
 import React from "react";
 import "/src/styles/AdditionalDetails.css";
 
-export default function AdditionalDetails({
-  student,
-  showDetails,
-  toggleDetails,
-}) {
+export default function AdditionalDetails({ student, showDetails }) {
   const score = student.codewars.current.total;
   const resume = student.certifications.resume;
   const linkedin = student.certifications.linkedin;

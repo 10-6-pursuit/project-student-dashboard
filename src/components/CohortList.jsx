@@ -47,7 +47,16 @@ export default function CohortList() {
         >
           All Students
         </button>
-        {["Winter2026", "Fall2026", "Summer2026", "Spring2026", "Winter2025", "Fall2025", "Summer2025", "Spring2025"].map(cohort => (
+        {[
+          "Winter2026",
+          "Fall2026",
+          "Summer2026",
+          "Spring2026",
+          "Winter2025",
+          "Fall2025",
+          "Summer2025",
+          "Spring2025",
+        ].map((cohort) => (
           <button
             key={cohort}
             className="cohort-list__container__filter-btn"
