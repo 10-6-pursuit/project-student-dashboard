@@ -11,6 +11,7 @@ export default function StudentProfile({
   certifications,
   scores,
   notes,
+  students
 }) {
 
   const date = new Date(dob)
@@ -20,12 +21,7 @@ export default function StudentProfile({
     day: "numeric"
   })
 
-  const {
-    resume: isResume,
-    linkedin: isLinked,
-    github: isGithub,
-    mockInterview: isMockInterview,
-  } = certifications;
+  const { resume, linkedin, github, mockInterview } = certifications
 
   return (
     <li className="student-profile">
@@ -35,9 +31,9 @@ export default function StudentProfile({
           <h3 className="student-info__name">
             {name}
             <span>
-              {isLinked && isGithub && isMockInterview && isResume
+                {resume && linkedin && github && mockInterview && codewars.current.total > 600
                 ? "On Track to Graduate"
-                : ""}
+                : "Off Track to Graduate"}
             </span>
           </h3>
         </div>
@@ -51,6 +47,7 @@ export default function StudentProfile({
           certifications={certifications}
           scores={scores}
           notes={notes}
+          students={students}
         />
       </div>
     </li>

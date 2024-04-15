@@ -22,6 +22,9 @@ export default function Students({ students, cohort }) {
               certifications={student.certifications}
               scores={student.cohort.scores}
               notes={student.notes}
+
+              //pass down students
+              students={students}
             />
           );
         })}

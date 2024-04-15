@@ -1,38 +1,34 @@
-import { useState } from "react";
+import { useState} from "react";
 
-export default function Note({ notes }) {
-  const [studentNote, setStudentNote] = useState(notes);
-  const [newCommenter, setNewCommenter] = useState("");
-  const [newComment, setNewComment] = useState("");
+export default function Note({ notes, studentID, appendNotes, students}) {
+  
+  const [studentNote, setStudentNote] = useState({
+    commenter: "",
+    comment: "",
+  })
 
-  //Handle Commenter
-  function handleClick(e) {
-    if (newCommenter.length > 0 && newComment.length > 0) {
-      setStudentNote([
-        ...studentNote,
-        {
-          commenter: newCommenter,
-          comment: newComment,
-        },
-      ]);
-    }
+  //Add notes to our Data for persisitence
+  function appendNotes(studentNote, studentID) {
+    students.map((student) => student.id === studentID ? student.notes.push(studentNote) : null)
   }
 
-  //Handle Comment
-  function handleCommenter(e) {
-    setNewCommenter(e.target.value);
+  function handleNote(e) {
+    setStudentNote({
+      ...studentNote,
+      [e.target.id]: e.target.value
+    });
   }
 
-  function handleComment(e) {
-    setNewComment(e.target.value);
-  }
-
-  function resetForm() {
-    setNewCommenter(""), setNewComment("");
+  function resetForm(){
+    setStudentNote({
+      commenter: "",
+      comment: "",
+    })
   }
 
   function handleSubmit(e) {
     e.preventDefault();
+    appendNotes(studentNote, studentID)
     resetForm();
   }
 
@@ -44,14 +40,14 @@ export default function Note({ notes }) {
         <form onSubmit={handleSubmit}>
           <div className="inputs">
             <fieldset>
-              <label htmlFor="comment-name">
+              <label htmlFor="commenter">
                 Comment Name
                 <input
                   type="text"
-                  id="comment-name"
-                  name="comment-name"
-                  value={newCommenter}
-                  onChange={handleCommenter}
+                  id="commenter"
+                  name="commenter"
+                  value={studentNote.commenter}
+                  onChange={handleNote}
                   required
                 />
               </label>
@@ -62,8 +58,8 @@ export default function Note({ notes }) {
                   type="text"
                   id="comment"
                   name="comment"
-                  value={newComment}
-                  onChange={handleComment}
+                  value={studentNote.comment}
+                  onChange={handleNote}
                   required
                 />
               </label>
@@ -71,14 +67,13 @@ export default function Note({ notes }) {
                 className="submit"
                 type="submit"
                 value="Add Note"
-                onClick={handleClick}
               />
             </fieldset>
           </div>
         </form>
       </section>
       <ul>
-        {studentNote.map((note, index) => {
+        {notes.map((note, index) => {
           return (
             <li key={index}>
               {note.commenter} says, "{note.comment}"

@@ -6,6 +6,7 @@ export default function StudentExtras({
   certifications,
   scores,
   notes,
+  students
 }) {
   const { current, goal } = codewars;
   const { total: currentTotal, lastWeek: currentLastWeek } = current;
@@ -90,7 +91,7 @@ export default function StudentExtras({
           </ul>
         </div>
       </div>
-      <Note notes={notes} />
+      <Note notes={notes} studentID={studentID} students={students}/>
     </div>
   );
 }

@@ -6,10 +6,7 @@ export default function Cohort({
 }) {
   function handleClick(e) {
     const text = e.target.textContent.replace(" ", "");
-    console.log(text);
-
     handleFilter(text);
-
     setCohort(cohort);
   }
 

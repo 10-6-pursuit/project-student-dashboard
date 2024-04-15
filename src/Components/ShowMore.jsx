@@ -7,6 +7,7 @@ export default function ShowMore({
   certifications,
   scores,
   notes,
+  students
 }) {
   const [showMore, setShowMore] = useState(false);
 
@@ -28,6 +29,7 @@ export default function ShowMore({
             certifications={certifications}
             scores={scores}
             notes={notes}
+            students={students}
           />
         </div>
       ) : null}
