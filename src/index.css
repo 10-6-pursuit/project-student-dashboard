@@ -119,6 +119,10 @@ main {
   grid-column: 2 / span 1;
 }
 
+.student-details hr {
+  margin: 15px 0;
+}
+
 .student-progress {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
