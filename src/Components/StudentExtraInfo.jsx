@@ -26,7 +26,7 @@ export default function StudentExtraInfo ({student}) {
             </div>
             <div className="one-on-one">
                 <hr/>
-                <OneOnOneNotes student={student}/>
+                <OneOnOneNotes studentId={student.id} student={student}/>
             </div>
         </>
     )

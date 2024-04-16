@@ -1,12 +1,12 @@
 import StudentExtraInfo from "./StudentExtraInfo";
 import { useState } from "react";
 export default function Student ({student}) {
-
+    
     const [showInfo, setShowInfo] = useState(false);
+    
 
     function toggleInfo(){
         setShowInfo(!showInfo)
-        console.log(showInfo)
     }
 
     return (

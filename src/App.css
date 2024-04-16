@@ -83,6 +83,15 @@ main{
             border-radius: 5px;
             padding: 5px;
         }
+
+        button:hover{
+            cursor: pointer;
+            background-color: yellowgreen;
+        }
+
+        button:active{
+            background-color: grey;
+        }
     }
 }
 .student{
