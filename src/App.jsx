@@ -44,8 +44,15 @@ const sortMethod = {
   "lastName": {
     "ascending": {method: (a, b) => a.names.surname.toLowerCase().localeCompare(b.names.surname.toLowerCase())},
     "descending": {method: (a, b) => b.names.surname.toLowerCase().localeCompare(a.names.surname.toLowerCase())},
+  },
+  "codewars": {
+    current: { 
+      total : {
+        "ascending": {method: (a, b) => a.codewars.current.total - b.codewars.current.total},
+        "descending": {method: (a, b) => b.codewars.current.total - a.codewars.current.total},
+      }
+    }
   }
-
 }
 
 function App() {
@@ -79,11 +86,15 @@ function App() {
   }
 
 function sortStudents(sortBy, sortDirection) {
-  filteredStudentList.sort(sortMethod[sortBy][sortDirection].method)
+  if (sortBy === "codewars") {
+    filteredStudentList.sort(sortMethod[sortBy].current.total[sortDirection].method)
+  } else {
+    filteredStudentList.sort(sortMethod[sortBy][sortDirection].method)
+  }
 }
 
   if (sortBy === "none") {
-    null
+    
   } else {  
     sortStudents(sortBy, sortDirection);
   }

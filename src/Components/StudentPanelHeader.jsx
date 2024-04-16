@@ -19,9 +19,11 @@ export default function StudentPanelHeader({ selectedCohort,
           name="sortBy"
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)} id="sort-by">
-          <option value="id">id</option>
+          {/* <option value="none">--Sort By--</option> */}
+          <option value="id">ID</option>
           <option value="firstName">First Name</option>
           <option value="lastName">Last Name</option>
+          <option value="codewars">Total CW Points</option>
         </select>
         <span> </span>
         <select
