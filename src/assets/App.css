@@ -1,0 +1,56 @@
+:root {
+	--primary: #41b06e;
+	--primary-lighter: rgba(18, 181, 18, 0.73);
+	--danger: red;
+	--success: green;
+	--text-dark: black;
+	--text-light: white;
+	/* --primary: #003c43;
+	--text-dark: #003c43;
+	--text-light: #fff2e1; */
+}
+.text-primary {
+	color: var(--primary);
+}
+.text-danger {
+	color: var(--danger);
+}
+.text-success {
+	color: var(--success);
+}
+.dashboard {
+	display: grid;
+	grid-template-rows: 10vh 80vh 10vh;
+}
+
+.header {
+	display: grid;
+	place-items: center;
+	background-color: var(--primary);
+	color: var(--text-light);
+}
+
+.header h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.global__title {
+	font-weight: bold;
+	font-size: 1.3rem;
+	margin-bottom: 5px;
+}
+.global__subtitle {
+	font-weight: bold;
+}
+
+main {
+	padding: 3em;
+	overflow: auto;
+}
+
+.main__wrapper {
+	display: grid;
+	grid-template-columns: 30em 1fr;
+	gap: 5em;
+}
