@@ -3,6 +3,8 @@ import StudentPanelHeader from './StudentPanelHeader.jsx'
 import Students from './Students.jsx'
 
 export default function StudentPanel({        selectedCohort,
+  sortBy,
+  sortDirection,
   setSortBy,
   setSortDirection,
   filteredStudentList,
@@ -14,6 +16,8 @@ export default function StudentPanel({        selectedCohort,
     <section className="student-panel">
       <StudentPanelHeader
         selectedCohort={selectedCohort}
+        sortBy={sortBy}
+        sortDirection={sortDirection}
         setSortBy={setSortBy}
         setSortDirection={setSortDirection}
         filteredStudentList={filteredStudentList} />

@@ -33,10 +33,10 @@ const cohortSymbols = {
 }
 
 const sortMethod = {
-  "none": {
-    "ascending": {method: undefined},
-    "descending": {method: undefined}
-    },
+  "id": {
+    "ascending": {method: (a, b) => a.id.toLowerCase().localeCompare(b.id.toLowerCase())},
+    "descending": {method: (a, b) => b.id.toLowerCase().localeCompare(a.id.toLowerCase())},
+  },
   "firstName": {
     "ascending": {method: (a, b) => a.names.preferredName.toLowerCase().localeCompare(b.names.preferredName.toLowerCase())},
     "descending": {method: (a, b) => b.names.preferredName.toLowerCase().localeCompare(a.names.preferredName.toLowerCase())},
@@ -53,7 +53,7 @@ function App() {
   const [ filteredStudentList, setFilteredStudentList ] = useState(studentList);
   const [ selectedCohort, setSelectedCohort ] = useState("All Students")
   const [ studentSort, setStudentSort ] = useState(filteredStudentList);
-  const [ sortBy, setSortBy ] = useState("none");
+  const [ sortBy, setSortBy ] = useState("firstName");
   const [ sortDirection, setSortDirection ] = useState("ascending");
 
   function handleCohortSelect(e) {
@@ -80,11 +80,13 @@ function App() {
 
 function sortStudents(sortBy, sortDirection) {
   filteredStudentList.sort(sortMethod[sortBy][sortDirection].method)
-  console.log(filteredStudentList)
-
 }
 
-  sortStudents(sortBy, sortDirection);
+  if (sortBy === "none") {
+    null
+  } else {  
+    sortStudents(sortBy, sortDirection);
+  }
 
   return (
     <>
@@ -98,6 +100,8 @@ function sortStudents(sortBy, sortDirection) {
         <StudentPanel
           selectedCohort={selectedCohort}
           cohortSymbols={cohortSymbols}
+          sortBy={sortBy}
+          sortDirection={sortDirection}
           setSortBy={setSortBy}
           setSortDirection={setSortDirection}
           filteredStudentList={filteredStudentList}
