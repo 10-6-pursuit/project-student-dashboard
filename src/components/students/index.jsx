@@ -3,7 +3,7 @@ import "./Students.css";
 export default function Students({
 	students,
 	cohortTitle,
-	onAddNotesToStudent,
+	onAddNotesToStudent
 }) {
 	return (
 		<div className="students">
