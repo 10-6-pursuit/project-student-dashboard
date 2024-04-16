@@ -8,6 +8,7 @@
 
 hr {
  border-top: 2px solid var(--green);
+ margin: 0;
 }
 
 .student-progress ul {
@@ -41,21 +42,27 @@ main {
   text-align: center;
 }
 
-.cohort h3 {
-  display: inline;
-}
-
-.cohort-name {
+.cohort {
   width: fit-content;
-  margin: 10px 0 10px 20px;
+  margin: 15px 0 15px 30px;
 }
 
-.cohort-name:hover {
+.cohort:hover {
   cursor: pointer;
   transform: scale(120%);
 }
 
+.cohort h3 {
+  display: inline-block;
+}
+
+.cohort-name {
+  width: 135px;
+  margin: 0px 0 0px 0px;
+}
+
 .cohort-symbol {
+  margin: 0;
   color: black;
 }
 
