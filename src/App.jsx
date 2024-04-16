@@ -34,13 +34,18 @@ const cohortSymbols = {
 
 const sortMethod = {
   "none": {
-    "ascending": {method: (a, b) => null},
-    "descending": {method: (a, b) => null}
+    "ascending": {method: undefined},
+    "descending": {method: undefined}
     },
   "firstName": {
     "ascending": {method: (a, b) => a.names.preferredName.toLowerCase().localeCompare(b.names.preferredName.toLowerCase())},
     "descending": {method: (a, b) => b.names.preferredName.toLowerCase().localeCompare(a.names.preferredName.toLowerCase())},
+  },
+  "lastName": {
+    "ascending": {method: (a, b) => a.names.surname.toLowerCase().localeCompare(b.names.surname.toLowerCase())},
+    "descending": {method: (a, b) => b.names.surname.toLowerCase().localeCompare(a.names.surname.toLowerCase())},
   }
+
 }
 
 function App() {
@@ -49,7 +54,7 @@ function App() {
   const [ selectedCohort, setSelectedCohort ] = useState("All Students")
   const [ studentSort, setStudentSort ] = useState(filteredStudentList);
   const [ sortBy, setSortBy ] = useState("none");
-  const [ sortDirection, setSortDirection ] = useState(undefined);
+  const [ sortDirection, setSortDirection ] = useState("ascending");
 
   function handleCohortSelect(e) {
     const cohortCode = e.target.id
@@ -73,7 +78,13 @@ function App() {
     setStudentList([...studentList]);
   }
 
-  console.log(sortBy, sortDirection)
+function sortStudents(sortBy, sortDirection) {
+  filteredStudentList.sort(sortMethod[sortBy][sortDirection].method)
+  console.log(filteredStudentList)
+
+}
+
+  sortStudents(sortBy, sortDirection);
 
   return (
     <>
