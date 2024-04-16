@@ -1,6 +1,6 @@
 import StudentProfile from "./StudentProfile";
 
-export default function Students({ students, cohort }) {
+export default function Students({ students, cohort, appendNotes }) {
   return (
     <div className="cohort-list">
       <h2>{cohort}</h2>
@@ -12,19 +12,11 @@ export default function Students({ students, cohort }) {
           return (
             <StudentProfile
               key={student.id}
-              name={`${student.names.preferredName} ${student.names.middleName} ${student.names.surname} `}
-              username={student.username}
-              dob={student.dob}
-              image={student.profilePhoto}
               student={student}
-              //Key into extras
-              codewars={student.codewars}
-              certifications={student.certifications}
-              scores={student.cohort.scores}
               notes={student.notes}
-
-              //pass down students
               students={students}
+              studentID={student.id}
+              appendNotes={appendNotes}
             />
           );
         })}

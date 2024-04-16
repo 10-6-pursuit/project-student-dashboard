@@ -1,35 +1,18 @@
 import Note from "./Note";
 
-export default function StudentExtras({
-  studentID,
-  codewars,
-  certifications,
-  scores,
-  notes,
-  students
-}) {
-  const { current, goal } = codewars;
+export default function StudentExtras({studentID, student, notes, students, appendNotes}) {
+  const { current, goal } = student.codewars;
   const { total: currentTotal, lastWeek: currentLastWeek } = current;
   const { total: goalTotal, lastWeek: goalLastWeek } = goal;
 
   const percentGoal = Math.round((currentTotal / goalTotal) * 100);
 
-  const {
-    assignments: assignment,
-    projects: project,
-    assessments: assessment,
-  } = scores;
-
-  const {
-    resume: isResume,
-    linkedin: isLinked,
-    github: isGithub,
-    mockInterview: isMockInterview,
-  } = certifications;
-
+  const { assignments, projects, assessments } = student.cohort.scores
+  const { resume, linkedin, github, mockInterview } = student.certifications
+  
   return (
     <div className="extras">
-      <div className="extra-info" key={studentID}>
+      <div className="extra-info" key={student.id}>
         <div className="codewars">
           <h3>CodeWars:</h3>
           <ul>
@@ -56,15 +39,15 @@ export default function StudentExtras({
           <ul>
             <li>
               <span>Assignment: </span>
-              {assignment * 100}%
+              {assignments * 100}%
             </li>
             <li>
               <span>Projects: </span>
-              {project * 100}%
+              {projects * 100}%
             </li>
             <li>
               <span>Assessments:</span>
-              {assessment * 100}%
+              {assessments * 100}%
             </li>
           </ul>
         </div>
@@ -72,26 +55,25 @@ export default function StudentExtras({
           <h3>Certifications:</h3>
           <ul>
             <li>
-              {/* Pass Boolean argument and add emjoi according to true or false */}
               <span>Resume: </span>
-              {isResume ? "✅" : "❌"}
+              {resume ? "✅" : "❌"}
             </li>
             <li>
               <span>LinkedIn: </span>
-              {isLinked ? "✅" : "❌"}
+              {linkedin ? "✅" : "❌"}
             </li>
             <li>
               <span>Mock Interview: </span>
-              {isMockInterview ? "✅" : "❌"}
+              {mockInterview ? "✅" : "❌"}
             </li>
             <li>
               <span>Github: </span>
-              {isGithub ? "✅" : "❌"}
+              {github ? "✅" : "❌"}
             </li>
           </ul>
         </div>
       </div>
-      <Note notes={notes} studentID={studentID} students={students}/>
+      <Note notes={notes} studentID={studentID} students={students} appendNotes={appendNotes}/>
     </div>
   );
 }

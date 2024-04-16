@@ -1,16 +1,11 @@
-import { useState} from "react";
+import { useState } from "react";
 
-export default function Note({ notes, studentID, appendNotes, students}) {
+export default function Note({ notes, studentID, appendNotes}) {
   
   const [studentNote, setStudentNote] = useState({
     commenter: "",
     comment: "",
   })
-
-  //Add notes to our Data for persisitence
-  function appendNotes(studentNote, studentID) {
-    students.map((student) => student.id === studentID ? student.notes.push(studentNote) : null)
-  }
 
   function handleNote(e) {
     setStudentNote({
@@ -28,9 +23,9 @@ export default function Note({ notes, studentID, appendNotes, students}) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    appendNotes(studentNote, studentID)
+    appendNotes(studentNote, studentID);
     resetForm();
-  }
+    }
 
   return (
     <div className="note">

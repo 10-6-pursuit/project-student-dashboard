@@ -9,7 +9,9 @@ function App() {
   const [allStudents] = useState(studentsData);
   const [cohort, setCohort] = useState("All Students");
 
-  
+  function appendNotes(studentNote, studentID) {
+    students.map((student) => student.id === studentID ? student.notes.push(studentNote) : null);
+  }
 
   return (
     <>
@@ -23,8 +25,8 @@ function App() {
         />
         <Students
           students={students}
-          setStudents={setStudents}
           cohort={cohort}
+          appendNotes={appendNotes}
         />
       </main>
     </>

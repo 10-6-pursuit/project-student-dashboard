@@ -1,14 +1,7 @@
 import { useState } from "react";
 import StudentExtras from "./StudentExtras";
 
-export default function ShowMore({
-  student,
-  codewars,
-  certifications,
-  scores,
-  notes,
-  students
-}) {
+export default function ShowMore({student, studentID, notes, students, appendNotes}) {
   const [showMore, setShowMore] = useState(false);
 
   function toggleShowMore() {
@@ -24,12 +17,11 @@ export default function ShowMore({
       {showMore ? (
         <div className="student-info__moreInfo">
           <StudentExtras
-            studentID={student.id}
-            codewars={codewars}
-            certifications={certifications}
-            scores={scores}
+            studentID={studentID}
             notes={notes}
+            student={student}
             students={students}
+            appendNotes={appendNotes}
           />
         </div>
       ) : null}
