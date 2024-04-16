@@ -41,6 +41,10 @@ main {
   text-align: center;
 }
 
+.cohort h3 {
+  display: inline;
+}
+
 .cohort-name {
   width: fit-content;
   margin: 10px 0 10px 20px;

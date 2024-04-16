@@ -11,7 +11,8 @@ export default function Cohort({ cohortCode,
           id={cohortCode}
           onClick={handleCohortSelect}
           style={cohortCode.replace("2", " 2") === selectedCohort ? {color: "green"} : null}
-        >{cohortCode.replace("2", " 2")} <span className="cohort-symbol">{symbolDisplay}</span></h3>
+        >{cohortCode.replace("2", " 2")}</h3>
+        <h3 className="cohort-symbol"> {symbolDisplay}</h3>
         <hr />
     </div>
   )
