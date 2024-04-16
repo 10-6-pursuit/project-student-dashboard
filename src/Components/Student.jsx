@@ -46,7 +46,7 @@ export default function Student({ student,
             <span className="green">Birthday: </span>{dobFormatted}
           </span>
         </div>
-        {isOnTrack ? <span>"On Track to Graduate 🎓"</span> : null}
+        {isOnTrack ? <span>On Track to Graduate 🎓</span> : null}
         <a
           href="#"
           className="green detail-toggle"
