@@ -16,7 +16,6 @@ export default function Cohort({
     );
 
     setStudents(filteredCohort);
-    console.log(filteredCohort);
   }
 
   return (

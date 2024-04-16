@@ -1,15 +1,23 @@
 import Note from "./Note";
 
-export default function StudentExtras({studentID, student, notes, students, appendNotes}) {
+export default function StudentExtras({
+  studentID,
+  student,
+  notes,
+  students,
+  appendNotes,
+}) {
   const { current, goal } = student.codewars;
+
   const { total: currentTotal, lastWeek: currentLastWeek } = current;
+
   const { total: goalTotal, lastWeek: goalLastWeek } = goal;
 
   const percentGoal = Math.round((currentTotal / goalTotal) * 100);
 
-  const { assignments, projects, assessments } = student.cohort.scores
-  const { resume, linkedin, github, mockInterview } = student.certifications
-  
+  const { assignments, projects, assessments } = student.cohort.scores;
+  const { resume, linkedin, github, mockInterview } = student.certifications;
+
   return (
     <div className="extras">
       <div className="extra-info" key={student.id}>
@@ -73,7 +81,12 @@ export default function StudentExtras({studentID, student, notes, students, appe
           </ul>
         </div>
       </div>
-      <Note notes={notes} studentID={studentID} students={students} appendNotes={appendNotes}/>
+      <Note
+        notes={notes}
+        studentID={studentID}
+        students={students}
+        appendNotes={appendNotes}
+      />
     </div>
   );
 }

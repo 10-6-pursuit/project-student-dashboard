@@ -7,10 +7,18 @@ export default function ListCohorts({
   allStudents,
   setCohort,
 }) {
+
   function showAll() {
     setStudents(allStudents);
     setCohort("All Students");
   }
+
+  const sortedCohorts = [...allStudents].sort((a, b) =>
+  new Date(b.cohort.cohortStartDate).getFullYear() - new Date(a.cohort.cohortStartDate).getFullYear() ||
+  new Date(b.cohort.cohortStartDate).getMonth() - new Date(a.cohort.cohortStartDate).getMonth()
+);
+
+const uniqueSeasons = Array.from(new Set(sortedCohorts.map(student => student.cohort.cohortCode.replace("2", " 2"))))
 
   return (
     <div className="cohorts">
@@ -18,7 +26,7 @@ export default function ListCohorts({
       <h3 onClick={showAll}>All Students</h3>
       <hr />
       <ul className="cohorts-season">
-        {cohortsData.map((cohort, index) => {
+        {uniqueSeasons.map((cohort, index) => {
           return (
             <Cohort
               key={index}
