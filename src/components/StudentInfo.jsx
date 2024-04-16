@@ -4,9 +4,9 @@ import StudentDetails from "/src/components/StudentDetails.jsx"
 
 export default function StudentInfo({student, setDataState, dataState}) {
    
-    let studentFullName = `${student.names.preferredName} ${student.names.middleName[0]}. ${student.names.surname}`
+    let studentFullName = `${student.names.preferredName} ${student.names.middleName[0]}. ${student.names.surname}`;
 
-    let studentBirthDay = new Date(student.dob).toLocaleString("default", {month:"long", day: "numeric", year: "numeric"})
+    let studentBirthDay = new Date(student.dob).toLocaleString("default", {month:"long", day: "numeric", year: "numeric"});
 
     return (
         <div className="studentInfo__card">
@@ -24,7 +24,7 @@ export default function StudentInfo({student, setDataState, dataState}) {
                 </div>
             </div>
             <div className="studentInfo__card-bottom">
-            <StudentDetails student={student} setDataState={setDataState} dataState={dataState}/>
+                <StudentDetails student={student} setDataState={setDataState} dataState={dataState}/>
             </div>
         </div>
     )
