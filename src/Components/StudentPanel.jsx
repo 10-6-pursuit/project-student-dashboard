@@ -1,39 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import StudentPanelHeader from './StudentPanelHeader.jsx'
 import Students from './Students.jsx'
+
+const sortMethod = {
+  "none": {
+    "ascending": {method: (a, b) => null},
+    "descending": {method: (a, b) => null}
+    },
+  "firstName": {
+    "ascending": {method: (a, b) => a.names.preferredName.toLowerCase().localeCompare(b.names.preferredName.toLowerCase())},
+    "descending": {method: (a, b) => b.names.preferredName.toLowerCase().localeCompare(a.names.preferredName.toLowerCase())},
+  }
+}
 
 export default function StudentPanel({ selectedCohort,
   filteredStudentList,
   cohortSymbols,
   handleAddNote
 }) {
-  const [ studentSort, setStudentSort ] = useState(filteredStudentList);
-  const [ sortBy, setSortBy ] = useState(false)
 
-  function handleStudentSort() {
-    setSortBy(!sortBy);
-  }
-
-  useEffect(() =>{
-    setStudentSort(filteredStudentList)
-  }, [filteredStudentList])
-
-  useEffect(() => {
-    console.log(studentSort)
-    const newSort = [...studentSort].sort((a, b) => a.names.preferredName.toLowerCase() - b.names.preferredName.toLowerCase());
-
-    console.log(newSort)
-    setStudentSort([...newSort]);
-  }, [sortBy])
-  
   return (
     <section className="student-panel">
       <StudentPanelHeader
         selectedCohort={selectedCohort}
-        studentSort={studentSort}
-        handleStudentSort={handleStudentSort} />
+        filteredStudentList={filteredStudentList} />
       <Students
-        studentSort={studentSort}
+        filteredStudentList={filteredStudentList}
         cohortSymbols={cohortSymbols}
         handleAddNote={handleAddNote} />
     </section>

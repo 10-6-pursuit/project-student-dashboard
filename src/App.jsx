@@ -36,6 +36,9 @@ function App() {
   const [ studentList, setStudentList ] = useState(data);
   const [ filteredStudentList, setFilteredStudentList ] = useState(studentList);
   const [ selectedCohort, setSelectedCohort ] = useState("All Students")
+  const [ studentSort, setStudentSort ] = useState(filteredStudentList);
+  const [ sortBy, setSortBy ] = useState("none");
+  const [ sortDirection, setSortDirection ] = useState(undefined);
 
   function handleCohortSelect(e) {
     const cohortCode = e.target.id
@@ -52,6 +55,8 @@ function App() {
     const filteredStudents = studentList.filter(({ cohort }) => cohort.cohortCode === cohortQuery);
     setFilteredStudentList(filteredStudents);
   }
+
+
 
   // update student note
   function handleAddNote(studentId, newNote) {
