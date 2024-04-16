@@ -73,12 +73,11 @@ main {
 }
 
 .student-card {
-  width: minmax(450px, 550px);
+  width: 550px;
   height: fit-content;
   border: 2px solid var(--green);
   padding: 0 20px 20px 20px;
 }
-
 
 .card-cohort-symbol {
   margin: 10px 0 0 95%;
@@ -95,6 +94,10 @@ main {
   aspect-ratio: 1;
   background: gray;
   box-shadow: 2px 2px 5px gray;
+}
+
+.student-info {
+  width: fit-content;
 }
 
 .student-name {
