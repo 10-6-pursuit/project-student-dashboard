@@ -1,12 +1,12 @@
 import Student from './Student.jsx'
 
-export default function Students({ filteredStudentList,
+export default function Students({ studentSort,
   cohortSymbols,
   handleAddNote }) {
 
   return(
     <ul className="student-list">
-      {filteredStudentList.map(student => (
+      {studentSort.map(student => (
         <Student
           student={student}
           cohortSymbols={cohortSymbols}
