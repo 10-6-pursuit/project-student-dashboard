@@ -2,18 +2,9 @@ import { useState } from 'react';
 import StudentPanelHeader from './StudentPanelHeader.jsx'
 import Students from './Students.jsx'
 
-const sortMethod = {
-  "none": {
-    "ascending": {method: (a, b) => null},
-    "descending": {method: (a, b) => null}
-    },
-  "firstName": {
-    "ascending": {method: (a, b) => a.names.preferredName.toLowerCase().localeCompare(b.names.preferredName.toLowerCase())},
-    "descending": {method: (a, b) => b.names.preferredName.toLowerCase().localeCompare(a.names.preferredName.toLowerCase())},
-  }
-}
-
-export default function StudentPanel({ selectedCohort,
+export default function StudentPanel({        selectedCohort,
+  setSortBy,
+  setSortDirection,
   filteredStudentList,
   cohortSymbols,
   handleAddNote
@@ -23,6 +14,8 @@ export default function StudentPanel({ selectedCohort,
     <section className="student-panel">
       <StudentPanelHeader
         selectedCohort={selectedCohort}
+        setSortBy={setSortBy}
+        setSortDirection={setSortDirection}
         filteredStudentList={filteredStudentList} />
       <Students
         filteredStudentList={filteredStudentList}

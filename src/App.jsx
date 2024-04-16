@@ -32,6 +32,17 @@ const cohortSymbols = {
   "Winter": "❄️"
 }
 
+const sortMethod = {
+  "none": {
+    "ascending": {method: (a, b) => null},
+    "descending": {method: (a, b) => null}
+    },
+  "firstName": {
+    "ascending": {method: (a, b) => a.names.preferredName.toLowerCase().localeCompare(b.names.preferredName.toLowerCase())},
+    "descending": {method: (a, b) => b.names.preferredName.toLowerCase().localeCompare(a.names.preferredName.toLowerCase())},
+  }
+}
+
 function App() {
   const [ studentList, setStudentList ] = useState(data);
   const [ filteredStudentList, setFilteredStudentList ] = useState(studentList);
@@ -56,13 +67,13 @@ function App() {
     setFilteredStudentList(filteredStudents);
   }
 
-
-
   // update student note
   function handleAddNote(studentId, newNote) {
     studentList[idIndexMap[studentId]].notes.push(newNote);
     setStudentList([...studentList]);
   }
+
+  console.log(sortBy, sortDirection)
 
   return (
     <>
@@ -75,8 +86,10 @@ function App() {
           handleCohortSelect={handleCohortSelect} />
         <StudentPanel
           selectedCohort={selectedCohort}
-          filteredStudentList={filteredStudentList}
           cohortSymbols={cohortSymbols}
+          setSortBy={setSortBy}
+          setSortDirection={setSortDirection}
+          filteredStudentList={filteredStudentList}
           handleAddNote={handleAddNote} />
       </main>
     </>

@@ -11,11 +11,11 @@ export default function StudentPanelHeader({ selectedCohort,
     "direction": "undefined"
   })
   
-  function handleSortFormChange(e) {
-    setSortForm({...sortForm, [e.target.name]: e.target.value})
-    // setSortBy(sortForm.sortBy);
-    // setSortDirection(sortForm.direction);
-  }
+  // function handleSortFormChange(e) {
+  //   setSortForm({...sortForm, [e.target.name]: e.target.value})
+  //   setSortBy(sortForm.sortBy);
+  //   setSortDirection(sortForm.direction);
+  // }
 
   return (
     <div className="student-panel-header">
@@ -27,7 +27,7 @@ export default function StudentPanelHeader({ selectedCohort,
         <select
           name="sortBy"
           value={sortForm.sortBy}
-          onChange={(e) => handleSortFormChange(e)} id="sort-by">
+          onChange={(e) => setSortBy(e.target.value)} id="sort-by">
           <option value="none">--Sort By--</option>
           <option value="firstName">First Name</option>
           <option value="lastName">Last Name</option>
@@ -36,7 +36,7 @@ export default function StudentPanelHeader({ selectedCohort,
         <select
         name="direction"
         value={sortForm.direction}
-        onChange={(e) => handleSortFormChange(e)} id="direction">
+        onChange={(e) => setSortDirection(e.target.value)} id="direction">
           <option value="">--Direction--</option>
           <option value="ascending">Ascending</option>
           <option value="descending">Descending</option>
