@@ -18,4 +18,4 @@ Welcome to the Student Dashboard Project.  The following will be a setup instruc
 
     ![components map](./src/assets/components-map.png)
 
-4. There will be 4 css file to be utilized; an App.css, for the some general styling semantic elements, a CohortList.css to style the CohortList.jsx component, a StudentInfo.css to style the StudentInfo.jsx components, and lastly, a StudentDetails.css to style the StudentDetails.jsx component.
+4. There will be 4 css file to be utilized; an App.css, for the general styling of semantic elements, a CohortList.css to style the CohortList.jsx component, a StudentInfo.css to style the StudentInfo.jsx components, and lastly, a StudentDetails.css to style the StudentDetails.jsx component.

@@ -69,7 +69,7 @@ export default function StudentDetails({student, setDataState, dataState}) {
                 </div>
                 <hr />
                 <div className="studentDetails__form">
-                    <p>1-on-1 Notes</p>
+                    <p>1-on-1 Notes</p><p>Number of Comment: {student.notes.length}</p>
                     <form onSubmit={addNotes}>
                         <label>Commenter Name<input onChange={handleTextChange} type="text" id="commenter" value={comment.commenter} />
                         </label>
