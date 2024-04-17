@@ -1,5 +1,8 @@
 import Cohort from "./Cohort"
 export default function CohortList({ setStudents, allStudents, setCohort, setNumberOfStudents}) {
+
+    allStudents.sort((a,b) => new Date(b.cohort.cohortStartDate) - new Date(a.cohort.cohortStartDate));
+
     
     const uniqueCohorts = allStudents.map(student => student.cohort.cohortCode).filter((cohort, index, array ) => array.indexOf(cohort) === index);
 

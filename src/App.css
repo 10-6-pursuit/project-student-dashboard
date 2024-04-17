@@ -1,4 +1,5 @@
 header {
+
     height: 80px;
     background-color: rgb(74, 162, 74);
     text-align: center;
@@ -7,150 +8,41 @@ header {
     font-family: "Raleway";
 }
 
-main{
+main {
+
     display: flex;
     font-family: sans-serif;
-    h2{
+
+    h2 {
         font-family: "Raleway";
     }
 
-    h4{
+    h4 {
         font-weight: lighter;
-        span{
+
+        span {
             color: rgb(74, 162, 74);
         }
     }
 }
 
-.extra-info{
-    display: flex;
-    list-style: none;
-    grid-row: 9 / 10;
-    grid-column: 1 / span 5;
-    color: rgb(74, 162, 74);
-    
+.cohortlistcontainer {
 
-
-    section{
-        margin: 15px;
-
-        h3{
-            margin: 15px;
-            color: black;
-            font-family: "Raleway";
-        }
-
-        span{
-            color: black;
-        }
-
-        li{
-            margin: 15px;
-        }
-    }
-}
-
-.one-on-one{
-    grid-row: 10 / 11;
-    grid-column: 1 / span 5;
-    margin: 20px;
-
-    h3{
-        font-family: "Raleway";
-    }
-
-    hr{
-        height: 2px;
-        background-color: rgb(74, 162, 74);
-    }
-
-    .comment-list{
-        margin-top: 15px;
-    }
-
-    form{
-        border: 1px solid grey;
-        padding: 10px;
-
-        #commenter-name{
-            margin-bottom: 5px;
-        }
-        button{
-            margin: 10px 0px;
-            color: white;
-            background-color: rgb(74, 162, 74);
-            border: none;
-            border-radius: 5px;
-            padding: 5px;
-        }
-
-        button:hover{
-            cursor: pointer;
-            background-color: yellowgreen;
-        }
-
-        button:active{
-            background-color: grey;
-        }
-    }
-}
-.student{
-    margin: 5px;
-    border: 2px solid rgb(74, 162, 74);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    img{
-        height: 100px;
-        margin: 20px;
-        grid-row: 1 / 8;
-    }
-}
-.show-more{
-    grid-row: 7 / 8;
-    grid-column: 2 / 3;
-    border: none;
-    background-color: transparent;
-    text-align: left;
-    color: rgb(74, 162, 74);
-    text-decoration: underline;
-}
-
-.show-more:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-.student-name{
-    font-weight: bold;
-    font-family: "Raleway";
-}
-
-.student-info{
-    margin-top: 20px;
-    margin-left: none;
-    grid-row: 2 / 7;
-}
-
-span{
-    color:rgb(74, 162, 74);
-}
-
-.cohortlistcontainer{
     width: 400px;
     font-family: "Raleway";
     margin: 20px;
 
-    h2{
+    h2 {
         text-align: center;
         margin: 35px;
     }
 
-    hr{
+    hr {
         height: 1px;
         background-color: rgb(74, 162, 74);
     }
 
-    .all-students{
+    .all-students {
         font-family: Arial, Helvetica, sans-serif;
         border: none;
         background-color: transparent;
@@ -163,15 +55,17 @@ span{
         color: grey;
     }
     
-    .all-students:active{
+    .all-students:active {
         color: rgb(74, 162, 74);
     }
 
 }
 
 .cohort-date {
+
     list-style: none;
-    button{
+
+    button {
         font-family: Arial, Helvetica, sans-serif;
         border: none;
         background-color: transparent;
@@ -183,13 +77,149 @@ span{
         color: grey;
     }
 
-    button:active{
+    button:active {
         color: rgb(74, 162, 74);
     }
 
-    hr{
+    hr {
         height: 1px;
         background-color: rgb(74, 162, 74);
     }
 }
+
+
+
+.student {
+
+    margin: 5px;
+    border: 2px solid rgb(74, 162, 74);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    img {
+        height: 100px;
+        margin: 20px;
+        grid-row: 1 / 8;
+    }
+
+    .student-info {
+        margin-top: 20px;
+        margin-left: none;
+        grid-row: 2 / 7;
+    
+        .student-name {
+            font-weight: bold;
+            font-family: "Raleway";
+        }
+    
+        span {
+            color:rgb(74, 162, 74);
+        }
+    }
+
+    .on-track {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+        color: rgb(74, 162, 74);
+
+        .off-track{
+            color: red;
+        }
+    }
+
+    .show-more {
+        grid-row: 7 / 8;
+        grid-column: 2 / 3;
+        border: none;
+        background-color: transparent;
+        text-align: left;
+        color: rgb(74, 162, 74);
+        text-decoration: underline;
+    }
+    
+    .show-more:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+
+.extra-info {
+
+    display: flex;
+    list-style: none;
+    grid-row: 9 / 10;
+    grid-column: 1 / span 5;
+    color: rgb(74, 162, 74);
+    
+
+
+    section {
+        margin: 15px;
+
+        h3 {
+            margin: 15px;
+            color: black;
+            font-family: "Raleway";
+        }
+
+        span {
+            color: black;
+        }
+
+        li {
+            margin: 15px;
+        }
+    }
+}
+
+.one-on-one {
+
+    grid-row: 10 / 11;
+    grid-column: 1 / span 5;
+    margin: 20px;
+
+    h3 {
+        font-family: "Raleway";
+    }
+
+    hr {
+        height: 2px;
+        background-color: rgb(74, 162, 74);
+    }
+
+    .comment-list {
+        margin-top: 15px;
+    }
+
+    form {
+        border: 1px solid grey;
+        padding: 10px;
+
+        #commenter-name {
+            margin-bottom: 5px;
+        }
+
+        button {
+            margin: 10px 0px;
+            color: white;
+            background-color: rgb(74, 162, 74);
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: yellowgreen;
+        }
+
+        button:active {
+            background-color: grey;
+        }
+    }
+}
+
+
 

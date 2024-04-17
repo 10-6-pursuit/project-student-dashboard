@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function OneOnOneNotes ({student, studentId}){
+export default function OneOnOneNotes ({student}){
 
     const [notes, setNotes] = useState(student.notes);
     const [newComment, setNewComment] = useState({
@@ -8,11 +8,8 @@ export default function OneOnOneNotes ({student, studentId}){
       })
       
     
-      function addComment() {
+      function addComment(newComment) {
         setNotes([...notes, newComment]);
-      }
-
-      function addNotes (newComment){
         notes.push(newComment);
       }
 
@@ -27,8 +24,7 @@ export default function OneOnOneNotes ({student, studentId}){
       
       function handleSubmit(e) {
         e.preventDefault();
-        addComment();
-        addNotes(newComment);
+        addComment(newComment);
         resetCommentForm();
       }
 
@@ -48,6 +44,7 @@ export default function OneOnOneNotes ({student, studentId}){
                 <label htmlFor="comment">Comment </label><input id="comment" type="text" onChange={handleTextChange} value={newComment.comment} required></input><br/>
                 <button type="submit">Add Note</button>
             </form>
+            <div>Numbers of notes: {student.notes.length}</div>
             <div className="comment-list">
             {notes.map(({commenter, comment}, i) => <li key={i}>{commenter}: {comment} </li>)}
             </div>
