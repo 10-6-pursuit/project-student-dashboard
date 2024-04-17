@@ -1,5 +1,5 @@
 import Cohort from "./Cohort"
-export default function CohortList({ setStudents, allStudents, setCohort, setNumberOfStudents}) {
+export default function CohortList({students, setStudents, allStudents, setCohort, setNumberOfStudents}) {
 
     allStudents.sort((a,b) => new Date(b.cohort.cohortStartDate) - new Date(a.cohort.cohortStartDate));
 
@@ -12,8 +12,6 @@ export default function CohortList({ setStudents, allStudents, setCohort, setNum
         setStudents(filteredCohortList)
         setNumberOfStudents(filteredCohortList.length)
     }
-
-    console.log(uniqueCohorts)
 
     return(
     <>
