@@ -1,0 +1,11 @@
+header {
+  width: 100vw;
+  height: 75px;
+  background: var(--green);
+  align-content: center;
+}
+
+.site-header {
+  margin: 0px;
+  text-align: center;
+}

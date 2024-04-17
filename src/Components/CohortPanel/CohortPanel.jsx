@@ -1,4 +1,5 @@
 import Cohorts from './Cohorts.jsx'
+import './CohortPanel.css'
 
 export default function CohortPanel({
   cohorts,

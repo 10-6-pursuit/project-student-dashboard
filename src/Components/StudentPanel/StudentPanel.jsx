@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import StudentPanelHeader from './StudentPanelHeader.jsx'
-import Students from './Students.jsx'
+import StudentPanelHeader from '../StudentPanelHeader/StudentPanelHeader.jsx'
+import Students from '../Students/Students.jsx'
 
 export default function StudentPanel({
   selectedCohort,

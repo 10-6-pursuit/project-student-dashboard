@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './Student.css'
 import StudentDetails from './StudentDetails.jsx'
 
 export default function Student({

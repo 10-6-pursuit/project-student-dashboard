@@ -1,4 +1,5 @@
-import Student from './Student.jsx'
+import Student from '../Student/Student.jsx'
+import './Students.css'
 
 export default function Students({
   filteredStudentList,

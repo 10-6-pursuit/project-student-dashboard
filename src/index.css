@@ -15,31 +15,14 @@ hr {
  margin: 0;
 }
 
-.student-progress ul {
-  list-style: none;
-  padding: 0
-}
-
 .green {
   color: var(--green);
-}
-
-header {
-  width: 100vw;
-  height: 75px;
-  background: var(--green);
-  align-content: center;
-}
-
-.site-header {
-  margin: 0px;
-  text-align: center;
 }
 
 main {
   margin: 20px;
   display: grid;
-  grid-template-columns: minmax(100px, 500px) 1fr;
+  grid-template-columns: 500px 1fr;
   /* display: flex; */
   column-gap: 30px;
 }
@@ -47,133 +30,6 @@ main {
 /* main > * {
   flex: 1 1 auto;
 } */
-
-.cohort-panel {
-  width: 500px;
-  height: fit-content;
-  /* flex: 1 1 auto; */
-}
-
-.cohort-panel h2 {
-  text-align: center;
-}
-
-.cohort {
-  width: fit-content;
-  margin: 15px 0 15px 30px;
-}
-
-.cohort:hover {
-  cursor: pointer;
-  transform: scale(120%);
-}
-
-.cohort h3 {
-  display: inline-block;
-}
-
-.cohort-name {
-  width: 135px;
-  margin: 0px 0 0px 0px;
-}
-
-.cohort-symbol {
-  margin: 0;
-  color: black;
-}
-
-.student-panel-header {
-  margin-bottom: 20px;
-}
-
-.student-panel h2 {
-  margin-bottom: 0;
-}
-
-.student-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.student-card {
-  width: 550px;
-  height: fit-content;
-  border: 2px solid var(--green);
-  padding: 0 20px 20px 20px;
-}
-
-.card-cohort-symbol {
-  margin: 10px 0 0 95%;
-  z-index: 1;
-}
-
-.student-card-upper {
-  display: grid;
-  grid-template-columns: 100px 3fr 1fr;
-}
-
-.avatar {
-  width: 75px;
-  aspect-ratio: 1;
-  background: gray;
-  box-shadow: 2px 2px 5px gray;
-}
-
-.student-info {
-  width: fit-content;
-}
-
-.student-name {
-  margin: 0px;
-}
-
-.detail-toggle {
-  grid-column: 2 / span 1;
-}
-
-.student-details hr {
-  margin: 15px 0;
-}
-
-.student-progress {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.student-notes h3 {
-  margin: 0;
-}
-
-.note-form {
-  margin: 10px 0;
-}
-
-fieldset {
-  border: 1px solid gray;
-}
-
-input {
-  margin: 10px 0px;
-}
-
-button {
-  color: white;
-  background: var(--green);
-  border: none;
-  border-radius: 3px;
-}
-
-.notes {
-  padding: 0px 0 0 20px;
-}
-
-.note {
-  list-style: disc;
-}
 
 /* @media screen and (width < 1200px) {
 

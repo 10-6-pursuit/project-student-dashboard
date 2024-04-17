@@ -1,3 +1,4 @@
+import './StudentPanelHeader.css'
 import { useState } from 'react';
 
 export default function StudentPanelHeader({ selectedCohort,

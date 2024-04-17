@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import Header from  './Components/Header.jsx'
-import CohortPanel from  './Components/CohortPanel.jsx'
-import StudentPanel from  './Components/StudentPanel.jsx'
+import Header from  './Components/Header/Header.jsx'
+import CohortPanel from  './Components/CohortPanel/CohortPanel.jsx'
+import StudentPanel from  './Components/StudentPanel/StudentPanel.jsx'
 import data from './data/data.json'
-
 
 // get list of cohorts
 const cohortSet = new Set();
