@@ -1,0 +1,88 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: white;
+    border: 1px solid green;
+    padding: 20px;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0%;
+    margin-right: 20px;
+  }
+  
+  h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+ 
+  .ScoreCard {
+    margin-left: 20px;
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+  }
+  
+  .ScoreCard h3 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .ScoreCard p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+
+  .ScoreCard p.percent {
+    font-weight: bold;
+  }
+  
+
+  .ScoreCard .certifications p {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ScoreCard .certifications i {
+    font-style: normal;
+    margin-right: 5px;
+    color: red;
+  }
+  
+  .ScoreCard .certifications .certified i {
+    color: green;
+  }
+  
+
+  
