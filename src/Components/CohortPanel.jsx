@@ -12,7 +12,7 @@ export default function CohortPanel({
     <h2 className="cohort-panel-header">Choose a Class by Start Date</h2>
     <div className="cohort">
         <h3
-          className="cohort-name"
+          className="cohort-name hidden"
           style={"All Students" === selectedCohort ? {color: "green"} : null}
           id="AllStudents"
           onClick={handleCohortSelect}

@@ -7,7 +7,7 @@
 }
 
 .root {
-  width: 100%;
+  width: 100vw;
 }
 
 hr {
@@ -25,6 +25,7 @@ hr {
 }
 
 header {
+  width: 100vw;
   height: 75px;
   background: var(--green);
   align-content: center;
@@ -38,12 +39,19 @@ header {
 main {
   margin: 20px;
   display: grid;
-  grid-template-columns: max(500px) 1fr;
+  grid-template-columns: minmax(100px, 500px) 1fr;
+  /* display: flex; */
   column-gap: 30px;
 }
 
+/* main > * {
+  flex: 1 1 auto;
+} */
+
 .cohort-panel {
-  max-width: 500px;
+  width: 500px;
+  height: fit-content;
+  /* flex: 1 1 auto; */
 }
 
 .cohort-panel h2 {
@@ -167,14 +175,9 @@ button {
   list-style: disc;
 }
 
+/* @media screen and (width < 1200px) {
 
-@media screen and (width < 1200) {
-  header {
-    background: red;
+  .cohort .cohort-name {
+    display: none;
   }
-
-  .cohort-name {
-    color: red;
-    margin-left: -99999px;
-  }
-}
+} */
