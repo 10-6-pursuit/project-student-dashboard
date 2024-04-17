@@ -1,3 +1,9 @@
+:root {
+    --main-color: #5C946E;
+    --text-color: white;
+  }
+
+
 html {
   overscroll-behavior: none;
 }
