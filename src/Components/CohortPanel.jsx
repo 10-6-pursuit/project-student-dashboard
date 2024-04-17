@@ -1,9 +1,11 @@
 import Cohorts from './Cohorts.jsx'
 
-export default function CohortPanel({ cohorts,
+export default function CohortPanel({
+  cohorts,
   selectedCohort,
   cohortSymbols,
-  handleCohortSelect }) {
+  handleCohortSelect
+}) {
   
   return (
   <section className="cohort-panel">

@@ -2,7 +2,8 @@ import { useState } from 'react';
 import StudentPanelHeader from './StudentPanelHeader.jsx'
 import Students from './Students.jsx'
 
-export default function StudentPanel({        selectedCohort,
+export default function StudentPanel({
+  selectedCohort,
   sortBy,
   sortDirection,
   setSortBy,

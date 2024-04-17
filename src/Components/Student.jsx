@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import StudentDetails from './StudentDetails.jsx'
 
-export default function Student({ student,
+export default function Student({
+  student,
   cohortSymbols,
-  handleAddNote }) {
+  handleAddNote
+}) {
   const [ showDetails, setShowDetails ] = useState(false);
   const { cohort: { cohortCode } } = student;
   const symbolDisplay = `${cohortSymbols[cohortCode.slice(0, -4)]}'${cohortCode.slice(-2)}`;
@@ -19,15 +21,16 @@ export default function Student({ student,
   // convert dob
   const event = new Date(dob);
   const options = {
-  month: "long",
-  day: "numeric",
-  year: "numeric"
+    month: "long",
+    day: "numeric",
+    year: "numeric"
   }
   const dobFormatted = event.toLocaleDateString('en-US', options)
 
   // is on track
   const isOnTrack = Object.values(certifications).every(cert => cert);
 
+  // handle show details
   function handleShowDetailsToggle(e) {
     e.preventDefault();
     setShowDetails(!showDetails);
@@ -57,7 +60,8 @@ export default function Student({ student,
         <StudentDetails
           student={student}
           handleAddNote={handleAddNote} /> :
-        null}
+        null
+      }
     </li>
   )
 }

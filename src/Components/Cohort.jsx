@@ -1,8 +1,10 @@
-export default function Cohort({ cohortCode,
+export default function Cohort({
+  cohortCode,
   selectedCohort,
   cohortSymbols,
-  handleCohortSelect }) {
-    const symbolDisplay = `${cohortSymbols[cohortCode.slice(0, -4)]}'${cohortCode.slice(-2)}`;
+  handleCohortSelect
+}) {
+  const symbolDisplay = `${cohortSymbols[cohortCode.slice(0, -4)]}'${cohortCode.slice(-2)}`;
   
   return (
     <>

@@ -59,10 +59,10 @@ function App() {
   const [ studentList, setStudentList ] = useState(data);
   const [ filteredStudentList, setFilteredStudentList ] = useState(studentList);
   const [ selectedCohort, setSelectedCohort ] = useState("All Students")
-  const [ studentSort, setStudentSort ] = useState(filteredStudentList);
   const [ sortBy, setSortBy ] = useState("firstName");
   const [ sortDirection, setSortDirection ] = useState("ascending");
 
+  // handle cohort selection
   function handleCohortSelect(e) {
     const cohortCode = e.target.id
     if (cohortCode === "AllStudents") {
@@ -85,13 +85,14 @@ function App() {
     setStudentList([...studentList]);
   }
 
-function sortStudents(sortBy, sortDirection) {
-  if (sortBy === "codewars") {
-    filteredStudentList.sort(sortMethod[sortBy].current.total[sortDirection].method)
-  } else {
-    filteredStudentList.sort(sortMethod[sortBy][sortDirection].method)
+  // handle student sorting
+  function sortStudents(sortBy, sortDirection) {
+    if (sortBy === "codewars") {
+      filteredStudentList.sort(sortMethod[sortBy].current.total[sortDirection].method)
+    } else {
+      filteredStudentList.sort(sortMethod[sortBy][sortDirection].method)
+    }
   }
-}
 
   if (sortBy === "none") {
     

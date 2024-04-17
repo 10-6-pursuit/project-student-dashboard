@@ -21,8 +21,7 @@ export default function NoteForm({ id, handleAddNote }) {
 
   return(
     <form className="note-form"
-      onSubmit={handleFormSubmit}
-    >
+      onSubmit={handleFormSubmit} >
       <fieldset>
         <label
           htmlFor="commenter"
@@ -32,7 +31,7 @@ export default function NoteForm({ id, handleAddNote }) {
           id="commenter"
           value={noteForm.commenter}
           onChange={handleInputChange}
-          required/>
+          required />
         <br />
         <label
           htmlFor="comment"
@@ -42,7 +41,7 @@ export default function NoteForm({ id, handleAddNote }) {
           id="comment"
           value={noteForm.comment}
           onChange={handleInputChange}
-          required/>
+          required />
         <br />
         <button type="submit">Add Note</button>
       </fieldset>
