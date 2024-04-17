@@ -11,9 +11,10 @@ function App() {
   const cohorts = students.map(student => student.cohort).sort((a,b)=>new Date(b.cohortStartDate) - new Date(a.cohortStartDate)).map(cohort=>cohort.cohortCode).filter((code,index,array)=>array.indexOf(code)===index);
 
   function filterStudents(e){
-    if(e.target.id === "allstudents"){
-      setFilteredStudents(students)
-    }else {setFilteredStudents(students.filter(ele=>ele.cohort.cohortCode === e.target.id))};
+    if(e.target.id === "allstudents") {
+      setFilteredStudents(students);
+    } else {
+      setFilteredStudents(students.filter(ele => ele.cohort.cohortCode === e.target.id))};
   }
 
   function addNote(student,comment){
