@@ -11,13 +11,24 @@ export default function OneOnOne({student,addNote}){
     function handleChange(e){
         setNewComment({...newComment, [e.target.id]: e.target.value,})
     }
-    
+
+    function resetForm(){
+        setNewComment({
+              commenter: "",
+              comment: "",
+            })
+          }
+
     function handleSubmit(e){
         e.preventDefault();
         addNote(student, newComment);
+        resetForm();
     }
 
+
     
+
+
     return(
     <>
         <h2 id="oneonone-heading">1-on-1 Notes</h2>
