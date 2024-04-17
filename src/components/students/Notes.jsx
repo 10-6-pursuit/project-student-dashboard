@@ -40,7 +40,6 @@ export default function Comments({ id, notes, onAddNotesToStudent }) {
 				<div>
 					<label htmlFor="name">Comment</label>
 					<input
-
 						required
 						onChange={handleTextChange}
 						className="input"

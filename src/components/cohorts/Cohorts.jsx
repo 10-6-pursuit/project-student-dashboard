@@ -1,4 +1,4 @@
-import "./cohorts.css";
+import "./Cohorts.css";
 
 export default function Cohort({ onFilterClass, cohorts }) {
 	return (
