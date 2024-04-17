@@ -25,7 +25,6 @@ hr {
 }
 
 header {
-  width: 1fr;
   height: 75px;
   background: var(--green);
   align-content: center;
@@ -166,4 +165,16 @@ button {
 
 .note {
   list-style: disc;
+}
+
+
+@media screen and (width < 1200) {
+  header {
+    background: red;
+  }
+
+  .cohort-name {
+    color: red;
+    margin-left: -99999px;
+  }
 }
