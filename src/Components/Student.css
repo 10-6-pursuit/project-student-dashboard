@@ -1,0 +1,10 @@
+.student-container {
+    border: 1px solid #5ca56f;
+    list-style-type: none;
+    width: 900px;
+    gap: 100px;
+}
+
+.profile-pic{
+    width: 150px;
+}
