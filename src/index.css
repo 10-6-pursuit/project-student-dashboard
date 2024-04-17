@@ -1,39 +1,48 @@
-.dark {
-  background: url(../src/images/Noise\ &\ Texture.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  color: white;
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+:root {
+  background: #DBD7D4;
+  font-family: 'Alegreya Sans SC';
+  font-weight: 500;
+  color: #414141;
 }
 
+.dark {
+  background: #272932;
+  color: #F1EFF1;
+}
 
 .dark .switchThemes button {
-  background: white;
+  background: #DBD7D4;
   color: black;
 } 
 
 .switchThemes button {
   background: black;
-  color: white;
+  color: #F1EFF1;
+  padding: 5px 10px;
 }
 
-.dark .header {
-  background: linear-gradient(0deg, #500059, #000000)
+
+.dark hr {
+  color: #BB9681;
 }
 
-.dark hr,
-.dark span {
-  color: #7f4284;
-}
 
 .dark .student-profile {
-  border: 2px solid #7f4284;
+  border: 2px solid #BB9681;
+  color: black;
+
 }
 
-.dark .cohort li:hover {
-  background: #dd84e4;
+.dark .cohort li:hover,
+.dark .cohorts h3:hover {
+  background: #F8F8F8;
   color: black;
-  opacity: 75%;
+}
+
+.dark .note .submit {
+  background: #BB9681;
 }
 
 html {
@@ -41,54 +50,51 @@ html {
 }
 
 .header {
-  background-color: #5C946E;
-  color: white;
   text-align: center;
-  padding: 1.25rem;
-  margin-bottom: 2rem;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 /* Set Grid Display */
 main {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto;
 }
 
 /* Left Side of App */
 .cohorts {
-  /* text-align: center; */
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 0rem 2rem;
 }
 
 .cohorts h3 {
   cursor: pointer;
-  text-align: start;
-  font-weight: bolder;
+  font-weight: 800;
   margin-bottom: 0px;
 }
 
 
 hr {
   border: 1.5px solid;
-  color:#5C946E;
+  color: black;
 }
 
 .cohort {
   cursor: pointer;
-  list-style: none;
-  text-align: start;
-  font-weight: bolder;
+  /* list-style: none; */
+  /* text-align: start; */
+  /* font-weight: bolder; */
   margin-left: -2.5rem;
   margin-bottom: 1.5rem;
 }
 
-.cohort li:hover {
-  background: pink;
-  color: black;
-  opacity: 75%;
+.cohort li:hover,
+.cohorts h3:hover {
+  display: inline;
+  background: #6A6666;
+  color: #F1EFF1;
 }
+
 
 /* Right Side of App */
 .cohort-list {
@@ -96,23 +102,24 @@ hr {
 }
 
 .cohort-list h3 {
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 li {
-  display: inline-block;
   list-style: none;
 }
 
 span {
-  color: #5C946E;
+  color: #BB9681;
   font-weight: 500;
 }
 
 .student-profile {
+  border-radius: 0.5rem;
+  background: #F8F8F8;
   max-width: 85%;
   display: flex;
-  border: 2px solid #5C946E;
+  border: 2px solid #6A6666;
   padding: 2rem;
   margin: 2rem 0rem;
 }
@@ -120,12 +127,14 @@ span {
 .student-profile img {
   width: 150px;
   max-height: 150px;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   object-fit: cover;
   margin-right: 2rem;
+  margin-top: 7px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
-.student-info .student-info__name   {
+.student-info .student-info__name {
   font-weight: bolder;
 }
 
@@ -155,12 +164,8 @@ span {
 }
 
 .extra-info li {
-  margin-bottom: 1rem;
+  line-height: 2rem;
 }
-
-/* .extra-info hr {
-  width: 90%;
-} */
 
 .note hr {
   width: 100%;
@@ -175,11 +180,10 @@ span {
 
 
 .note .submit {
-  background: #5C946E;
+  cursor: pointer;
+  background: #414141;
   border-radius: 5px;
-  text-align: center;
   color: white;
-  text-decoration: none;
   padding: 5px 0px;
   width: 85px;
   border: none;
@@ -195,11 +199,9 @@ section {
   width: 100%;
 }
 
-
 fieldset {
-  width: 94%;
+  /* width: 94%; */
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
   padding: 1.5rem 1.5rem 0rem;
 
@@ -221,7 +223,6 @@ fieldset input {
 }
 /* Style for on Track */
 .student-info__name span {
-  /* margin-left: 10rem; */
   float: right;
 }
 
