@@ -1,0 +1,10 @@
+.cohort-student {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2em;
+}
+ .cohort{
+    flex: 1;
+ }

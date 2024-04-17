@@ -1,0 +1,24 @@
+
+.cohort{
+
+    flex: 1;
+    margin-right: 50px;
+    font-weight: bold;
+}
+.cohort h4{
+    border-bottom: 1px solid green;
+    padding-bottom: .5em;
+}
+
+.cohort-list button{
+    font-weight: bold;
+}
+.cohort-list h4{
+    text-align: center;
+}
+
+.border-color{
+    border-bottom: 2px solid;
+    border-color: green;
+}
+
