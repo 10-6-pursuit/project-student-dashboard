@@ -6,6 +6,10 @@
   font-family: sans-serif;
 }
 
+.root {
+  width: 100%;
+}
+
 hr {
  border-top: 2px solid var(--green);
  margin: 0;
@@ -21,6 +25,7 @@ hr {
 }
 
 header {
+  width: 1fr;
   height: 75px;
   background: var(--green);
   align-content: center;
@@ -34,8 +39,12 @@ header {
 main {
   margin: 20px;
   display: grid;
-  grid-template-columns: 2fr 5fr;
-  column-gap: 20px;
+  grid-template-columns: max(500px) 1fr;
+  column-gap: 30px;
+}
+
+.cohort-panel {
+  max-width: 500px;
 }
 
 .cohort-panel h2 {
