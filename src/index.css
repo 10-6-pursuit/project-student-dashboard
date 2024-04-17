@@ -1,7 +1,22 @@
-:root {
-    --main-color: #5C946E;
-    --text-color: white;
-  }
+.dark {
+  background: linear-gradient(90deg, black, rgb(41, 41, 41));
+  color: white;
+}
+
+
+.dark .switchThemes button {
+  background: white;
+  color: black;
+} 
+
+.switchThemes button {
+  background: black;
+  color: white;
+}
+
+.dark .header {
+  background: linear-gradient(0deg, rgb(62, 158, 62), rgb(9, 63, 9))
+}
 
 
 html {
