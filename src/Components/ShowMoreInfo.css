@@ -1,0 +1,20 @@
+.extras{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
+}
+.achievement{
+    display: flex;
+    justify-content: space-evenly;
+    padding:10px;
+    margin-bottom: 10px;
+    border-bottom: solid 2px green;
+}
+
+.achievement__r{
+padding: 10px;
+justify-content: center;
+}
+.achievement__req{
+    margin-bottom: 10px;
+}
