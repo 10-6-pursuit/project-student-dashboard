@@ -13,7 +13,7 @@ function App() {
   
   //Creating a state for dark mode
   const [theme, setTheme] = useState("light");
-  
+
   function appendNotes(studentNote, studentID) {
     students.map((student) => student.id === studentID ? student.notes.push(studentNote) : null);
   }
