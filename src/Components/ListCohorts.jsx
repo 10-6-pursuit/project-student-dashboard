@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Cohort from "./Cohort";
 
 export default function ListCohorts({
@@ -10,10 +9,6 @@ export default function ListCohorts({
   theme
 }) {
 
-  //Creating a state for dark mode
-  // const [theme, setTheme] = useState("light");
-
-  //Create function for switching. Should add a className called "dark" if on light and if on dark should remove it if clicked on button again.
   const buttonText = theme === "light" ? "Dark Mode" : "Light Mode";
 
   function toggleTheme() {
@@ -52,7 +47,6 @@ const uniqueSeasons = Array.from(new Set(sortedCohorts.map(student => student.co
           );
         })}
       </ul>
-      {/* Implementing Dark Mode */}
       <div className="switchThemes">
         <button onClick={toggleTheme}>{buttonText}</button>
       </div>

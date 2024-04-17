@@ -1,17 +1,20 @@
 import ShowMore from "./ShowMore";
 
-//add extras after student, this comment here is for reference, if doesn't work refer back to this.
-export default function StudentProfile({student, notes, students,studentID, appendNotes}) {
-
-  const date = new Date(student.dob)
+export default function StudentProfile({
+  student,
+  notes,
+  students,
+  studentID,
+  appendNotes,
+}) {
+  const date = new Date(student.dob);
   const formatted = date.toLocaleDateString("en", {
     year: "numeric",
     month: "long",
-    day: "numeric"
-  })
+    day: "numeric",
+  });
 
-  const { resume, linkedin, github, mockInterview } = student.certifications
-  
+  const { resume, linkedin, github, mockInterview } = student.certifications;
 
   return (
     <li className="student-profile">
@@ -19,9 +22,13 @@ export default function StudentProfile({student, notes, students,studentID, appe
       <div className="student-info">
         <div className="student-name">
           <h3 className="student-info__name">
-          {`${student.names.preferredName} ${student.names.middleName} ${student.names.surname} `}
+            {`${student.names.preferredName} ${student.names.middleName} ${student.names.surname} `}
             <span>
-                {resume && linkedin && github && mockInterview && student.codewars.current.total > 600
+              {resume &&
+              linkedin &&
+              github &&
+              mockInterview &&
+              student.codewars.current.total > 600
                 ? "On Track to Graduate"
                 : "Off Track to Graduate"}
             </span>

@@ -1,9 +1,5 @@
-export default function Cohort({
-  cohort,
-  setStudents,
-  allStudents,
-  setCohort,
-}) {
+export default function Cohort({cohort, setStudents, allStudents, setCohort,}) {
+
   function handleClick(e) {
     const text = e.target.textContent.replace(" ", "");
     handleFilter(text);
@@ -14,7 +10,6 @@ export default function Cohort({
     const filteredCohort = allStudents.filter(
       (student) => student.cohort.cohortCode === text
     );
-
     setStudents(filteredCohort);
   }
 
