@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <h1>Student Dashboard</h1>
-      <CohortList />
+      <CohortList students={students}/>
       <StudentList students={students} setStudents={setStudents}/>
     </div>
   );
