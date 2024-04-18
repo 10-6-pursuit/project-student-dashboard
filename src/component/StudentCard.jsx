@@ -1,7 +1,7 @@
 import { useState } from "react";
 import OneOnOne from "./OneOnOne";
 import ScoreCard from "./ScoreCard";
-export default function StudentCard({ student,addComment,toggleShow,showMore,key}) {
+export default function StudentCard({ student,addComment,showMore,key,toggleShow}) {
   function formatDate(dateString) {
     // Split the date string into day, month, and year
     const parts = dateString.split("/");
@@ -35,9 +35,10 @@ export default function StudentCard({ student,addComment,toggleShow,showMore,key
     return formattedDateString;
   }
 
+
   return (
 
-    <li className="student-element" >
+    <li className="student-element" key={key}>
       <img src={student.profilePhoto} alt={`Pic`} />
       <div>
         <h3>
@@ -48,9 +49,9 @@ export default function StudentCard({ student,addComment,toggleShow,showMore,key
         <p>
           <span>Birthday:</span> {formatDate(student.dob)}
         </p>
-        <button  onClick={()=>toggleShow(student)} className="show-more" id={student.id}>{!showMore?`Show More...`:`Show Less...`}</button>
+        <button  onClick={()=>toggleShow(student.id)} className="show-more" id={student.id}>{!showMore?`Show More...`:`Show Less...`}</button>
         
-       {showMore?<>
+       {showMore===student.id?<>
         <ScoreCard student={student}/>
         <br />
         <hr />

@@ -10,12 +10,11 @@ function App() {
   const [color, setColor] = useState(`black`);
 
   const [newList, setNewList] = useState(data);
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(``);
+  const [showMoreBool, setShowMoreBool] = useState(false);
 
-  function toggleShow(event, student) {
 
-    setShowMore(!showMore);
-  }
+
   const [cohort, setCohort] = useState(`All-students`);
   const [NumberOfStudent, setNumberOfStudent] = useState(data.length);
 
@@ -25,6 +24,17 @@ function App() {
 
       setNewList([...newList]);
     }
+  }
+  function toggleShow(arg) {
+   if(arg&&!showMoreBool){
+    setShowMore(arg);
+    setShowMoreBool(true)
+   }
+   if(arg&&showMoreBool){
+    setShowMore(``);
+    setShowMoreBool(false)
+   }
+   
   }
 
   let array = [];
@@ -148,10 +158,10 @@ function App() {
               {...newList.map((student, i) => {
                 return (
                   <StudentCard
+                  toggleShow={toggleShow}
                     student={student}
                     addComment={addComment}
                     showMore={showMore}
-                    toggleShow={toggleShow}
                     key={student.id + i}
                   />
                 );
