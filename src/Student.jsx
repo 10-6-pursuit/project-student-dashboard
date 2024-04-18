@@ -1,8 +1,10 @@
 import { useState } from "react";
 import MoreInfo from "./MoreInfo.jsx";
 
-export default function Student({student}){
 
+export default function Student({student, addNote}){
+
+   // const [studentState, setStudent] = useState(student);
     const [showMore, setShowMore] = useState(false);
 
 
@@ -32,7 +34,7 @@ export default function Student({student}){
             <a onClick={() => setShowMore(!showMore)} 
             href="#">{showMore ? "show Less" : "show More"}</a>
         
-        {showMore && <MoreInfo />}
+        {showMore && <MoreInfo student={student} addNote={addNote}/>}
         </li>
     )
 }

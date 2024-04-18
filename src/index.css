@@ -1,0 +1,35 @@
+/* container */
+.three-columns-grid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* columns */
+.three-columns-grid > * {
+    padding:1rem;
+}
+
+.solid-border {border-style: solid;}
+
+.cohort-ul {
+    list-style-type: none; /* Remove bullets */
+   
+  }
+
+  .cohort-ul li{
+    border-bottom: 1px solid green;
+  }
+
+  .primary-content{
+    width: 100%;
+  }
+  .primary-content .sidebar{
+    width: 25%;
+    float:left
+  }
+  
+  .primary-content .main{
+    width: 75%;
+    float:right
+  }

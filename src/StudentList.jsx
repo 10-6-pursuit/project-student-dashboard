@@ -1,13 +1,13 @@
 import Student from "./Student.jsx"
+import { useState } from "react";
 
-export default function studentList({students}){
-
-    return(
+export default function studentList({ students, addNote }) {
+    //const [studentsState, setStudents] = useState(students);
+    return (
         <>
-        <p>Student List</p>
-        <ul>
-            {students.map((student) => <Student student={student} />)}
-        </ul>
+            <ul>
+                {students.map((student) => <Student student={student} addNote={addNote} />)}
+            </ul>
         </>
     )
 
