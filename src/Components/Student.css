@@ -1,0 +1,42 @@
+.student-container {
+    border: 1px solid #5ca56f;
+    list-style-type: none;
+    width: 900px;
+    gap: 100px;
+    margin-bottom: 30px;
+}
+
+.profile-pic{
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.name {
+    display: flex;
+    margin-left: 220px;
+    margin-top: -115px;
+    font-weight: bold;
+}
+
+.username {
+    margin-left: 220px;
+}
+
+.bday {
+    margin-left: 220px;
+    color: #5ca56f;
+}
+
+.format-date {
+    color: black;
+}
+
+.show-more {
+    margin-left: 220px;
+    margin-top: 50px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #5ca56f;
+}
+

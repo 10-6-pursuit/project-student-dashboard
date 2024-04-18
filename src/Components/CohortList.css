@@ -1,0 +1,17 @@
+.cohortlist {
+    margin-left: 30px;
+}
+
+hr {
+    width: 380px;
+    margin-left: 0px;
+}
+
+.cohortlist-title {
+    margin-left: 50px;
+}
+
+.cohortlist-elem {
+    margin-left: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+/* .showmore-container {
+    display: grid;
+    grid-template-columns: 0.5px 0.5px 0.5px;
+} */
+
+.codewars {
+    display: block;
+    margin-left: 60px;
+}
+
+.scores {
+    display: block;
+    margin-left: 365px;
+    margin-top: -185px;
+    
+}
+
+.certifications {
+    display: block;
+    margin-left: 650px;
+    margin-top: -155px;
+}
