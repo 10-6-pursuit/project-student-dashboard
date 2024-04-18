@@ -11,12 +11,7 @@ comment:``})
         setChangeText({...changeText,[event.target.id]:event.target.value})
         
     }
-    // function addComment(){
-    //     setCommentList([changeText,...commentList])
-
-        
-    // }
-   
+ 
     function handleSubmit(e){
         e.preventDefault()
         addComment(student,changeText)

@@ -34,9 +34,7 @@ export default function StudentCard({ student,addComment,toggleShow,showMore,key
 
     return formattedDateString;
   }
-  // function toggleShow(){
-  //   setShowMore(!showMore)
-  // }
+
   return (
 
     <li className="student-element" >
