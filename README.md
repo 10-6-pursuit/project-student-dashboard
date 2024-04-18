@@ -35,7 +35,12 @@ This project has three different parts on which you will be graded. Each part is
 1. Clone the repository.
 1. Install dependencies using npm install.
 1. Run the development server with npm start.
-1. Access the application in your web browser at https://students-dashboard-nyc.netlify.app/
+1. Access the application in your web browser at http://localhost:5174/
+
+## Deployment website
+
+- https://students-dashboard-nyc.netlify.app/ 
+
 
 
 ### Landing page

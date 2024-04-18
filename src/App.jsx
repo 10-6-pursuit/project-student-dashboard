@@ -6,7 +6,7 @@ import CohortList from "./Components/CohortList";
 import StudentList from "./Components/StudentList";
 
 function App() {
-const [allStudents, setAllStudent] = useState(studentsData);
+const [allStudents] = useState(studentsData);
 const [students, setStudents] = useState(allStudents);
 const [cohort, setCohort] = useState("All Students");
 const [numberOfStudents, setNumberOfStudents] = useState(students.length);
@@ -14,7 +14,7 @@ const [numberOfStudents, setNumberOfStudents] = useState(students.length);
 
   return (
     <div>
-      <Header />
+      <Header/>
       <main>
         <div className="cohorts">
           <CohortList setNumberOfStudents={setNumberOfStudents} students={students} allStudents={allStudents} setCohort={setCohort}  setStudents={setStudents} />
