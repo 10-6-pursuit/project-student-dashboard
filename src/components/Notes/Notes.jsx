@@ -1,17 +1,24 @@
 import './Notes.scss';
 import { useState } from 'react';
 
-export default function Notes({ students }) {
-  const [comments, setComments] = useState(students.notes);
+export default function Notes({ student, addNote }) {
+  const [comments, setComments] = useState(student.notes);
   const [newComment, setNewComment] = useState({ commenter: '', comment: '' });
 
   function handleChange(e) {
-    e.preventDefault();
+    setNewComment({
+      ...newComment,
+      [e.target.id]: e.target.value,
+    });
   }
 
   function handleSubmit(e) {
-      e.preventDefault();
-      setNewComment([...comments, '']);
+    e.preventDefault();
+    addNote(newComment, student);
+    setNewComment({
+      commenter: '',
+      comment: '',
+    });
   }
 
   return (
@@ -24,8 +31,8 @@ export default function Notes({ students }) {
             type="text"
             value={newComment.commenter}
             onChange={handleChange}
-            name="commenterName"
-            id="commenterName"
+            name="commenter"
+            id="commenter"
           />
         </label>
         <br />
@@ -36,14 +43,14 @@ export default function Notes({ students }) {
             value={newComment.comment}
             onChange={handleChange}
             name=""
-            id=""
+            id="comment"
           />
         </label>
         <br />
         <input type="submit" value="Add Note" id="submit" />
       </form>
       <ul>
-        {students.notes.map((note) => {
+        {student.notes.map((note) => {
           return (
             <li>
               {note.commenter} says, "{note.comment}"

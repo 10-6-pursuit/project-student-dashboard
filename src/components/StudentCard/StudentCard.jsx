@@ -2,7 +2,7 @@ import './StudentCard.scss';
 import { useState } from 'react';
 import Notes from '../Notes/Notes';
 
-export default function StudentCard({ students }) {
+export default function StudentCard({ student, addNote }) {
   const [expand, setExpand] = useState(true);
   const [stats, setStats] = useState(null);
 
@@ -41,19 +41,19 @@ export default function StudentCard({ students }) {
           <h4>CodeWars</h4>
           <ul>
             <li>
-              <span>Current Total:</span> {students.codewars.current.total}
+              <span>Current Total:</span> {student.codewars.current.total}
             </li>
             <li>
-              <span>Last Week:</span> {students.codewars.current.lastWeek}
+              <span>Last Week:</span> {student.codewars.current.lastWeek}
             </li>
             <li>
-              <span>Goal:</span> {students.codewars.goal.total}
+              <span>Goal:</span> {student.codewars.goal.total}
             </li>
             <li>
               <span>Percent of Goal:</span>{' '}
               {Math.round(
-                (students.codewars.current.total /
-                  students.codewars.goal.total) *
+                (student.codewars.current.total /
+                  student.codewars.goal.total) *
                   100
               )}
               %
@@ -65,10 +65,10 @@ export default function StudentCard({ students }) {
           <ul>
             <li>
               <span>Assignments:</span>{' '}
-              {students.cohort.scores.assignments * 100}%
+              {student.cohort.scores.assignments * 100}%
             </li>
             <li>
-              <span>Projects:</span> {students.cohort.scores.projects * 100}%
+              <span>Projects:</span> {student.cohort.scores.projects * 100}%
             </li>
           </ul>
         </div>
@@ -77,22 +77,22 @@ export default function StudentCard({ students }) {
           <ul>
             <li>
               <span>
-                Resume: {students.certifications.resume ? '✅ ' : '❌'}
+                Resume: {student.certifications.resume ? '✅ ' : '❌'}
               </span>
             </li>
             <li>
               <span>
-                LinkedIn: {students.certifications.linkedin ? '✅ ' : '❌'}
+                LinkedIn: {student.certifications.linkedin ? '✅ ' : '❌'}
               </span>
             </li>
             <li>
               <span>
-                Mock Interview: {students.certifications.github ? '✅ ' : '❌'}
+                Mock Interview: {student.certifications.github ? '✅ ' : '❌'}
               </span>
             </li>
             <li>
               <span>
-                GitHub: {students.certifications.mockInterview ? '✅ ' : '❌'}
+                GitHub: {student.certifications.mockInterview ? '✅ ' : '❌'}
               </span>
             </li>
           </ul>
@@ -100,18 +100,18 @@ export default function StudentCard({ students }) {
         <hr />
         </div>
         <hr />
-      <Notes students={students} />
+      <Notes student={student} addNote={addNote} />
       </>
     );
   };
 
   const OnTrackStatus = () => {
     if (
-      students.certifications.resume == true &&
-      students.certifications.linkedin == true &&
-      students.certifications.github == true &&
-      students.certifications.mockInterview == true &&
-      students.codewars.current.total >= 600
+      student.certifications.resume == true &&
+      student.certifications.linkedin == true &&
+      student.certifications.github == true &&
+      student.certifications.mockInterview == true &&
+      student.codewars.current.total >= 600
     ) {
       return <p className="on-track-status">On Track to Graduate</p>;
     } else {
@@ -123,23 +123,23 @@ export default function StudentCard({ students }) {
     <div className="StudentCard">
       <div className="student-info">
         <div>
-          <img src={students.profilePhoto} alt="Student profile photo" />
+          <img src={student.profilePhoto} alt="Student profile photo" />
         </div>
         <div className="width-100">
           <div className="student-info__name">
             <h3>
               {`${
-                students.names.preferredName
-              }  ${students.names.middleName.slice(0, 1)}. ${
-                students.names.surname
+                student.names.preferredName
+              }  ${student.names.middleName.slice(0, 1)}. ${
+                student.names.surname
               }`}
             </h3>
             <OnTrackStatus />
           </div>
-          <p>{students.username}</p>
+          <p>{student.username}</p>
           <p>
             <span>Birthday: </span>
-            {convertDateFormat(students.dob)}
+            {convertDateFormat(student.dob)}
           </p>
           <br />
           <p className="expand" onClick={handleClick}>
