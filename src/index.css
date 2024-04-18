@@ -1,0 +1,39 @@
+:root {
+  --green: #5ba769;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+.root {
+  width: 100vw;
+}
+
+hr {
+ border-top: 2px solid var(--green);
+ margin: 0;
+}
+
+.green {
+  color: var(--green);
+}
+
+main {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  /* display: flex; */
+  column-gap: 30px;
+}
+
+/* main > * {
+  flex: 1 1 auto;
+} */
+
+/* @media screen and (width < 1200px) {
+
+  .cohort .cohort-name {
+    display: none;
+  }
+} */

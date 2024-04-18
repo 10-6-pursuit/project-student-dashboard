@@ -1,0 +1,33 @@
+.cohort-panel {
+  width: 500px;
+  height: fit-content;
+  /* flex: 1 1 auto; */
+}
+
+.cohort-panel h2 {
+  text-align: center;
+}
+
+.cohort {
+  width: fit-content;
+  margin: 15px 0 15px 30px;
+}
+
+.cohort:hover {
+  cursor: pointer;
+  transform: scale(120%);
+}
+
+.cohort h3 {
+  display: inline-block;
+}
+
+.cohort-name {
+  width: 135px;
+  margin: 0px 0 0px 0px;
+}
+
+.cohort-symbol {
+  margin: 0;
+  color: black;
+}
