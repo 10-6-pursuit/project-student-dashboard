@@ -1,3 +1,7 @@
 .student-list {
-    display: inline;
+    margin-left: 50px;
+}
+
+.unordered-list {
+    margin-left: -50px;
 }

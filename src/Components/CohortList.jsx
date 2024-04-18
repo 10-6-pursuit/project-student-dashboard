@@ -8,9 +8,10 @@ export default function CohortList({data, handleCohort, currentCohort}) {
 
     return (
         <div className="cohortlist">
-            <h2>Choose a Class by Start Date</h2>
-            <p onClick={handleCohort}>All Students</p>
-            {modifiedCohortArray.map(ele => <><p onClick={handleCohort} >{ele}</p><hr/></>)}
+            <h2 className="cohortlist-title">Choose a Class by Start Date</h2>
+            <p className="cohortlist-elem" onClick={handleCohort}>All Students</p>
+            <hr/>
+            {modifiedCohortArray.map(ele => <><p className="cohortlist-elem" onClick={handleCohort} >{ele}</p><hr/></>)}
             {/* {currentCohort} */}
         </div>
     )

@@ -1,0 +1,19 @@
+.one-on-one {
+    display: block;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+.add-note {
+    background-color: #5ca56f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form {
+    border: 1px solid #5ca56f;
+    padding: 10px;
+    width: 815px;
+    margin-bottom: 30px;
+}

@@ -44,9 +44,9 @@ export default function Student({student}) {
                 <p className="username">{student.username}</p>
                 <p className="bday">Birthday: <span className="format-date">
                 {formatDate(student.dob)}</span></p>
-                <p onClick={handleShowmore}>{showMoreText}</p>
+                <p className="show-more" onClick={handleShowmore}>{showMoreText}</p>
                 {showmore ? <ShowMore student={student}/> : null}
-                {(student.certifications.resume === true && student.certifications.linkedin === true && student.certifications.github === true && student.certifications.mockInterview === true && student.codewars.current.total > 600) ? <p>On Track To Graduate</p> : null}
+                {(student.certifications.resume === true && student.certifications.linkedin === true && student.certifications.github === true && student.certifications.mockInterview === true && student.codewars.current.total > 600) ? <p className="on-track">On Track To Graduate</p> : null}
             </li>
         
     );

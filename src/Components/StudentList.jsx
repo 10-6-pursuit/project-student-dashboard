@@ -26,7 +26,7 @@ export default function StudentList({data, currentCohort}) {
             <h2>{currentCohort}</h2>
             <h3>Total Students: <span>{totalStudents(data, currentCohort)}</span></h3>
             {/* <Student data={data} currentCohort={currentCohort}/> */}
-            <ul>{newList.map(student => <Student student={student}/>)}</ul>
+            <ul className="unordered-list">{newList.map(student => <Student student={student}/>)}</ul>
         </div>
     )
 };

@@ -9,10 +9,11 @@
     color: white;
 }
 
-/* .body-container {
-    display : block;
+.body-container {
+    display : flex;
     
-}  */
+    
+} 
 
 /* .cohortlist {
     display: inline-block;

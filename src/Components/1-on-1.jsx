@@ -1,4 +1,5 @@
 import {useState} from "react";
+import "./1-on-1.css";
 
 export default function OneOnOne({student}) {
     const [comments, setComments] = useState(student.notes);
@@ -15,24 +16,26 @@ export default function OneOnOne({student}) {
     }    
 
     return (
-        <>
+        <div className="one-on-one">
             <h2>1-on-1 notes</h2>
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
                 <label>
                     Commenter Name
+                    <br/>
                     <input id="commenter" value={newComment.commenter} onChange={handleAddComment}/>
                 </label>
                 <br/>
                 <label>
                     Comment
+                    <br/>
                     <input value={newComment.comment} id="comment" onChange={handleAddComment}/>
                 </label>
                 <br/>
-                <button type="submit">Add Note</button>
+                <button className="add-note" type="submit">Add Note</button>
                 <ul>
                     {comments.map(obj => <li>{obj.commenter} says, {obj.comment}</li>)}
                 </ul>
             </form>
-        </>
+        </div>
     )
 };
