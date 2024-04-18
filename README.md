@@ -133,3 +133,6 @@ The following is an example of the application. These images show the applicatio
 ### 1-on-1 section
 
 ![one-on-one section](./instruction-assets/one-on-one-section.png)
+
+
+Netlify URL: https://project-student-dashboard-jg.netlify.app/
