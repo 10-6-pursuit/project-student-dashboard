@@ -39,15 +39,18 @@ export default function OneOnOne({ id, comments, addNote }) {
     }
 
     return (
-        <>
+        <div class="margin-20">
+            <hr class="hr-color" />
             <h3>1-on-1 Notes</h3>
-
             <div class="solid-border">
-                <div> Commenter Name <input type="text" ref={commentorNameRef} value={commentorName} onChange={(e) => onCommentorName(e.target.value, true)}></input></div>
-                <div>  Comment <input type="text" ref={commentRef} value={commentAdded} onChange={(e) => onComment(e.target.value, true)}></input></div>
-                <div><button type="button" onClick={(e) => { buttonClick(e, commentorNameRef, commentRef) }} >Add Note</button></div>
+                <div class="one-one">
+                    <div> Commenter Name <input type="text" ref={commentorNameRef} value={commentorName} onChange={(e) => onCommentorName(e.target.value, true)}></input></div>
+                    <div>  Comment <input type="text" ref={commentRef} value={commentAdded} onChange={(e) => onComment(e.target.value, true)}></input></div>
+                    <div><button type="button" onClick={(e) => { buttonClick(e, commentorNameRef, commentRef) }} >Add Note</button></div>
+                </div>
+               
             </div>
             <ul>{getComments}</ul>
-        </>
+        </div>
     )
 }

@@ -5,7 +5,7 @@ export default function studentList({ students, addNote }) {
     //const [studentsState, setStudents] = useState(students);
     return (
         <>
-            <ul>
+            <ul class="ul-student-list">
                 {students.map((student) => <Student student={student} addNote={addNote} />)}
             </ul>
         </>

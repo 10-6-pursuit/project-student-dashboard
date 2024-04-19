@@ -11,6 +11,8 @@ function App() {
   const [cohortStudents, setCohortStudents] = useState(studentsData);
   const [cohortTitle, setCohortTitle] = useState("All Students");
 
+
+  //TO ADD NOTE RECEIVED FROM CHILD COMPONENT
   const addNote = (id, commentorName, commentAdded) => {
     let i;
     let newStudents = [...students];
@@ -27,6 +29,7 @@ function App() {
   }
 
 
+  //TO FILTER STUDENTS BASED ON THE COHORT CLICK
   const cohortClick = (batch, cohortTitle) => {
     if (batch == "allStudents") {
       setCohortTitle("All Students");
@@ -48,15 +51,16 @@ function App() {
 
   return (
     <div>
-      <h1>Student Dashboard</h1>
+
+      <header><h1>Student Dashboard</h1></header>
       <div class="primary-content">
         <div class="sidebar">
           <CohortList cohortStudents={students} cohortClick={cohortClick} />
         </div>
         <div class="main">
-          <div>
+          <div class="margin-left-40">
             {cohortTitle}</div>
-          <div>
+          <div class="margin-left-40">
             Total Students: {cohortStudents.length} </div>
           <StudentList students={cohortStudents} addNote={addNote} />
         </div>
