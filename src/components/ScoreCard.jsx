@@ -1,4 +1,7 @@
-const ScoreCard = ({student}) => {
+// const ScoreCard = (props) => {
+    // props.student
+const ScoreCard = ({student, something, cohort}) => {
+    
 return (
     <div className="ScoreCard">
         <h3>Codewars:</h3>
