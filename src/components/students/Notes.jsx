@@ -1,26 +1,18 @@
 import { useState } from "react";
 
 export default function Comments({ id, notes, onAddNotesToStudent }) {
-	const [newComment, setNewComment] = useState({
-		commenter: "",
-		comment: "",
-	});
+	const [newComment, setNewComment] = useState({});
 
 	function handleTextChange(e) {
 		e.preventDefault();
 		const { value, name } = e.target;
-
 		setNewComment((prev) => ({ ...prev, [name]: value }));
 	}
 
 	function handleSubmmit(e) {
 		e.preventDefault();
 		onAddNotesToStudent(id, newComment);
-		setNewComment( {
-				commenter: "",
-				comment: "",
-			})
-		
+		setNewComment({});
 	}
 
 	return (
@@ -32,6 +24,7 @@ export default function Comments({ id, notes, onAddNotesToStudent }) {
 					<input
 						required
 						onChange={handleTextChange}
+						value={newComment.commenter || ""}
 						className="input"
 						type="text"
 						name="commenter"
@@ -42,6 +35,7 @@ export default function Comments({ id, notes, onAddNotesToStudent }) {
 					<input
 						required
 						onChange={handleTextChange}
+						value={newComment.comment || ""}
 						className="input"
 						type="text"
 						name="comment"
