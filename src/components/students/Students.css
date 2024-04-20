@@ -1,0 +1,87 @@
+.student {
+	border: 1px solid var(--primary);
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.student__preview {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	margin-bottom: 1.2em;
+}
+
+.student__img__container {
+	width: 100px;
+}
+.student__img__container img {
+	border-radius: 5px;
+	max-width: 100%;
+}
+.students__list {
+	overflow-y: auto;
+	max-height: 70vh;
+	margin-top: 25px;
+}
+
+.showmore {
+	cursor: pointer;
+	text-decoration: underline;
+	width: fit-content;
+	margin-top: 1em;
+}
+
+.student__description {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.details {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.details__title,
+.details__item {
+	margin-bottom: 0.7em;
+}
+
+.comments {
+	width: 100%;
+  margin-top: 1em;
+}
+
+.comments__form {
+	border: 1px solid var(--primary);
+	padding: 1em;
+	margin-block: 1em;
+}
+.comment__list{
+  margin: 1em;
+}
+.comment__list ul li {
+	list-style: circle;
+  margin-bottom: 5px;
+}
+.comment__list ul {
+	max-height: 5em;
+  overflow-y: auto;
+}
+
+.input {
+	margin: 0.2em 0.6em;
+}
+
+.commets__btn {
+	all: unset;
+	background-color: var(--primary);
+	padding: 0.3em 0.8em;
+	border-radius: 5px;
+	color: white;
+	transition: all 150ms ease-in-out;
+}
+.commets__btn:hover {
+	cursor: pointer;
+	background-color: var(--primary-lighter);
+}
