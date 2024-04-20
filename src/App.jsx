@@ -70,7 +70,10 @@ function App() {
       setNumberOfStudent(filteredArray.length);
     }
 
-    setShowMore(false);
+    setShowMore(``);
+    setShowMoreBool(false)
+
+
   }
 
   function toggleMode() {
