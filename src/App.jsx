@@ -10,7 +10,7 @@ function App() {
   const [cohortSelection, setCohortSelection] = useState("All Students");
 
   function filterStudents(e) {
-    const cohortCode = e.target.id;q
+    const cohortCode = e.target.id;
     if (cohortCode === "allstudents") {
       setCohortSelection("All Students");
       setFilteredStudents(students);
