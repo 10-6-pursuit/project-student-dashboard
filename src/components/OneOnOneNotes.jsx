@@ -33,37 +33,15 @@ export default function OneOnOneNotes({ addComment }) {
       <fieldset className="one-on-one-fieldset">
         <form className="one-on-one-form" onSubmit={handleSubmit}>
           <label className="one-on-one-form__label" htmlFor="commenter-name">
-            <span className="one-on-one-form__label__title">
-              Commenter Name
-            </span>
-            <input
-              className="one-on-one-form__input"
-              type="text"
-              id="commenter-name"
-              value={commenterName}
-              onChange={handleChange}
-              required
-            />
-            <span className="error-box">
-              {error ? "Please enter first and last name only" : null}
-            </span>
+            <span className="one-on-one-form__label__title">Commenter Name</span>
+            <input className="one-on-one-form__input" type="text" id="commenter-name" value={commenterName} onChange={handleChange} required/>
+            <span className="error-box">{error ? "Please enter first and last name only" : null}</span>
           </label>
           <label className="one-on-one-form__label" htmlFor="comment">
             <span className="one-on-one-form__label__title">Comment</span>
-            <input
-              className="one-on-one-form__input"
-              type="text"
-              id="comment"
-              value={comment}
-              onChange={(e) => setComment(e.target.value)}
-              required
-            />
+            <input className="one-on-one-form__input" type="text" id="comment" value={comment} onChange={(e) => setComment(e.target.value)} required/>
           </label>
-          <input
-            className="one-on-one-form__submit-btn"
-            type="submit"
-            value={"Add Note"}
-          />
+          <input className="one-on-one-form__submit-btn" type="submit" value={"Add Note"}/>
         </form>
       </fieldset>
     </div>

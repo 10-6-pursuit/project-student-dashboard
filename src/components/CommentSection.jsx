@@ -10,11 +10,7 @@ export default function CommentsSection({ comments }) {
   return (
     <div>
       <ul>
-        {comments.map((note, index) => (
-          <li key={index}>
-            {commenterName(note.commenter)} says, {`"${note.comment}"`}
-          </li>
-        ))}
+        {comments.map((note, index) => (<li key={index}>{commenterName(note.commenter)} says, {`"${note.comment}"`}</li>))}
       </ul>
     </div>
   );
