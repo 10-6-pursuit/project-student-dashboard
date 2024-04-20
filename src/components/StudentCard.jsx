@@ -4,7 +4,7 @@ import OneOnOneNotes from "./OneOnOneNotes";
 import CommentsSection from "./CommentSection";
 import "/src/styles/StudentCard.css";
 
-export default function StudentCard({ student }) {
+export default function StudentCard({ student, darkMode }) {
   const [showDetails, setShowDetails] = useState(false);
   const [comments, setComments] = useState(student.notes);
 
@@ -36,7 +36,7 @@ export default function StudentCard({ student }) {
           </div>
           <p className="card__inner-container__content">{student.username}</p>
           <p className="card__inner-container__content"><span className="green-txt">Birthday: </span>{formatDate(student.dob)}</p>
-          <button className="card__show-more-btn" onClick={toggleDetails}>{showDetails ? "Show Less" : "Show More..."}</button>
+          <button className={`card__show-more-btn ${darkMode ? "dark-mode" : ""}`} onClick={toggleDetails}>{showDetails ? "Show Less" : "Show More..."}</button>
         </div>
       </div>
       <AdditionalDetails student={student} showDetails={showDetails} />

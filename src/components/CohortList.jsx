@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import StudentList from "./StudentList";
 import "/src/styles/CohortList.css";
 
-export default function CohortList() {
+export default function CohortList({ darkMode }) {
   const [filter, setFilter] = useState(null);
   const [comments, setComments] = useState({});
 
@@ -31,12 +31,12 @@ export default function CohortList() {
     <div className="cohort-list">
       <div className="cohort-list__container">
         <h2 className="cohort-list__container__filter-title">{filter ? `Showing ${handleFilterTitle(filter)}` : "Choose a Class by Start Date"}</h2>
-        <button className="cohort-list__container__filter-btn" onClick={handleShowAll}> All Students </button>
+        <button className={`cohort-list__container__filter-btn ${darkMode ? "dark-mode" : ""}`} onClick={handleShowAll}> All Students </button>
         {["Winter2026", "Fall2026", "Summer2026", "Spring2026", "Winter2025", "Fall2025", "Summer2025", "Spring2025",].map((cohort) => (
-          <button key={cohort} className="cohort-list__container__filter-btn" onClick={() => handleFilter(cohort)}>{handleFilterTitle(cohort)}</button>
+          <button key={cohort} className={`cohort-list__container__filter-btn ${darkMode ? "dark-mode" : ""}`} onClick={() => handleFilter(cohort)}>{handleFilterTitle(cohort)}</button>
         ))}
       </div>
-      <StudentList filter={filter} comments={comments} addComment={addComment} handleFilterTitle={handleFilterTitle}/>
+      <StudentList filter={filter} comments={comments} addComment={addComment} handleFilterTitle={handleFilterTitle} darkMode={darkMode}/>
     </div>
   );
 }

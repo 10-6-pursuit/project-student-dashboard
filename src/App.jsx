@@ -10,7 +10,7 @@ function App() {
     <div id="app" className={darkMode ? "dark-mode" : ""}>
       <h1>Student Dashboard</h1>
       <button className="toggle-btn" onClick={toggleDarkMode}>Toggle Dark Mode</button>
-      <CohortList />
+      <CohortList darkMode={darkMode} />
     </div>
   );
 }
