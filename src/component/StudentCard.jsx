@@ -1,7 +1,9 @@
 import { useState } from "react";
 import OneOnOne from "./OneOnOne";
 import ScoreCard from "./ScoreCard";
-export default function StudentCard({ student,addComment,showMore,key,toggleShow}) {
+export default function StudentCard({ student,addComment,key}) {
+  // const [showMore, setShowMore] = useState(``);
+  const [showMoreBool, setShowMoreBool] = useState(false);
   function formatDate(dateString) {
     // Split the date string into day, month, and year
     const parts = dateString.split("/");
@@ -34,7 +36,17 @@ export default function StudentCard({ student,addComment,showMore,key,toggleShow
 
     return formattedDateString;
   }
-
+  // function toggleShow(arg) {
+  //   if(arg&&!showMoreBool){
+  //    setShowMore(arg);
+  //    setShowMoreBool(true)
+  //   }
+  //   if(arg&&showMoreBool){
+  //    setShowMore(``);
+  //    setShowMoreBool(false)
+  //   }
+    
+  //  }
 
   return (
 
@@ -49,9 +61,9 @@ export default function StudentCard({ student,addComment,showMore,key,toggleShow
         <p>
           <span>Birthday:</span> {formatDate(student.dob)}
         </p>
-        <button  onClick={()=>toggleShow(student.id)} className="show-more" id={student.id}>{!showMore?`Show More...`:`Show Less...`}</button>
+        <button  onClick={()=>setShowMoreBool(!showMoreBool)} className="show-more" id={student.id}>{showMoreBool?`Show Less...`:`Show More...`}</button>
         
-       {showMore===student.id?<>
+       {showMoreBool?<>
         <ScoreCard student={student}/>
         <br />
         <hr />

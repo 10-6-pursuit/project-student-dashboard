@@ -10,8 +10,8 @@ function App() {
   const [color, setColor] = useState(`black`);
 
   const [newList, setNewList] = useState(data);
-  const [showMore, setShowMore] = useState(``);
-  const [showMoreBool, setShowMoreBool] = useState(false);
+  // const [showMore, setShowMore] = useState(``);
+  // const [showMoreBool, setShowMoreBool] = useState(false);
 
 
 
@@ -25,17 +25,17 @@ function App() {
       setNewList([...newList]);
     }
   }
-  function toggleShow(arg) {
-   if(arg&&!showMoreBool){
-    setShowMore(arg);
-    setShowMoreBool(true)
-   }
-   if(arg&&showMoreBool){
-    setShowMore(``);
-    setShowMoreBool(false)
-   }
+  // function toggleShow(arg) {
+  //  if(arg&&!showMoreBool){
+  //   setShowMore(arg);
+  //   setShowMoreBool(true)
+  //  }
+  //  if(arg&&showMoreBool){
+  //   setShowMore(``);
+  //   setShowMoreBool(false)
+  //  }
    
-  }
+  // }
 
   let array = [];
   let newArray = [];
@@ -55,7 +55,7 @@ function App() {
   function handleList(event) {
     if (event.target.id === `all-students-button`) {
       setCohort(`All students`);
-      setNumberOfStudent(data.length);
+      setNewList(data)
     } else {
       let filteredArray = [
         ...data.filter((el) => event.target.id === el.cohort.cohortCode),
@@ -70,10 +70,7 @@ function App() {
       setNumberOfStudent(filteredArray.length);
     }
 
-    setShowMore(``);
-    setShowMoreBool(false)
-
-
+    // setShowMore(false);
   }
 
   function toggleMode() {
@@ -161,10 +158,10 @@ function App() {
               {...newList.map((student, i) => {
                 return (
                   <StudentCard
-                  toggleShow={toggleShow}
+                  // toggleShow={toggleShow}
                     student={student}
                     addComment={addComment}
-                    showMore={showMore}
+                    // showMore={showMore}
                     key={student.id + i}
                   />
                 );
