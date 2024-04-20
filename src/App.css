@@ -97,12 +97,15 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    border-radius: 20px;
     
 
     img {
         height: 100px;
         margin: 20px;
         grid-row: 1 / 8;
+        border: 2px solid #edb60d;
+        border-radius: 180px;
     }
 
     .student-info {
@@ -196,11 +199,19 @@ main {
     }
 
     form {
-        border: 1px solid grey;
+        border: 1px solid #edb60d;
         padding: 10px;
+        border-radius: 20px;
 
-        #commenter-name {
+        #commenter {
+            border-radius: 7px;
+            border: 1px solid #edb60d;
             margin-bottom: 5px;
+        }
+
+        #comment {
+            border-radius: 7px;
+            border: 1px solid #edb60d;
         }
 
         button {
