@@ -5,12 +5,15 @@
     width: 95%;
     margin-left: 25px;
  }
+
  label{
      padding: 20px;
  }
+
  input{
      margin-bottom: 10px;
  }
+
  #submitbutton{
      margin-left: 20px;
      background-color: green;
@@ -19,10 +22,13 @@
      padding: 5px;
      cursor: pointer;
  }
+
  #oneonone-heading{
  font-size: 17px;
  margin-bottom: 10px;
  }
+
  .comments{
-     margin-left: 50px;margin-bottom: 10px;
+     margin-left: 50px;
+     margin-bottom: 10px;
  }

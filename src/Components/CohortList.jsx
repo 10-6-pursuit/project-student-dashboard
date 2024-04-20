@@ -3,7 +3,7 @@ import "./CohortList.css";
 export default function Cohorts({ cohortSelection, cohortStudents, filterStudents }) {
   return (
     <>
-      <h1 id="cohorts2">Choose a Class by Start Date</h1>
+      <h1 id="cohortspane">Choose a Class by Start Date</h1>
       <ul>
         <li
           className={`cohorts ${cohortSelection === "All Students" ? "selected" : ""}`}

@@ -25,10 +25,6 @@ export default function OneOnOne({student,addNote}){
         resetForm();
     }
 
-
-    
-
-
     return(
     <>
         <h2 id="oneonone-heading">1-on-1 Notes</h2>
