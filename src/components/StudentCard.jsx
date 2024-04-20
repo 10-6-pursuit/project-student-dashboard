@@ -32,7 +32,7 @@ export default function StudentCard({ student, darkMode }) {
           </div>
           <p className="card__inner-container__content">{student.username}</p>
           <p className="card__inner-container__content"><span className="green-txt">Birthday: </span>{formatDate(student.dob)}</p>
-          <button className={`card__show-more-btn ${darkMode ? "dark-mode" : ""}`} onClick={toggleDetails}>{showDetails ? "Show Less" : "Show More..."}</button>
+          <button className={`card__show-more-btn ${darkMode ? "dark-mode" : "light-mode"}`} onClick={toggleDetails}>{showDetails ? "Show Less" : "Show More..."}</button>
         </div>
       </div>
       <AdditionalDetails student={student} showDetails={showDetails} />
