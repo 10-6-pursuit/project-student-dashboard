@@ -1,0 +1,39 @@
+hr {
+    border: none;
+    height: 2px;
+    background-color: #67a35f;
+}
+
+.one-on-one-fieldset {
+    padding: 25px 20px;
+    border: 1px solid black;
+}
+
+.one-on-one-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.one-on-one-form__label__title {
+    margin-right: 10px;
+}
+
+.one-on-one-form__submit-btn {
+    width: min-content;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    background-color: #67a35f;
+}
+
+.one-on-one-form__submit-btn:hover {
+    cursor: pointer;
+    background-color: #477041;
+}
+
+.error-box {
+    margin-left: 10px;
+    color: red;
+}

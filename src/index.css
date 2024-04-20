@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1 {
+    margin: 0px;
+    margin-bottom: 40px;
+    padding: 90px;
+    background-color: #67a35f;
+    color: white;
+    text-align: center;
+}
+
+#app {
+    font-family: "Bitter";
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 20px;
+    padding: 20px;
+}
+
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.light-mode {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.toggle-btn:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
