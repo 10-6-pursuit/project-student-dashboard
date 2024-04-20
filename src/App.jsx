@@ -34,7 +34,7 @@ function App() {
   return (
     <div id="app" className={darkMode ? "dark-mode" : "light-mode"}>
       <h1>Student Dashboard</h1>
-      <button className="toggle-btn" onClick={toggleDarkMode}>Toggle Dark Mode</button>
+      <button className={`toggle-btn ${darkMode ? "dark-mode" : "light-mode"}`} onClick={toggleDarkMode}>Toggle Dark Mode</button>
       <div className="main-container">
         <CohortList darkMode={darkMode} filter={filter} handleFilter={handleFilter} handleShowAll={handleShowAll} handleFilterTitle={handleFilterTitle} />
         <StudentList filter={filter} comments={comments} addComment={addComment} handleFilterTitle={handleFilterTitle} darkMode={darkMode} />

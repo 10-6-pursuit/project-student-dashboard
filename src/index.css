@@ -38,10 +38,9 @@ h1 {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid black;
-    background-color: #ffffff;
-    color: #333333;
 }
 
 .toggle-btn:hover {
     cursor: pointer;
+    background-color: lightgray;
 }
