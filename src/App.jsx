@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CohortList from "./Components/CohortList";
 import StudentList from "./Components/StudentList";
 import data from "./data/data.json";
+import Header from "./Components/Header";
 
 function App() {
   const [studentData, setStudentData] = useState(data)
@@ -9,9 +10,9 @@ function App() {
   const [students, setStudents] = useState(studentData)
 
 
-  const [heading, setHeading] = useState("All Students");
+  const [heading, setHeading] = useState("Choose Class By Start Date");
 
-  const [cohort, setCohort] = useState("All Students");
+
 
   const updateHeading = (e) => setHeading(e.target.innerText);
 
@@ -34,12 +35,13 @@ function App() {
 
   return (
       <main>
+        <Header/>
         <h1>{heading}</h1>
           <div className="App">
         <sidebar>
           <CohortList handleCohortChange={handleCohortChange} students={studentData}/>
         </sidebar>
-        <StudentList students={students} setStudents={setStudents}/>     
+        <StudentList students={students} setStudents={setStudents}/>  
     </div>
     </main>
 );

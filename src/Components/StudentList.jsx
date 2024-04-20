@@ -1,4 +1,5 @@
 import Student from "./Student";
+import Studentdetails from "./Studentdetails";
 
 
 
@@ -6,8 +7,8 @@ function StudentList({ students, setStudents }) {
 
 
     return (
-      <div>
-        <p>Student List</p>
+      <div className="studentList__card">
+        <p><b>All Students</b></p>
         <p>Total Students:{students.length}</p>
         <ul>
         {students.map((student) => (
@@ -17,7 +18,8 @@ function StudentList({ students, setStudents }) {
             setStudents={setStudents}
             key={student.id}
           />
-        ))}
+          ))}
+          {/* <Studentdetails/> */}
         </ul>
       </div>
     );

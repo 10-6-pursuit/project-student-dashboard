@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Studentdetails from './Studentdetails';
 
 function Student({ student }) {
 
@@ -16,11 +15,7 @@ function Student({ student }) {
                 <div className='student__card-email'>{student.userName}</div>
                 <div className='student__card-birthday'>{student.dob}</div>
             </div>
-            {/* <Studentdetails/> */}
-
-
         </div>
-
     );
 }
 
