@@ -1,4 +1,4 @@
-My Project Link: https://abdelstudentdashboardproject.netlify.app/
+Project Link: https://abdelstudentdashboardproject.netlify.app/
 
 # Student Dashboard Project
 
