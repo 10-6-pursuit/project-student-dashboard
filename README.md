@@ -17,12 +17,12 @@ The application allows users to view a comprehensive list of students, filter by
 https://alexandraperez-studentdashboardproject.netlify.app/
 
 ## Installation
-Follow these steps to run the application locally:
+Follow these steps to run the application locally
 
-1. Clone the repository:
+1. Clone the repository
 
-2. Navigate to the project directory:
+2. Navigate to the project directory
 
-3. Install dependencies:
+3. Install dependencies
 
-4. Start the development server:
+4. Start the development server
