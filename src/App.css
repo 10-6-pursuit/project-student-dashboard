@@ -1,0 +1,238 @@
+header {
+
+    height: 80px;
+    background-color: #cdc65d;
+    background-image: linear-gradient(#AE8625, #e0aa3e, #AE8625);
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-family: "Raleway";
+}
+
+main {
+
+    display: flex;
+    font-family: sans-serif;
+
+    h2 {
+        font-family: "Raleway";
+    }
+
+    h4 {
+        font-weight: lighter;
+
+        span {
+            color: #edb60d;
+        }
+    }
+}
+
+.cohortlistcontainer {
+
+    width: 400px;
+    font-family: "Raleway";
+    margin: 20px;
+
+    h2 {
+        text-align: center;
+        margin: 35px;
+    }
+
+    hr {
+        height: 1px;
+        background-color: #edb60d;
+    }
+
+    .all-students {
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        background-color: transparent;
+        font-weight: bold;
+    
+    }
+    
+    .all-students:hover {
+        cursor: pointer;
+        color: grey;
+    }
+    
+    .all-students:active {
+        color: #edb60d;
+    }
+
+}
+
+.cohort-date {
+
+    list-style: none;
+
+    button {
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        background-color: transparent;
+        font-weight: bold;
+    }
+
+    button:hover {
+        cursor: pointer;
+        color: grey;
+    }
+
+    button:active {
+        color: #edb60d;
+    }
+
+    hr {
+        height: 1px;
+        background-color: #edb60d;
+    }
+}
+
+
+
+.student {
+
+    margin: 5px;
+    border: 2px solid #edb60d;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border-radius: 20px;
+    
+
+    img {
+        height: 100px;
+        margin: 20px;
+        grid-row: 1 / 8;
+        border: 2px solid #edb60d;
+        border-radius: 180px;
+    }
+
+    .student-info {
+        margin-top: 20px;
+        margin-left: none;
+        grid-row: 2 / 7;
+    
+        .student-name {
+            font-weight: bold;
+            font-family: "Raleway";
+        }
+    
+        span {
+            color:#edb60d;
+        }
+    }
+
+    .on-track {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+        color: rgb(74, 162, 74);
+
+        .off-track{
+            color: red;
+        }
+    }
+
+    .show-more {
+        grid-row: 7 / 8;
+        grid-column: 2 / 3;
+        border: none;
+        background-color: transparent;
+        text-align: left;
+        color: #edb60d;
+        text-decoration: underline;
+    }
+    
+    .show-more:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+
+.extra-info {
+
+    display: flex;
+    list-style: none;
+    grid-row: 9 / 10;
+    grid-column: 1 / span 5;
+    color: #edb60d;
+    
+
+
+    section {
+        margin: 15px;
+
+        h3 {
+            margin: 15px;
+            color: black;
+            font-family: "Raleway";
+        }
+
+        span {
+            color: black;
+        }
+
+        li {
+            margin: 15px;
+        }
+    }
+}
+
+.one-on-one {
+
+    grid-row: 10 / 11;
+    grid-column: 1 / span 5;
+    margin: 20px;
+
+    h3 {
+        font-family: "Raleway";
+    }
+
+    hr {
+        height: 2px;
+        background-color: #edb60d;
+    }
+
+    .comment-list {
+        margin-top: 15px;
+    }
+
+    form {
+        border: 1px solid #edb60d;
+        padding: 10px;
+        border-radius: 20px;
+
+        #commenter {
+            border-radius: 7px;
+            border: 1px solid #edb60d;
+            margin-bottom: 5px;
+        }
+
+        #comment {
+            border-radius: 7px;
+            border: 1px solid #edb60d;
+        }
+
+        button {
+            margin: 10px 0px;
+            color: white;
+            background-color: #edb60d;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #A57110;
+        }
+
+        button:active {
+            background-color: grey;
+        }
+    }
+}
+
+
+
