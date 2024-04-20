@@ -14,7 +14,11 @@ export default function StudentCard({ student, darkMode }) {
   const github = student.certifications.github;
   const mockInterview = student.certifications.mockInterview;
   
-  const formatDate = (input) => new Date(input).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  const formatDate = (input) => {
+    const date = new Date(input);
+    return date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  };
+
   const toggleDetails = () => setShowDetails(!showDetails);
   const addComment = (commenter, comment) => {
     const newComment = { commenter, comment };
@@ -32,7 +36,7 @@ export default function StudentCard({ student, darkMode }) {
           </div>
           <p className="card__inner-container__content">{student.username}</p>
           <p className="card__inner-container__content"><span className="green-txt">Birthday: </span>{formatDate(student.dob)}</p>
-          <button className={`card__show-more-btn ${darkMode ? "dark-mode" : "light-mode"}`} onClick={toggleDetails}>{showDetails ? "Show Less" : "Show More..."}</button>
+          <button className={`card__show-more-btn ${darkMode ? "dark-mode" : ""}`} onClick={toggleDetails}>{showDetails ? "Show Less" : "Show More..."}</button>
         </div>
       </div>
       <AdditionalDetails student={student} showDetails={showDetails} />
