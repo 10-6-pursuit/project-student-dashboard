@@ -14,11 +14,7 @@ export default function StudentCard({ student, darkMode }) {
   const github = student.certifications.github;
   const mockInterview = student.certifications.mockInterview;
   
-  const formatDate = (input) => {
-    const date = new Date(input);
-    return date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-  };
-
+  const formatDate = (input) => new Date(input).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
   const toggleDetails = () => setShowDetails(!showDetails);
   const addComment = (commenter, comment) => {
     const newComment = { commenter, comment };
