@@ -14,9 +14,20 @@ h1 {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 20px;
+    padding: 20px;
+}
+
 .dark-mode {
     background-color: #333333;
     color: #ffffff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.light-mode {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
