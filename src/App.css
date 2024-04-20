@@ -1,0 +1,231 @@
+.app-title{
+    text-align: center;
+    background-color: rgba(0, 117, 0, 0.776);
+    color: white;
+    margin: 0px;
+    height: 100px;
+    padding-top: 40px;
+    
+}
+main{        display: grid;
+    grid-template-columns:  1fr 2fr;
+
+
+    .headings{
+        grid-column: 2/3;
+        .all-students{
+            margin-left: 10px;
+           
+        }
+        .all-cohorts{
+            margin-left: 50px;
+        }
+    }
+    h1{
+        margin-left: 20px;
+
+        margin-top: 50px;
+    
+    }
+    .containers{
+        grid-column: 2/3;
+
+
+         
+        }
+      
+       
+        
+            .student-element{
+                border:1px solid green;
+                /* list-style:none; */
+                margin-left:-30px;
+                display:flex;
+                margin: -10px;
+                margin-right: 40px;
+
+                
+                
+                /* height:300px; */
+                img{
+                  height:80px;
+                  margin:25px;
+                  margin-right:20px;
+                }
+                .on-track{
+                    margin-left: 30%;
+                    color: green;
+
+                }
+                div{
+                  margin-top:20px;
+                  padding:0px;
+                  padding-top:15px;
+                  h3{
+                    margin:0px;
+                    
+                  }
+                
+                 p{
+                  padding:0px;
+                   margin:5px;
+                   span{
+                     
+                     color:green;
+                   }
+                 }
+                  .show-more{
+                    color:green;
+                    text-decoration:underline;
+                    margin-top:12px;
+                    background-color: white;
+                    margin-bottom: 10px;
+                    border: none;
+                  }
+                 
+                }
+                
+                .scorecard-container{
+                    /* justify-content: space-between; */
+                    display: flex;
+                    background-color: white(221, 197, 209);
+                    margin-top: 10px;
+                    margin-left: -70px;
+                    /* height: 160px; */
+                    /* margin-right: -111px; */
+                    width: 180%;
+                    div{
+                        margin: 0px;
+                        /* margin-top: -30px; */
+                        p{
+                            margin: 13px;
+                            span{color: green;}
+                            font-size: 21px;
+                        }
+                        h3{
+                            font-size: 23px;
+                        }
+
+
+                    }
+                  }
+                  .oneonecontainer{
+                    margin-top: -20px;
+                    margin-bottom: 30px;
+                    h4{
+                        margin-left: -100px;
+
+                    }
+                    
+                    form{
+                        input{
+                            margin-left: 5px;
+                            margin-bottom: 5px;
+                        }
+                        padding: 20px;
+                        border: 2px solid gray;
+                        button{
+                            color: white;
+                            background-color: green;
+                            border-radius: 5px;
+                            margin-top: 5px;
+                            padding: 3px 7px;
+                            
+                    
+                        };
+                        margin: 10px;
+                        margin-left: -100px;
+                        margin-right: 20px;
+                      
+                        
+                      
+                    }
+                    li{
+                        border:none;
+                        padding: 10px;
+                        margin-left: -120px;
+                        
+
+                        
+                        
+                    }
+                  }
+
+              }
+              .cohort-container{
+                background-color: pink;
+                grid-column: 1/2;
+                padding: 10px;
+                margin: 10px;
+                margin-bottom: 0px;
+                padding: 0px;
+               
+          
+    
+            } 
+        
+    }
+    .cohort-button{
+        padding: 0px;
+        background-color: white;
+        border: none;
+        border-bottom: 3px solid green;
+        text-align: start;
+        font-size: 19px;
+        height: 30px;
+       
+        width: 90%;
+        font-weight: 600;
+        padding: 15px;
+        padding-bottom:30px ;
+       
+    } 
+    .cohort-element{
+        list-style: none;
+        margin-left: -10px;
+    }
+    .cohort-title{
+        text-align: start;
+        margin-bottom: -10px;
+    }
+    .total-students{
+        font-size: 17px;
+        margin-bottom: 40px;
+        span{
+            color: green;
+        }
+    }
+    .all-students-button{
+        padding: 0px;
+        background-color: white;
+        border: none;
+        border-bottom: 3px solid green;
+        text-align: start;
+        font-size: 20px;
+        height: 30px;
+        padding: 15px;
+        padding-bottom:30px ;
+        font-weight: 600;
+        margin-left: -10px;
+
+        width: 92%;
+    }
+    .codewars-container{
+        width: 100%;
+    }
+    .scores-container{
+        width: 100%;
+    }
+    .certifications-container{
+        width: 100%;
+    }
+    hr{border:2px solid green;
+    width: 160%;
+    margin-left: -90px;
+    }
+    span{
+        color: green;
+    }
+   
+
+
