@@ -9,7 +9,9 @@ export default function OneOnOne({student,addNote}){
     });
 
     function handleChange(e){
-        setNewComment({...newComment, [e.target.id]: e.target.value,})
+        setNewComment({
+            ...newComment,
+            [e.target.id]: e.target.value,})
     }
 
     function resetForm(){
@@ -38,7 +40,7 @@ export default function OneOnOne({student,addNote}){
         </form>
         </div>
         <ul>
-            {student.notes.map(({commenter,comment},index) => <li className="comments" key={`${student.id}-${index}`}>{`${commenter} says, "${comment}"`}</li>)}
+            {student.notes.map(({commenter, comment}, index) => <li className="comments" key={`${student.id}-${commenter}-${comment}`}>{`${commenter} says, "${comment}"`}</li>)}
         </ul>
     </>
     )

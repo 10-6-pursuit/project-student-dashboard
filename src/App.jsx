@@ -5,30 +5,30 @@ import studentsInfo from "./data/data.json";
 import "./App.css";
 
 function App() {
-  const [students, setStudents] = useState(studentsInfo);
-  const [filteredStudents, setFilteredStudents] = useState(students);
+  const [allStudents, setallStudents] = useState(studentsInfo);
+  const [filteredStudents, setFilteredStudents] = useState(allStudents);
   const [cohortSelection, setCohortSelection] = useState("All Students");
 
   function filterStudents(e) {
     const cohortCode = e.target.id;
     if (cohortCode === "allstudents") {
       setCohortSelection("All Students");
-      setFilteredStudents(students);
+      setFilteredStudents(allStudents);
     } else {
       setCohortSelection(cohortCode.split("20").join(" 20"));
-      setFilteredStudents(students.filter(student => student.cohort.cohortCode === cohortCode));
+      setFilteredStudents(allStudents.filter(student => student.cohort.cohortCode === cohortCode));
     }
   }
 
-  const cohortStudents = students
+  const cohortStudents = allStudents
     .map(student => student.cohort)
     .sort((a, b) => new Date(b.cohortStartDate) - new Date(a.cohortStartDate))
     .map(cohort => cohort.cohortCode)
     .filter((code, index, array) => array.indexOf(code) === index);
 
   function addNote(student, comment) {
-    students.forEach(ele => ele.id === student.id && ele.notes.push(comment));
-    setStudents([...students]);
+    allStudents.forEach(currStudent => currStudent.id === student.id && currStudent.notes.push(comment));
+    setallStudents([...allStudents]);
   }
 
   return (

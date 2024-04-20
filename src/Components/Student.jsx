@@ -2,11 +2,11 @@ import { useState } from "react";
 import ShowMoreInfo from "./ShowMoreInfo.jsx";
 import "./Student.css";
 
-export default function Student({student,addNote}){
+export default function Student({student, addNote}){
 
-    const [showMore,setShowMore] = useState(false);
+    const [showMore, setShowMore] = useState(false);
 
-    const {profilePhoto,username,dob,names:{preferredName,middleName,surname}} = student;
+    const {profilePhoto, username, dob, names:{preferredName,middleName,surname}} = student;
     
     const canGraduate = student.certifications;//newArray array constructor<<
 
@@ -22,7 +22,7 @@ export default function Student({student,addNote}){
         <div className="students-list__students">
         <img src = {profilePhoto}/><li className="students-list__student"><h2 className="students-list__student__name">{`${preferredName} ${middleName.slice(0,1)}. ${surname}`}</h2><p className="students-list__student__name">{username}</p><p className="students-list__student__name"><span>Birthday</span>: {new Date(dob).toLocaleDateString('en-US', {year:"numeric",month:"long",day:"numeric"})}</p>
 
-        <a onClick={()=>setShowMore(!showMore)} href="#">{showMore ? "Show less..." : "Show more..."}</a>
+        <a onClick={()=>setShowMore(!showMore)} href="#">{showMore ? "Show Less..." : "Show More..."}</a>
         <p>{onTrack.every(requirements => requirements) ? <span>"On Track to Graduate"</span>: null}</p>
         </li>
         </div>
