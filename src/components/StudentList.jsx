@@ -7,8 +7,8 @@ export default function StudentList({ filter, comments, addComment, handleFilter
 
   return (
     <div className="list">
-      <h2 className="list__title" id="list-title">{filter ? handleFilterTitle(filter) : "All Students"}</h2>
-      <p className="list__para" id="list-total"> Total Students: {filteredData.length}</p>
+      <h2 className="list__title" id="list-title">{handleFilterTitle(filter) || "All Students"}</h2>
+      <p className="list__para" id="list-total">Total Students: {filteredData.length}</p>
       {filteredData.map((student) => (
         <StudentCard key={student.id} student={student} darkMode={darkMode} comments={comments[student.id] || []} addComment={(commenter, comment) => addComment(student.id, commenter, comment)}/>
       ))}
