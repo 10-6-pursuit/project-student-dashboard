@@ -36,6 +36,8 @@ export default function OneOnOne({ id, comments, addNote }) {
         addNote(id, commentorName, commentAdded);
         onCommentorName("", false);
         onComment("", false);
+        setCommentorName("");
+        setComment("");
     }
 
     return (
