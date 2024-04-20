@@ -27,7 +27,7 @@ export default function Student ({ student }) {
                 <img src={student.profilePhoto}></img>
                 <div className="on-track">{resume && linkedin && github && mockInterview && student.codewars.current.total > 600 ? <div>On Track to Graduate</div> : <div className="off-track">Off Track to Graduate</div>}</div>
                 <section className="student-info">
-                    <div className="student-name">{preferredName} {middleName[1].toUpperCase()}. {surname}</div>
+                    <div className="student-name">{preferredName} {middleName[0].toUpperCase()}. {surname}</div>
                     <div>{student.username}</div>
                     <div><span>Birthday:</span> {dateConverter(student.dob).replace("," , " ")}</div>
                 </section>
