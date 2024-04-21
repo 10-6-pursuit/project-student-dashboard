@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.stats {
+  display: flex;
+  gap: auto;
+  white-space: wrap;
+  max-width: inherit;
+  // margin-right: 70px;
+
+  h4 {
+    font-weight: 600;
+  }
+
+  ul {
+    list-style-type: none;
+    white-space: nowrap;
+  }
+
+  li {
+    line-height: 40px;
+  }
+}

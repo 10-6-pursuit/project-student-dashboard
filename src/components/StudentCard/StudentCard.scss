@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.StudentCard {
+  border: 2px solid $primaryColor;
+  width: 100%;
+  padding: 20px;
+  min-width: 100%;
+  margin: 30px 0px;
+
+  .student-info__name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+
+  span {
+    font-weight: normal;
+  }
+
+  span,
+  .expand {
+    color: $primaryColor;
+  }
+
+  .expand {
+    text-decoration: underline;
+  }
+
+  .stats {
+    margin-top: 20px;
+    // max-width: 100%;
+    width: auto;
+    // overflow: hidden;
+  }
+
+  .width-100 {
+    width: 100%;
+  }
+
+  img {
+    display: block;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 80px;
+  }
+}
+
+.list-view {
+
+  .student-info {
+    display: flex;
+  }
+}
+
+.grid-view {
+  .StudentCard img {
+    width: 250px;
+    margin: 0;
+  }
+}
