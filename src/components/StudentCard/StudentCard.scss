@@ -7,42 +7,10 @@
   min-width: 100%;
   margin: 30px 0px;
 
-  .student-info {
-    display: flex;
-  }
-
   .student-info__name {
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-
-  .stats {
-    display: flex;
-    gap: auto;
-    white-space: wrap;
-    max-width: inherit;
-    // margin-right: 70px;
-
-    h4 {
-      font-weight: 600;
-    }
-
-    ul {
-      list-style-type: none;
-      white-space: nowrap;
-    }
-
-    li {
-      line-height: 40px;
-    }
-  }
-
-  img {
-    display: block;
-    width: 80px;
-    border-radius: 5px;
-    margin-right: 10px;
   }
 
   h3 {
@@ -71,5 +39,26 @@
 
   .width-100 {
     width: 100%;
+  }
+
+  img {
+    display: block;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 80px;
+  }
+}
+
+.list-view {
+
+  .student-info {
+    display: flex;
+  }
+}
+
+.grid-view {
+  .StudentCard img {
+    width: 250px;
+    margin: 0;
   }
 }

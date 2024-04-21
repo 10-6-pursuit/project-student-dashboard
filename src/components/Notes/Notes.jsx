@@ -52,7 +52,7 @@ export default function Notes({ student, addNote }) {
       <ul>
         {student.notes.map((note) => {
           return (
-            <li>
+            <li key={student.notes.indexOf(note)}>
               {note.commenter} says, "{note.comment}"
             </li>
           );

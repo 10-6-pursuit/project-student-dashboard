@@ -31,6 +31,3 @@ function App() {
 }
 
 export default App;
-
-// Add 1-1 section
-// Stretch goal

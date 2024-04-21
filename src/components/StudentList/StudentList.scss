@@ -11,4 +11,19 @@
   span {
     color: $primaryColor;
   }
+
+  .grid-icon {
+    display: block;
+    width: 2.5rem;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.grid-view {
+  width: max-content;
 }
