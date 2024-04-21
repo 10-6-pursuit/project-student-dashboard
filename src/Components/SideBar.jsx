@@ -15,28 +15,28 @@ export default function SideBar ( {setStudents, data}) {
         <p onClick= {()=>setStudents(data)}> All Students</p>
          <hr/>
 
-        <p onClick= {event => filterStudents(event)}> Winter2026⛄️</p>
+        <p onClick= {event => filterStudents(event)}> Winter2026</p>
         <hr/>
 
-        <p onClick= {event => filterStudents(event)}> Fall2026🌧️</p>
+        <p onClick= {event => filterStudents(event)}> Fall2026</p>
         <hr/>
 
-        <p onClick= {event => filterStudents(event)}> Summer2026🌞</p>
+        <p onClick= {event => filterStudents(event)}> Summer2026</p>
         <hr/>
 
-        <p onClick= {event => filterStudents(event)}> Spring2026🌸</p>
+        <p onClick= {event => filterStudents(event)}> Spring2026</p>
         <hr/>
 
-        <p onClick= {event => filterStudents(event)}> Winter2025⛄️</p>
+        <p onClick= {event => filterStudents(event)}> Winter2025</p>
         <hr/>
 
-        <p onClick= {event => filterStudents(event)}> Fall2025🌧️</p>
+        <p onClick= {event => filterStudents(event)}> Fall2025</p>
         <hr/>
 
-        <p onClick= {event => filterStudents(event)}> Summer2025🌞</p>
+        <p onClick= {event => filterStudents(event)}> Summer2025</p>
         <hr/>
 
-        <p onClick= {event => filterStudents(event)}>Spring2025🌸</p>
+        <p onClick= {event => filterStudents(event)}>Spring2025</p>
 </div>
     );
     }
