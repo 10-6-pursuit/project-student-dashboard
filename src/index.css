@@ -1,0 +1,76 @@
+.Sidebar {
+    border: 1px solid green;
+    padding: 10px;
+    margin:10px;
+    font-size: medium;
+    font-family: 'Segoe UI',Verdana;
+    color: purple;
+    height:max-content;
+
+}
+.Style {
+
+
+}
+
+.Student {
+     border: 1px solid green;
+     padding: 5px;
+     margin-bottom: 5px;
+     font-family: 'Segoe UI',Verdana;
+     display: flex;
+      img {
+        height: max-content;
+      }
+      
+     
+
+}
+.DivStyle {
+    display: flex;
+   ul{
+    width:80%;
+    border-radius: 5%;
+    padding:7px;
+   }
+
+}
+.list {
+    /* width:60%; */
+}
+.nameStyle {
+     margin-left: 20px;
+}
+
+
+    
+
+.AppStyle{
+    font-family: 'Segoe UI', Verdana;
+    color: purple;
+    font-size: small;
+     
+}
+
+.StudentDash{
+    background-color: green;
+    color:purple;
+    padding: 10px;
+    text-align: center;
+
+}
+/* .header {
+    background-color: purple;
+    padding: 10px;
+    text-align:center;
+} */
+
+/* .header-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.header-item {
+    flex: 1; */
+
