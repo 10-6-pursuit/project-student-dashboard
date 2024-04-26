@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-export default function CohortList({students}) {
-
-    const [heading, setHeading] = useState("Cohort List");
+export default function CohortList({students, setStudents, handleCohortChange}) {
 
     const allCohorts = students.map((student) => student.cohort);
 
@@ -15,24 +13,17 @@ export default function CohortList({students}) {
         return new Date(b.cohortStartDate) - new Date(a.cohortStartDate);
       });
 
-      function handleCohortChange(e) {
-        
-      }
-
     return (
         <div>
-        <h1>{heading}</h1>
+            <p>Choose a class by Start Date</p>
         <ul>
+            <li onClick={handleCohortChange}>All Students</li>
             {uniqueCohorts.map((cohort) => 
-            <li onClick={(e) => {
-                setHeading(e.target.innerText)
-
-            }}>
+            <li id={cohort.cohortCode} onClick={handleCohortChange}>
                 {cohort.cohortCode.replace("2", " 2")}
             </li>
             )}
         </ul>
-        <span>Total Students: {students.length}</span>
         </div>
     )
 }

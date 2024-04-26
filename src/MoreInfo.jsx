@@ -10,7 +10,7 @@ export default function MoreInfo({setStudents, student, notes, scores, certifica
             <br />
             <ul id="codeW" className="codeWarsList">
                 <li><span>Current Total:</span> { codewars.current.total }</li>
-                <li><span>Last Week: </span> 
+                <li><span>Last Week:</span> 
                 { codewars.current.lastWeek }</li>
                 <li><span>Goal:</span> { codewars.goal.total }</li>
                 <li><span>Percent of Goal Achieved: { Math.round(codewars.current.total / codewars.goal.total * 100)}% </span> </li>
