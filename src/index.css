@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+:root {
+  background: #DBD7D4;
+  font-family: 'Alegreya Sans SC';
+  font-weight: 500;
+  color: #414141;
+}
+
+.dark {
+  background: #272932;
+  color: #F1EFF1;
+}
+
+.dark .switchThemes button {
+  background: #DBD7D4;
+  color: black;
+} 
+
+.switchThemes button {
+  background: black;
+  color: #F1EFF1;
+  padding: 5px 10px;
+}
+
+
+.dark hr {
+  color: #BB9681;
+}
+
+
+.dark .student-profile {
+  border: 2px solid #BB9681;
+  color: black;
+
+}
+
+.dark .cohort li:hover,
+.dark .cohorts h3:hover {
+  background: #F8F8F8;
+  color: black;
+}
+
+.dark .note .submit {
+  background: #BB9681;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+.header {
+  text-align: center;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Set Grid Display */
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+/* Left Side of App */
+.cohorts {
+  margin: 0rem 2rem;
+}
+
+.cohorts h3 {
+  cursor: pointer;
+  font-weight: 800;
+  margin-bottom: 0px;
+}
+
+
+hr {
+  border: 1.5px solid;
+  color: black;
+}
+
+.cohort {
+  cursor: pointer;
+  /* list-style: none; */
+  /* text-align: start; */
+  /* font-weight: bolder; */
+  margin-left: -2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cohort li:hover,
+.cohorts h3:hover {
+  display: inline;
+  background: #6A6666;
+  color: #F1EFF1;
+}
+
+
+/* Right Side of App */
+.cohort-list {
+  margin-left:4rem;
+}
+
+.cohort-list h3 {
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+span {
+  color: #BB9681;
+  font-weight: 500;
+}
+
+.student-profile {
+  border-radius: 0.5rem;
+  background: #F8F8F8;
+  max-width: 85%;
+  display: flex;
+  border: 2px solid #6A6666;
+  padding: 2rem;
+  margin: 2rem 0rem;
+}
+
+.student-profile img {
+  width: 150px;
+  max-height: 150px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-right: 2rem;
+  margin-top: 7px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.student-info .student-info__name {
+  font-weight: bolder;
+}
+
+.showMore button {
+  cursor: pointer;
+  text-decoration: underline;
+  border: none;
+  background: none;
+  font-size: 18px;
+}
+
+
+.extra-info,
+.note {
+  display: flex;
+  flex-direction: row;
+  margin-left: -11rem;
+}
+
+.extra-info h3 {
+  font-weight: bold;
+}
+
+.extra-info ul {
+  margin-left: -2.5rem;
+  margin-right: 7rem;
+}
+
+.extra-info li {
+  line-height: 2rem;
+}
+
+.note hr {
+  width: 100%;
+  margin-right: 2rem;
+}
+
+.note {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+.note .submit {
+  cursor: pointer;
+  background: #414141;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 0px;
+  width: 85px;
+  border: none;
+  margin-left: -3px;
+  font-weight: bold;
+}
+
+.form-note {
+  margin-right: 2rem;
+}
+
+section {
+  width: 100%;
+}
+
+fieldset {
+  /* width: 94%; */
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 0rem;
+
+}
+
+fieldset input {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.note li {
+  margin-top: 1rem;
+  list-style: disc;
+}
+
+.student-info {
+  display: block;
+  width: 100%;
+}
+/* Style for on Track */
+.student-info__name span {
+  float: right;
+}
+
+.note .note-title {
+  display: block;
+  width: 100%;
+  text-align: start;
+}
