@@ -14,6 +14,8 @@ function App() {
 
   function appendNotes(studentNote, studentID) {
     students.map((student) => student.id === studentID ? student.notes.push(studentNote) : null);
+    //Wierd it worked before but I have to make this perma so we need to setStudents
+    setStudents([...students]);
   }
 
   return (
